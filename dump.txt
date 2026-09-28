@@ -1,0 +1,232 @@
+P00 [Title]: MODUL PRAKTIKUM PEMBUATAN WEBSITE
+P01 [Heading 1]: Dengan AI Coding: Antigravity, 9Router & OpenCode
+P02 [Normal]: Kelompok 8: Alfian, Adrian, Fino, Irsyad
+P03 [Normal]: SMK Negeri 2 Surakarta | Tahun 2026
+P05 [Heading 1]: BAB 1: MASALAH - TOKEN ANTIGRAVITY SERING LIMIT
+P06 [Heading 2]: Apa itu Token Limit?
+P07 [List Bullet]: Token adalah satuan unit teks (kata/karakter) yang diproses AI
+P08 [List Bullet]: Setiap kali kamu menulis Prompt ke Antigravity, AI mengonsumsi token
+P09 [List Bullet]: Layanan AI gratis memiliki batasan token per hari/jam (Rate Limit)
+P10 [Heading 2]: Masalah yang Terjadi:
+P11 [Normal]: Saat kamu sedang membuat website portfolio, tiba-tiba muncul error:
+P12 [Normal]: ❌ "Rate Limit Exceeded" atau "Quota Reached"
+P13 [List Bullet]: Antigravity berhenti merespon permintaan AI
+P14 [List Bullet]: Pekerjaan terhenti di tengah jalan
+P15 [List Bullet]: Harus menunggu atau ganti akun
+P16 [Heading 2]: Contoh Skenario:
+P17 [Normal]: Kamu sedang membuat Navbar website → Token habis → Antigravity error → Pekerjaan terhenti ❌
+P19 [Heading 1]: BAB 2: SOLUSI - APA ITU 9ROUTER DAN OPENCODE?
+P20 [Heading 2]: Konsep Solusi:
+P21 [Normal]: Gunakan sistem perantara yang dapat mengalihkan request ke provider AI cadangan
+P22 [Heading 2]: 2.1 Apa itu 9Router?
+P23 [Normal]: Aplikasi LOKAL yang berjalan di komputer kamu
+P24 [List Bullet]: Port default: 20128 (http://localhost:20128)
+P25 [List Bullet]: Harus INSTALL & JALANKAN di CMD
+P26 [List Bullet]: Berfungsi sebagai "polisi lalu lintas" yang mengarahkan permintaan AI
+P27 [List Bullet]: Jika satu provider limit → otomatis alihkan ke provider lain
+P28 [List Bullet]: Menyimpan log semua request yang masuk
+P29 [Heading 2]: 2.2 Apa itu OpenCode?
+P30 [Normal]: Platform ONLINE (berbasis website) penyedia token API untuk mengakses model AI
+P31 [List Bullet]: TIDAK perlu install, TIDAK perlu jalankan di CMD
+P32 [List Bullet]: Hanya perlu: Buka browser → login ke https://opencode.ai
+P33 [List Bullet]: Buat API Key & copy token
+P34 [List Bullet]: Token tersebut di-paste ke dashboard 9Router
+P35 [List Bullet]: Lebih stabil dibanding Antigravity gratis biasa
+P36 [Heading 2]: 2.3 Alur Kerja:
+P37 [Normal]: ANTIGRAVITY
+P38 [Normal]: ↓ (Kirim Prompt)
+P39 [Normal]: 9ROUTER (Lokal Gateway)
+P40 [Normal]: ↓ (Routing cerdas)
+P41 [Normal]: OPENCODE (Provider AI)
+P42 [Normal]: ↓ (Balik kode)
+P43 [Normal]: ANTIGRAVITY (Editor)
+P45 [Heading 1]: BAB 3: INSTALASI & SETUP 9ROUTER + OPENCODE
+P46 [Heading 2]: LANGKAH 0: INSTALL NODE.JS (Langkah Pertama Paling Penting!)
+P47 [Heading 3]: Apa itu Node.js?
+P48 [Normal]: Node.js adalah runtime environment yang membuat laptop kamu bisa menjalankan aplikasi JavaScript
+P49 [List Bullet]: 9Router dibangun dengan Node.js, jadi WAJIB install terlebih dahulu
+P50 [List Bullet]: Jika belum ada Node.js → tidak bisa jalankan 9Router
+P51 [Heading 3]: Langkah Instalasi Node.js:
+P52 [Normal]: 1. Buka website: https://nodejs.org
+P53 [Normal]: → Pilih versi LTS (Long Term Support)
+P55 [Normal]: 2. Download installer untuk Windows
+P56 [Normal]: → File akan bernama: node-v18.xxx.msi atau node-v20.xxx.msi
+P58 [Normal]: 3. Klik installer & ikuti langkah instalasi:
+P59 [List Bullet]: Klik "Next" beberapa kali
+P60 [List Bullet]: Pilih "I Accept" untuk terms & conditions
+P61 [List Bullet]: ⚠️ PENTING: Centang "Add to PATH" agar bisa diakses dari CMD
+P62 [List Bullet]: Klik "Install"
+P63 [List Bullet]: Tunggu hingga selesai (5-10 menit)
+P65 [Normal]: 4. Restart laptop (PENTING untuk mengaktifkan PATH)
+P67 [Normal]: 5. Verifikasi instalasi berhasil:
+P68 [Normal]: Buka Command Prompt (CMD) baru dan ketik:
+P69 [Normal]: node -v
+P70 [Normal]: npm -v
+P72 [Normal]: ✅ Jika keluar versi (misal: v18.17.0 dan npm 9.6.4) → Node.js berhasil diinstall!
+P74 [Heading 2]: LANGKAH 1: INSTALL 9ROUTER GLOBALLY (di CMD)
+P75 [Normal]: Pastikan Node.js sudah terinstall terlebih dahulu!
+P77 [Normal]: Di Command Prompt, ketik:
+P78 [Normal]: npm install -g 9router
+P80 [Normal]: Tunggu hingga selesai (ditandai "added packages")
+P82 [Heading 2]: LANGKAH 2: JALANKAN 9ROUTER & BUKA WEB UI
+P83 [Normal]: Ketik di Command Prompt:
+P84 [Normal]: 9router
+P86 [Normal]: Akan muncul menu pilihan:
+P87 [Normal]: > Web UI (Open in Browser)
+P88 [Normal]: Terminal UI (Interactive CLI)
+P89 [Normal]: Hide to Tray (Background)
+P90 [Normal]: Exit
+P92 [Normal]: Pilih opsi pertama: "Web UI (Open in Browser)"
+P94 [Normal]: ✅ Browser akan terbuka otomatis ke dashboard 9Router
+P96 [Heading 2]: LANGKAH 3: LOGIN KE DASHBOARD 9ROUTER
+P97 [Normal]: Dashboard 9Router akan meminta password:
+P99 [Normal]: Masukkan password default:
+P100 [Normal]: 123456
+P102 [Normal]: ✅ Jika berhasil → Akan masuk ke halaman utama 9Router
+P105 [Heading 2]: LANGKAH 3B: AMBIL API KEY OPENCODE (Langkah Penting!)
+P106 [Normal]: Sebelum connect OpenCode ke 9Router, kita harus membuat & mengambil API Key dari OpenCode terlebih dahulu.
+P108 [Heading 3]: Step-by-Step Ambil API Key OpenCode:
+P109 [Normal]: 1. Buka browser dan masuk ke: https://opencode.ai
+P111 [Normal]: 2. Klik "Sign Up" atau "Register" (jika belum punya akun)
+P112 [Normal]: • Isi email
+P113 [Normal]: • Isi password
+P114 [Normal]: • Isi nama (optional)
+P115 [Normal]: • Klik "Create Account" atau "Sign Up"
+P117 [Normal]: 3. Verifikasi email
+P118 [Normal]: • OpenCode akan mengirim email verifikasi
+P119 [Normal]: • Buka email → Klik link verifikasi
+P121 [Normal]: 4. Login ke OpenCode
+P122 [Normal]: • Buka https://opencode.ai lagi
+P123 [Normal]: • Klik "Sign In" atau "Login"
+P124 [Normal]: • Masukkan email & password → Klik "Login"
+P126 [Normal]: ✅ Sudah masuk dashboard OpenCode!
+P128 [Normal]: 5. Cari menu "API Keys" atau "Settings"
+P129 [Normal]: • Di dashboard OpenCode, cari tombol/menu di:
+P130 [Normal]: - Bagian sidebar kiri (Settings, API Keys, Integrations)
+P131 [Normal]: - Atau di ikon profile/user (top-right)
+P132 [Normal]: • Klik menu yang bertuliskan "API Keys" atau "API"
+P134 [Normal]: 6. Buat API Key baru
+P135 [Normal]: • Klik tombol "+ Create API Key" atau "+ New" atau "+ Generate"
+P136 [Normal]: • Akan ada form, isi:
+P137 [Normal]: - API Key Name: "Antigravity" atau "9Router"
+P138 [Normal]: - (Field lain bisa dikosongkan atau default)
+P139 [Normal]: • Klik "Create", "Generate", atau "Save"
+P141 [Normal]: ✅ API Key baru sudah dibuat!
+P143 [Normal]: 7. Copy API Key
+P144 [Normal]: • API Key akan ditampilkan di layar (panjang string random)
+P145 [Normal]: • Contoh format: sk-xxx-yyy-zzz-...
+P146 [Normal]: • SEGERA copy dengan klik tombol "Copy" atau Ctrl+C
+P148 [Normal]: ⚠️ PENTING: API Key hanya ditampilkan SEKALI!
+P149 [Normal]: Jika tidak dicopy sekarang, tidak bisa dilihat lagi.
+P150 [Normal]: Harus buat API Key baru jika hilang.
+P152 [Normal]: 8. Simpan API Key
+P153 [Normal]: • Buka Notepad atau text editor
+P154 [Normal]: • Paste API Key: Ctrl+V
+P155 [Normal]: • Simpan file dengan nama: "opencode-api-key.txt"
+P156 [Normal]: • Jangan bagikan ke siapa pun!
+P158 [Normal]: ✅ API Key OpenCode sudah siap! Sekarang lanjut ke Langkah 4.
+P160 [Heading 2]: LANGKAH 4: CONNECT OPENCODE KE 9ROUTER
+P161 [Normal]: Di dashboard 9Router, cari menu "Providers" atau "Endpoint & Key":
+P163 [Normal]: 1. Pilih menu "Providers"
+P164 [Normal]: 2. Cari atau tambah provider "OpenCode"
+P165 [Normal]: 3. Masukkan API Key dari OpenCode (yang sudah dibuat sebelumnya)
+P166 [Normal]: 4. Klik "Connect" atau "Save"
+P168 [Normal]: ✅ Jika berhasil → Status OpenCode akan berubah menjadi "Connected" (hijau)
+P170 [Heading 2]: LANGKAH 5: BUAT COMBO DI 9ROUTER
+P171 [Normal]: Combo adalah konfigurasi AI yang menggabungkan Provider + Model
+P173 [Heading 3]: Langkah Membuat Combo:
+P174 [Normal]: 1. Buka menu "Combo & Vision Adapter" di dashboard 9Router
+P176 [Normal]: 2. Klik tombol "+ Create Combo" (warna orange/merah)
+P178 [Normal]: 3. Isi konfigurasi Combo:
+P179 [List Bullet]: Combo Name: OpenCode-AI
+P180 [List Bullet]: Select Provider: OpenCode
+P181 [List Bullet]: Select Model: Pilih salah satu model (contoh: Claude Sonnet, Claude Opus, dll)
+P183 [Normal]: 4. Klik "Create" atau "Save Combo"
+P185 [Normal]: ✅ Combo "OpenCode-AI" berhasil dibuat!
+P186 [Normal]: Combo ini nanti akan di-pilih di Antigravity
+P189 [Heading 2]: LANGKAH 6: BUAT API KEY DI 9ROUTER (untuk Antigravity)
+P190 [Normal]: Antigravity memerlukan API Key untuk terhubung ke 9Router.
+P192 [Normal]: 1. Di dashboard 9Router, buka menu "Endpoint & Key"
+P194 [Normal]: 2. Klik "+ Create API Key" atau "+ New"
+P196 [Normal]: 3. Isi nama API Key (contoh: "Antigravity-Key")
+P198 [Normal]: 4. Klik "Generate" atau "Create"
+P200 [Normal]: 5. Copy API Key yang dihasilkan (string panjang)
+P201 [Normal]: Contoh: sk-da27a8dd47d3696cc-ukrjjx-626c23b3
+P203 [Normal]: ⚠️ PENTING: Simpan API Key ini, akan digunakan di Langkah 7!
+P205 [Heading 2]: LANGKAH 7: SETUP ANTIGRAVITY DI CLI TOOLS (Dengan Model Selection)
+P206 [Normal]: Sekarang kita setup Antigravity di CLI Tools dengan memilih model yang ingin dipakai.
+P208 [Heading 3]: Step-by-Step:
+P209 [Normal]: 1. Di dashboard 9Router, buka menu "CLI Tools"
+P211 [Normal]: 2. Pilih "Antigravity" dari daftar tools yang tersedia
+P213 [Normal]: 3. Paste API Key yang dibuat di Langkah 6
+P214 [Normal]: → Tempel di field "API Key"
+      setelah itu klik start server
+P215 [Normal]: 4. Klik antigravity lalu Pilih Model yang ingin digunakan:
+P216 [Normal]: OPSI A: Pilih SEMUA model
+P217 [Normal]: → Klik checkbox "Select All" untuk pilih semua model
+P219 [Normal]: OPSI B: Pilih model tertentu saja
+P220 [Normal]: → Centang (✓) model yang ingin dipakai
+P221 [Normal]: → Contoh: Claude Sonnet, Claude Opus, Gemini 3.7, dll
+P223 [Normal]: 5. Klik tombol "Select"
+P224 [Normal]: → Ini untuk confirm model yang dipilih
+P226 [Normal]: 6. Klik tombol "Start Server" (warna orange/merah)
+P227 [Normal]: → MITM Server akan berubah dari "Stopped" menjadi "Running"
+P229 [Normal]: ✅ Antigravity sekarang terhubung ke 9Router dengan model pilihan!
+P231 [Heading 2]: LANGKAH 8: PILIH COMBO DI ANTIGRAVITY SETTINGS
+P232 [Normal]: Setelah Antigravity sudah terhubung, sekarang kita pilih Combo yang dibuat.
+P234 [Normal]: 1. Di Antigravity Editor, buka Settings (ikon Roda Gigi)
+P236 [Normal]: 2. Cari "Model Selection", "AI Provider", atau "9Router Settings"
+P238 [Normal]: 3. Pilih Combo yang dibuat: "OpenCode-AI"
+P239 [Normal]: → Di dropdown atau selector, cari combo "OpenCode-AI"
+P240 [Normal]: → Klik untuk pilih
+P242 [Normal]: 4. Klik "Save" atau "Connect"
+P244 [Normal]: ✅ SELESAI! Antigravity sudah siap dengan 9Router + OpenCode + Combo!
+P246 [Normal]: Sekarang kamu bisa mulai membuat website portfolio!
+P248 [Heading 1]: RINGKASAN KONFIGURASI LENGKAP
+P250 [Normal]: ✅ Setelah Langkah 7: Antigravity + 9Router + OpenCode sudah siap pakai!
+P252 [Heading 2]: Langkah 8: Pilih Combo di Antigravity Settings
+P253 [Normal]: Setelah semua setup selesai, baru kita pilih Combo "OpenCode-AI" di Antigravity Settings.
+P255 [Heading 1]: BAB 4: MEMBUAT MINI PROJECT - WEBSITE PORTFOLIO SISWA
+P256 [Heading 1]: Buatlah website portofolio kalian menggunakan antigravity dan buatlah sebagus mungkin 
+dan tambahkan di dalamnya project project yang sudah kalian buat selama belajar di sekolahan
+
+
+BAB 5: PUBLIKASIKAN DENGAN VERCEL
+P257 [Heading 2]: Apa itu Vercel?
+P258 [Normal]: Platform cloud gratis untuk publikasi website
+P259 [List Bullet]: Langsung baca dari GitHub repository
+P260 [List Bullet]: Auto deploy setiap kali kamu push kode
+P261 [List Bullet]: Dapatkan URL publik (nama.vercel.app)
+P262 [List Bullet]: Website bisa diakses dari mana saja
+P263 [Heading 2]: Langkah 1: Upload ke GitHub
+P264 [Normal]: Di folder proyek, buka Terminal dan jalankan:
+P265 [Normal]: git init
+P266 [Normal]: git add .
+P267 [Normal]: git commit -m "Portfolio Website"
+P268 [Normal]: git branch -M main
+P269 [Normal]: git remote add origin https://github.com/USERNAME/portfolio-nama.git
+P270 [Normal]: git push -u origin main
+P271 [Heading 2]: Langkah 2: Deploy di Vercel
+P272 [Normal]: Buka https://vercel.com
+P273 [List Bullet]: Login dengan akun GitHub
+P274 [List Bullet]: Klik "Add New → Project"
+P275 [List Bullet]: Pilih repository "portfolio-nama"
+P276 [List Bullet]: Klik "Deploy"
+P278 [Normal]: Tunggu proses selesai → Akan ada animasi confetti & URL publik akan muncul
+P279 [Heading 2]: Langkah 3: Dapatkan URL Live
+P280 [Normal]: Contoh URL yang akan kamu dapat:
+P281 [Normal]: https://portfolio-nama-siswa.vercel.app
+P283 [Normal]: ✅ Website kamu sudah LIVE! Bisa dibuka dari HP, laptop, komputer manapun!
+
+=== TABLES ===
+Table 0 10x2
+Langkah | Aksi
+Langkah 0 | Install Node.js
+Langkah 1 | npm install -g 9router
+Langkah 2 | Jalankan: 9router → Pilih Web UI
+Langkah 3 | Login dengan password: 123456
+Langkah 3B | Ambil API Key dari OpenCode (https://opencode.ai)
+Langkah 4 | Paste API Key OpenCode di "Providers" → Connect
+Langkah 5 | Buat Combo "OpenCode-AI" di "Combo & Vision Adapter"
+Langkah 6 | Buat API Key 9Router di "Endpoint & Key"
+Langkah 7 | CLI Tools → Antigravity → Paste API Key → Pilih Model → Select → Start Server
