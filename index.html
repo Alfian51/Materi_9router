@@ -3,485 +3,468 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modul Praktikum — 9Router, OpenCode &amp; Antigravity | Kelompok 8</title>
-<meta name="description" content="Materi lengkap: apa itu 9Router, kenapa harus pakai, fungsi, cara kerja, penjelasan OpenCode, kenapa ambil token dari OpenCode, setup Antigravity, tugas portofolio, dan deploy ke Vercel. SMK Negeri 2 Surakarta.">
+<title>AI Coding Training — 9Router & OpenCode di Antigravity</title>
+<meta name="description" content="Interactive AI Coding Training: konsep, instalasi, tugas portfolio, GitHub, dan deployment Vercel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="progress" id="progress"></div>
-<div class="bg-orbs"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
 
-<header class="nav" id="topnav">
-  <a class="brand" href="#hero"><span class="logo">◈</span><span>Kelompok<b>8</b> · SMKN 2 Ska</span></a>
-  <button class="burger" id="burger" aria-label="menu">☰</button>
-  <nav class="links" id="navlinks">
-    <a href="#masalah">Masalah</a>
-    <a href="#router">9Router</a>
-    <a href="#opencode">OpenCode</a>
-    <a href="#alur">Alur Kerja</a>
-    <a href="#instal">Instalasi</a>
-    <a href="#tugas">Tugas</a>
-    <a href="#vercel">Vercel</a>
-  </nav>
-  <a class="btn small" href="#tugas">Mulai Tugas →</a>
+<header class="topbar">
+  <button class="icon-btn menu-toggle" id="menuToggle" aria-label="menu">☰</button>
+  <a class="tb-brand" href="#pengenalan"><span class="tb-mark">◈</span><span class="tb-name">AI CODING<small>TRAINING</small></span></a>
+  <div class="tb-search">
+    <span class="tb-search-ico">⌕</span>
+    <input id="searchInput" type="text" placeholder="Cari materi… (9Router, OpenCode, Combo…)" autocomplete="off">
+    <div class="search-pop" id="searchPop"></div>
+  </div>
+  <div class="tb-right">
+    <span class="tb-progress" id="tbProgress">1 dari 9 bagian</span>
+    <div class="tb-bar"><span id="tbBar"></span></div>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-inner">
-    <div class="pill">📘 MODUL PRAKTIKUM · ALFIAN · ADRIAN · FINO · IRSYAD · 2026</div>
-    <h1>Membuat Website dengan <span class="grad">AI Coding</span> Tanpa Takut Limit.</h1>
-    <p class="lead">Pahami dulu <b>apa itu 9Router</b> dan <b>OpenCode</b>, kenapa keduanya jadi solusi saat Antigravity kena <b>rate limit</b>, lalu ikuti setup sampai website portofolio-mu tayang di <b>Vercel</b>.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="#router">📖 Mulai dari 9Router</a>
-      <a class="btn ghost" href="#instal">🚀 Langsung Setup</a>
-    </div>
-    <div class="chips">
-      <span>🚦 9Router = gateway AI lokal</span>
-      <span>🔑 OpenCode = penyedia token AI</span>
-      <span>🧠 Antigravity = editor AI coding</span>
-      <span>☁️ Vercel = hosting publik gratis</span>
-    </div>
-    <div class="stats">
-      <div class="stat"><b>9</b><span>Langkah Setup</span></div>
-      <div class="stat"><b>20</b><span>Foto Panduan</span></div>
-      <div class="stat"><b>2+</b><span>Project Portofolio</span></div>
-      <div class="stat"><b>1</b><span>Link Vercel Live</span></div>
-    </div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <p class="side-head">COURSE CONTENT</p>
+  <nav class="side-nav" id="sideNav">
+    <a href="#pengenalan" data-title="Pengenalan"><span class="num">01</span><span class="lbl">Pengenalan<i class="st"></i></span></a>
+    <a href="#router" data-title="9Router"><span class="num">02</span><span class="lbl">9Router<i class="st"></i></span></a>
+    <a href="#opencode" data-title="OpenCode"><span class="num">03</span><span class="lbl">OpenCode<i class="st"></i></span></a>
+    <a href="#workflow" data-title="Workflow"><span class="num">04</span><span class="lbl">Workflow<i class="st"></i></span></a>
+    <a href="#instalasi" data-title="Instalasi Setup"><span class="num">05</span><span class="lbl">Instalasi &amp; Setup<i class="st"></i></span></a>
+    <a href="#tugas" data-title="Tugas Praktik"><span class="num">06</span><span class="lbl">Tugas Praktik<i class="st"></i></span></a>
+    <a href="#praktik" data-title="Membuat Portfolio"><span class="num">07</span><span class="lbl">Membuat Portfolio<i class="st"></i></span></a>
+    <a href="#github" data-title="GitHub"><span class="num">08</span><span class="lbl">GitHub<i class="st"></i></span></a>
+    <a href="#vercel" data-title="Vercel Deployment"><span class="num">09</span><span class="lbl">Vercel<i class="st"></i></span></a>
+  </nav>
+  <div class="side-foot"><p>Kelompok 8 · SMKN 2 Surakarta · 2026</p></div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="main">
+<div class="reader">
+
+<!-- 01 -->
+<section class="chapter" id="pengenalan" data-name="Pengenalan">
+  <p class="eyebrow">01 / PENGENALAN</p>
+  <h1>AI Coding Training</h1>
+  <p class="doc-sub">Pemanfaatan 9Router dan OpenCode untuk AI Coding di Antigravity</p>
+  <p>Pelajari konsep, lakukan instalasi dan setup, kemudian gunakan workflow tersebut untuk membuat website portfolio dan mempublikasikannya melalui Vercel.</p>
+  <div class="callout">Sebelum masuk ke praktik, kita perlu memahami apa itu 9Router dan OpenCode, apa fungsi masing-masing, serta bagaimana keduanya dapat digunakan dalam workflow AI Coding bersama Antigravity.</div>
+
+  <h2>Course path</h2>
+  <div class="path">
+    <div class="path-step"><span>01</span><b>Pengenalan</b><p>Konsep dasar &amp; tujuan</p></div>
+    <div class="path-arrow">↓</div>
+    <div class="path-step"><span>02</span><b>Setup</b><p>Instalasi 9Router + OpenCode</p></div>
+    <div class="path-arrow">↓</div>
+    <div class="path-step"><span>03</span><b>Praktik</b><p>Website portfolio</p></div>
+    <div class="path-arrow">↓</div>
+    <div class="path-step"><span>04</span><b>Deployment</b><p>GitHub → Vercel → Online</p></div>
   </div>
-  <div class="hero-cards">
-    <div class="hcard tilt"><img src="assets/combo%209router.png" alt="Combo 9Router"><div><b>9Router Gateway</b><span>localhost:20128 · routing cerdas</span></div></div>
-    <div class="hcard tilt"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="OpenCode ready"><div><b>OpenCode Token</b><span>opencode.ai · API key stabil</span></div></div>
-    <div class="hcard tilt"><img src="assets/tampilan%20vercel%20deploy%20berhasil.jpeg" alt="Vercel deploy sukses"><div><b>Vercel Deploy</b><span>nama.vercel.app · live!</span></div></div>
-  </div>
-</section>
+  <p><a class="btn" href="#router">Mulai Materi →</a></p>
 
-<main>
-<!-- BAB 1 : MASALAH -->
-<section class="block" id="masalah">
-  <div class="kicker">BAB 1 · LATAR BELAKANG MASALAH</div>
-  <h2>Kenapa Antigravity <span class="grad">Sering Kena Limit?</span></h2>
-  <p class="sub">Sebelum bicara solusi, kita harus paham dulu masalahnya. Ini kunci kenapa 9Router dan OpenCode dibutuhkan.</p>
+  <h2>Mengapa workflow AI Coding perlu diatur?</h2>
+  <p>Saat coding dengan bantuan AI, ada tiga hal yang perlu dipahami dulu: token, rate limit, dan ketergantungan pada satu provider.</p>
+  <h3>Token</h3>
+  <p>Token adalah satuan yang digunakan model AI untuk memproses input dan output. Semakin panjang atau kompleks interaksi yang diberikan, penggunaan token dapat semakin besar.</p>
+  <h3>Rate limit</h3>
+  <p>Rate limit adalah batas penggunaan yang diberikan suatu layanan AI dalam periode tertentu. Batas tersebut dapat berkaitan dengan jumlah request atau jumlah token yang dapat diproses.</p>
+  <p>Ketika batas penggunaan tercapai, request dapat ditolak sampai batas tersebut tersedia kembali.</p>
+  <div class="example"><p class="ex-label">CONTOH</p><p class="ex-code">Rate Limit Exceeded</p><p>Kamu minta Antigravity buatkan Navbar portofolio. Di tengah jalan muncul error ini → AI berhenti merespons → kerja kepotong sampai batas tersedia kembali.</p></div>
+  <h3>Intinya</h3>
+  <p>Ketika kita hanya bergantung pada satu provider, keterbatasan seperti rate limit dapat mengganggu proses coding. Karena itu, kita dapat menggunakan workflow yang lebih fleksibel dengan mengatur beberapa provider melalui satu gateway.</p>
 
-  <div class="grid3">
-    <div class="card"><div class="ico">🎫</div><h3>Apa itu Token?</h3><p>Model AI tidak membaca kalimat utuh. Teks dipecah menjadi satuan kecil bernama <b>token</b> (kurang lebih = potongan kata / karakter). Semakin panjang prompt-mu, semakin banyak token yang dikonsumsi.</p></div>
-    <div class="card"><div class="ico">⏳</div><h3>Apa itu Rate Limit?</h3><p>Layanan AI gratis memberi <b>batas pemakaian</b> per jam / per hari. Kalau kuota token habis, muncul error <code>Rate Limit Exceeded</code> atau <code>Quota Reached</code> — AI berhenti merespons.</p></div>
-    <div class="card"><div class="ico">🧪</div><h3>Contoh Skenario Nyata</h3><p>Kamu sedang minta Antigravity membuat <b>Navbar</b> untuk website portofolio. Baru separuh jalan, token habis → error → pekerjaan macet. Harus menunggu reset kuota atau ganti akun. ❌</p></div>
-  </div>
-
-  <div class="errorbar">❌ "Rate Limit Exceeded" / "Quota Reached" — Antigravity berhenti merespons, pekerjaan terhenti di tengah jalan.</div>
-
-  <div class="panel">
-    <h3>💡 Inti masalahnya</h3>
-    <p>Antigravity gratis bergantung pada <b>satu sumber token yang terbatas</b>. Kalau sumber itu habis, tidak ada jalur cadangan — kerja langsung berhenti. Solusinya: sediakan <b>jalur AI cadangan</b> lewat sistem perantara yang bisa mengalihkan permintaan ke provider lain. Sistem perantara itu bernama <b>9Router</b>, dan sumber token cadangannya bernama <b>OpenCode</b>.</p>
-  </div>
-</section>
-
-<!-- BAB 2.1 : 9ROUTER -->
-<section class="block" id="router">
-  <div class="kicker">BAB 2.1 · PEMBAHASAN UTAMA</div>
-  <h2>Apa itu <span class="grad">9Router?</span></h2>
-  <p class="sub">Pahami tiga hal ini dulu: definisi, alasan memakai, dan fungsinya. Setelah itu baru masuk ke cara kerja teknisnya.</p>
-
-  <div class="panel">
-    <h3>Definisi 9Router</h3>
-    <p><b>9Router</b> adalah aplikasi <b>lokal</b> yang berjalan di komputer kamu sendiri (bukan di cloud/server orang lain). Ia bertugas menjadi <b>gateway — gerbang perantara — bagi semua permintaan AI</b> yang keluar dari editor coding seperti Antigravity. Semua prompt yang kamu ketik tidak langsung menuju provider AI, melainkan lewat 9Router dulu.</p>
-    <ul class="check">
-      <li>Berjalan di <b>port default 20128</b> → <code>http://localhost:20128</code></li>
-      <li>Harus <b>di-install dan dijalankan di CMD</b> (Command Prompt)</li>
-      <li>Punya <b>dashboard Web UI</b> yang dibuka lewat browser</li>
-      <li>Bertindak seperti <b>"polisi lalu lintas AI"</b> — menentukan request menuju provider mana</li>
-      <li>Menyimpan <b>log semua request</b> yang masuk, untuk monitoring pemakaian</li>
-    </ul>
+  <h2>Empat komponen yang dipakai</h2>
+  <div class="duo">
+    <div class="mini"><b>🚦 9Router</b><p>Gateway yang meneruskan dan mengatur request sesuai konfigurasi.</p></div>
+    <div class="mini"><b>🔑 OpenCode</b><p>Salah satu provider yang menyediakan akses ke model AI.</p></div>
+    <div class="mini"><b>🧠 Antigravity</b><p>Lingkungan / editor untuk coding dengan bantuan AI.</p></div>
+    <div class="mini"><b>☁️ Vercel</b><p>Platform untuk mempublikasikan website. Dipakai di tahap akhir.</p></div>
   </div>
 
-  <h3 class="mt">Kenapa Kita Harus Menggunakan 9Router?</h3>
-  <p class="sub2">9Router tidak sekadar "alat tambahan". Ia memecahkan masalah yang paling sering memutus alur kerja saat ngoding pakai AI.</p>
-  <div class="grid3">
-    <div class="card"><div class="ico">🛡️</div><h3>Anti-Macet saat Limit</h3><p>Tanpa 9Router, satu provider limit = kerja berhenti total. Dengan 9Router, request <b>otomatis dialihkan</b> ke provider lain yang masih sehat. Produktivitas tidak pernah putus.</p></div>
-    <div class="card"><div class="ico">🧩</div><h3>Satu Pintu, Banyak Model</h3><p>9Router menggabungkan banyak provider dan model (Claude Sonnet, Claude Opus, Gemini, dll) lewat konsep <b>Combo</b>. Kamu pilih model cukup sekali di dashboard, bukan di sana-sini.</p></div>
-    <div class="card"><div class="ico">📊</div><h3>Kontrol &amp; Log Lengkap</h3><p>Semua request tercatat: model apa yang dipakai, berapa banyak token, provider mana yang merespons. Pemakaian jadi transparan dan mudah dipantau.</p></div>
-    <div class="card"><div class="ico">🔌</div><h3>Jembatan ke Antigravity</h3><p>9Router menyediakan <b>MITM Server</b> dan <b>API Key khusus</b> sehingga Antigravity bisa terhubung secara resmi. Editor tetap dipakai seperti biasa, tapi sumber AInya lebih banyak.</p></div>
-  </div>
-
-  <div class="cmpwrap">
-    <h3 class="mt">Perbandingan: Tanpa 9Router vs Dengan 9Router</h3>
-    <table class="cmp">
-      <tr><th>Kondisi</th><th>Tanpa 9Router</th><th>Dengan 9Router</th></tr>
-      <tr><td>Provider utama kena limit</td><td>❌ Pekerjaan berhenti</td><td>✅ Otomatis pindah ke provider cadangan</td></tr>
-      <tr><td>Pilihan model</td><td>Terbatas sesuai akun</td><td>Banyak: Claude, Gemini, dll (via Combo)</td></tr>
-      <tr><td>Monitoring pemakaian</td><td>❌ Tidak ada catatan</td><td>✅ Log semua request</td></tr>
-      <tr><td>API Key terpusat</td><td>❌ Kelola manual di tiap tempat</td><td>✅ Satu dashboard kelola semua</td></tr>
-      <tr><td>Ketergantungan</td><td>Satu sumber token</td><td>Banyak sumber, saling cadangan</td></tr>
-    </table>
-  </div>
-
-  <h3 class="mt">Fungsi 9Router</h3>
-  <p class="sub2">Secara ringkas, inilah 7 fungsi utama yang dijalankan 9Router.</p>
-  <div class="funclist">
-    <div class="fitem"><span class="fico">🚦</span><div><h4>Routing Cerdas</h4><p>Menentukan provider mana yang akan menerima setiap permintaan AI berdasarkan konfigurasi dan kondisi terkini.</p></div></div>
-    <div class="fitem"><span class="fico">🔄</span><div><h4>Auto-Failover</h4><p>Deteksi otomatis saat satu provider error / limit → langsung alihkan ke provider lain tanpa intervensi manual.</p></div></div>
-    <div class="fitem"><span class="fico">🧩</span><div><h4>Combo &amp; Model</h4><p>Menggabungkan Provider + Model menjadi satu paket bernama Combo (misal: OpenCode + Claude Sonnet).</p></div></div>
-    <div class="fitem"><span class="fico">🔑</span><div><h4>Manajemen API Key</h4><p>Menyimpan API Key dari OpenCode dan menerbitkan API Key khusus untuk dipakai Antigravity.</p></div></div>
-    <div class="fitem"><span class="fico">📊</span><div><h4>Log &amp; Monitoring</h4><p>Mencatat setiap request yang lewat: waktu, model, provider, dan status respons.</p></div></div>
-    <div class="fitem"><span class="fico">🖥️</span><div><h4>MITM Server</h4><p>Server perantara (Stopped → Running) yang menghubungkan Antigravity ke gateway 9Router.</p></div></div>
-    <div class="fitem"><span class="fico">🎛️</span><div><h4>Dashboard Web UI</h4><p>Antarmuka berbasis browser untuk mengatur semua hal di atas, cukup dengan klik-klik.</p></div></div>
-  </div>
-
-  <h3 class="mt">Cara Kerja 9Router — Langkah demi Langkah</h3>
-  <p class="sub2">Ini alur teknis lengkap dari kamu mengetik prompt sampai kode muncul kembali di editor.</p>
-  <div class="howlist">
-    <div class="hstep"><span class="hsnum">1</span><div><h4>Kamu mengetik prompt di Antigravity</h4><p>Contoh: "Buatkan navbar responsif untuk website portofolio".</p></div></div>
-    <div class="hstep"><span class="hsnum">2</span><div><h4>Antigravity kirim request ke 9Router</h4><p>Request menuju alamat lokal <code>http://localhost:20128</code> — bukan langsung ke internet.</p></div></div>
-    <div class="hstep"><span class="hsnum">3</span><div><h4>9Router verifikasi API Key</h4><p>Mengecek API Key dari Antigravity (yang dibuat di menu Endpoint &amp; Key), valid atau tidak.</p></div></div>
-    <div class="hstep"><span class="hsnum">4</span><div><h4>9Router membaca Combo aktif</h4><p>Combo menentukan Provider + Model yang dipakai, misalnya <b>OpenCode + Claude Sonnet</b>.</p></div></div>
-    <div class="hstep"><span class="hsnum">5</span><div><h4>9Router cek kesehatan provider</h4><p>Apakah OpenCode masih sehat? Ada rate limit / error? Jika rusak, failover ke provider lain.</p></div></div>
-    <div class="hstep"><span class="hsnum">6</span><div><h4>Request diteruskan ke OpenCode</h4><p>9Router memanggil API OpenCode memakai API Key OpenCode yang sudah kamu paste di menu Providers.</p></div></div>
-    <div class="hstep"><span class="hsnum">7</span><div><h4>Model AI memproses prompt</h4><p>Model (Claude Sonnet / Opus / Gemini) membaca prompt dan menghasilkan jawaban / kode.</p></div></div>
-    <div class="hstep"><span class="hsnum">8</span><div><h4>Respons kembali lewat 9Router</h4><p>9Router menerima balasan, mencatat ke log, lalu meneruskan ke Antigravity.</p></div></div>
-    <div class="hstep"><span class="hsnum">9</span><div><h4>Kode muncul di editor</h4><p>Antigravity menampilkan hasil, kamu lanjut ngoding. Semua terasa normal, padahal sumbernya banyak.</p></div></div>
-  </div>
-
-  <div class="flow">
-    <div class="fnode">🧠<b>ANTIGRAVITY</b><span>kirim prompt</span></div>
-    <div class="farrow">↓</div>
-    <div class="fnode hot">🚦<b>9ROUTER</b><span>gateway :20128 · routing &amp; failover</span></div>
-    <div class="farrow">↓</div>
-    <div class="fnode">🔑<b>OPENCODE</b><span>provider AI · balas kode</span></div>
-    <div class="farrow">↓</div>
-    <div class="fnode">✅<b>ANTIGRAVITY</b><span>editor terima kode</span></div>
-  </div>
-</section>
-
-<!-- BAB 2.2 : OPENCODE -->
-<section class="block" id="opencode">
-  <div class="kicker">BAB 2.2 · PENYEDIA TOKEN</div>
-  <h2>Apa itu <span class="grad">OpenCode?</span></h2>
-  <p class="sub">9Router hanya pengatur lalu lintas. Yang benar-benar menjalankan AI dan mengeluarkan kode adalah provider — dan salah satu provider token yang kita pakai adalah OpenCode.</p>
-
-  <div class="panel">
-    <h3>Definisi OpenCode</h3>
-    <p><b>OpenCode</b> adalah <b>platform online</b> (berbasis website di <code>https://opencode.ai</code>) yang menyediakan <b>token API untuk mengakses model AI</b> seperti Claude Sonnet, Claude Opus, dan lainnya. Berbeda dengan 9Router, OpenCode <b>tidak perlu di-install</b> dan <b>tidak perlu dijalankan di CMD</b>. Cukup buka browser, daftar akun, login, lalu buat API Key.</p>
-    <ul class="check">
-      <li>Berbasis website — akses lewat <b>browser</b>, tanpa install</li>
-      <li>Menyediakan <b>API Key</b> (format: <code>sk-xxx-yyy-zzz-...</code>)</li>
-      <li>Ada paket <b>Free / Ready to Use</b> — cocok untuk belajar</li>
-      <li>API Key di-paste ke dashboard 9Router → langsung terhubung</li>
-      <li>Lebih stabil dibanding akun Antigravity gratis biasa</li>
-    </ul>
-  </div>
-
-  <h3 class="mt">Kenapa Kita Ambil Token dari OpenCode?</h3>
-  <p class="sub2">Pertanyaan paling penting: kenapa tidak langsung pakai token acak? Berikut alasannya secara lengkap.</p>
-  <div class="grid3">
-    <div class="card"><div class="ico">🎟️</div><h3>API Key = Tiket Akses</h3><p>Model AI tidak bisa dipanggil tanpa izin. API Key dari OpenCode adalah <b>tiket resmi</b> yang membuktikan kita berhak memakai model-model di dalamnya. Tanpa key, 9Router tidak punya cara memanggil AI.</p></div>
-    <div class="card"><div class="ico">🔓</div><h3>Kuota Lebih Lega</h3><p>Akun Antigravity gratis mudah kena rate limit. Token dari OpenCode memberi <b>jalur pemakaian sendiri</b> yang lebih stabil, sehingga kerja tidak gampang terputus di tengah jalan.</p></div>
-    <div class="card"><div class="ico">🧠</div><h3>Akses Banyak Model</h3><p>Dari satu platform OpenCode kita bisa memilih berbagai model — <b>Claude Sonnet, Claude Opus, dan lainnya</b> — tanpa harus membuat akun di banyak tempat.</p></div>
-    <div class="card"><div class="ico">🌐</div><h3>Online &amp; Simpel</h3><p>Prosesnya ringan: buka <code>opencode.ai</code> → Sign Up → verifikasi email → login → buat API Key → copy. Tidak ada proses instalasi yang berat.</p></div>
-    <div class="card"><div class="ico">🔗</div><h3>Paste Sekali, Dipakai Terus</h3><p>Setelah key di-paste ke menu <b>Providers</b> di 9Router dan statusnya <b>Connected</b>, seluruh request dari Antigravity otomatis memakai key tersebut. Sekali setup, selesai.</p></div>
-    <div class="card"><div class="ico">✅</div><h3>Ready to Use</h3><p>OpenCode menyediakan layanan gratis yang <b>langsung siap pakai</b> — sangat cocok untuk praktikum dan tugas sekolah tanpa biaya.</p></div>
-  </div>
-
-  <div class="warn">⚠️ <b>PENTING:</b> API Key OpenCode hanya ditampilkan <b>SATU KALI</b> saat dibuat. Begitu layar tertutup, key tidak bisa dilihat lagi — harus membuat key baru. Jadi langsung <b>copy dan simpan</b> ke file <code>opencode-api-key.txt</code>, jangan dibagikan ke siapa pun.</div>
-
-  <div class="split">
-    <div>
-      <figure class="shot"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="OpenCode ready to use" loading="lazy"><figcaption>OpenCode Free — Ready to Use</figcaption></figure>
-    </div>
-    <div>
-      <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Sambung OpenCode ke 9Router" loading="lazy"><figcaption>Connect OpenCode di menu Providers 9Router</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- BAB 2.3 : ALUR KERJA -->
-<section class="block" id="alur">
-  <div class="kicker">BAB 2.3 · ALUR KERJA TERPADU</div>
-  <h2>Antigravity → 9Router → OpenCode: <span class="grad">Satu Kesatuan</span></h2>
-  <p class="sub">Ketiga komponen bekerja dalam satu lingkaran. 9Router ada di tengah sebagai otak pengatur, OpenCode sebagai sumber tenaga, dan Antigravity sebagai tempat kamu bekerja.</p>
-  <div class="flow">
-    <div class="fnode">🖥️<b>ANTIGRAVITY</b><span>editor tempat kamu mengetik prompt</span></div>
-    <div class="farrow">↓</div>
-    <div class="fnode hot">🚦<b>9ROUTER</b><span>gateway lokal · routing cerdas · failover · log</span></div>
-    <div class="farrow">↓</div>
-    <div class="fnode">🔑<b>OPENCODE</b><span>provider AI · model memproses · balas kode</span></div>
-    <div class="farrow">↓</div>
-    <div class="fnode">✅<b>ANTIGRAVITY</b><span>kode tampil · kerja lanjut tanpa putus</span></div>
-  </div>
-  <div class="panel">
-    <h3>Kesimpulan Bab 2</h3>
-    <p><b>9Router</b> = polisi lalu lintas lokal yang memastikan request AI tidak pernah macet. <b>OpenCode</b> = pemasok token/model yang membuat 9Router punya tujuan untuk dituju. Gabungan keduanya membuat <b>Antigravity</b> bekerja terus-menerus tanpa takut limit. Sekarang saatnya praktik.</p>
-  </div>
-</section>
-
-<!-- BAB 3 : INSTALASI -->
-<section class="block" id="instal">
-  <div class="kicker">BAB 3 · PRAKTIK LANGSUNG</div>
-  <h2>Instalasi &amp; Setup <span class="grad">Lengkap</span></h2>
-  <p class="sub">Ikuti urutan langkah dari 0 sampai 8, jangan loncat. Estimasi total 30–45 menit.</p>
-
-  <div class="steps">
-    <article class="step" id="s0">
-      <div class="snum">0</div>
-      <div class="sbody">
-        <h3>Install Node.js: Langkah Pertama yang Paling Penting!</h3>
-        <p><b>Apa itu Node.js?</b> Node.js adalah <i>runtime environment</i> yang membuat laptop bisa menjalankan aplikasi JavaScript di luar browser. 9Router dibangun dengan Node.js — jadi <b>wajib install dulu</b>. Tanpa Node.js, 9Router tidak bisa dijalankan.</p>
-        <ol>
-          <li>Buka <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> → pilih versi <b>LTS</b> (Long Term Support).</li>
-          <li>Download installer Windows → filenya bernama <code>node-v18.xxx.msi</code> atau <code>node-v20.xxx.msi</code>.</li>
-          <li>Klik installer: <b>Next</b> beberapa kali → pilih <b>I Accept</b> untuk terms &amp; conditions.</li>
-          <li>⚠️ <b>PENTING:</b> centang <b>Add to PATH</b> agar Node.js bisa diakses dari CMD → klik <b>Install</b> → tunggu 5–10 menit.</li>
-          <li><b>Restart laptop</b> — penting agar PATH aktif.</li>
-          <li>Verifikasi: buka CMD baru lalu ketik:</li>
-        </ol>
-        <div class="code"><code>node -v</code><button data-copy="node -v">copy</button></div>
-        <div class="code"><code>npm -v</code><button data-copy="npm -v">copy</button></div>
-        <p class="ok">✅ Jika keluar versi (misal <code>v18.17.0</code> dan <code>npm 9.6.4</code>) → Node.js berhasil terpasang!</p>
-        <div class="shots2">
-          <figure class="shot"><img src="assets/install%20node.png" alt="Installer Node.js" loading="lazy"><figcaption>Installer Node.js LTS</figcaption></figure>
-          <figure class="shot"><img src="assets/node%20-v.png" alt="Verifikasi node -v" loading="lazy"><figcaption>Verifikasi: <code>node -v</code></figcaption></figure>
-        </div>
-      </div>
-    </article>
-
-    <article class="step" id="s1">
-      <div class="snum">1</div>
-      <div class="sbody">
-        <h3>Install 9Router Secara Global</h3>
-        <p>Pastikan Node.js sudah terpasang. Di Command Prompt, ketik perintah berikut lalu Enter:</p>
-        <div class="code big"><code>npm install -g 9router</code><button data-copy="npm install -g 9router">copy</button></div>
-        <p>Tunggu sampai proses selesai — ditandai munculnya tulisan <code>added packages</code>.</p>
-        <figure class="shot"><img src="assets/install%209router.png" alt="Install 9router global" loading="lazy"><figcaption>Install 9Router global via npm</figcaption></figure>
-      </div>
-    </article>
-
-    <article class="step" id="s2">
-      <div class="snum">2</div>
-      <div class="sbody">
-        <h3>Jalankan 9Router & Buka Web UI</h3>
-        <p>Di Command Prompt, ketik:</p>
-        <div class="code big"><code>9router</code><button data-copy="9router">copy</button></div>
-        <p>Akan muncul menu pilihan: <b>Web UI (Open in Browser)</b>, Terminal UI (Interactive CLI), Hide to Tray (Background), dan Exit. Pilih opsi pertama: <b>Web UI (Open in Browser)</b>.</p>
-        <p class="ok">✅ Browser terbuka otomatis ke dashboard 9Router.</p>
-        <figure class="shot"><img src="assets/Menu%20Pilihan%209router%20(Web%20UI).jpg" alt="Menu pilihan 9Router" loading="lazy"><figcaption>Pilih Web UI (Open in Browser)</figcaption></figure>
-      </div>
-    </article>
-
-    <article class="step" id="s3">
-      <div class="snum">3</div>
-      <div class="sbody">
-        <h3>Login ke Dashboard 9Router</h3>
-        <p>Dashboard akan meminta password. Masukkan <b>password default</b>:</p>
-        <div class="code big"><code>123456</code><button data-copy="123456">copy</button></div>
-        <p class="ok">✅ Jika berhasil, kamu masuk ke halaman utama 9Router.</p>
-        <figure class="shot"><img src="assets/login%209router.jpeg" alt="Login dashboard 9Router" loading="lazy"><figcaption>Password default: <code>123456</code></figcaption></figure>
-      </div>
-    </article>
-
-    <article class="step" id="s3b">
-      <div class="snum">3B</div>
-      <div class="sbody">
-        <h3>Ambil API Key dari OpenCode</h3>
-        <p>Sebelum menghubungkan OpenCode ke 9Router, kita harus membuat dan mengambil API Key OpenCode dulu. Ikuti urutannya:</p>
-        <ol>
-          <li>Buka browser → masuk ke <a href="https://opencode.ai" target="_blank" rel="noopener">opencode.ai</a>.</li>
-          <li>Klik <b>Sign Up / Register</b> (jika belum punya akun): isi email, password, nama (opsional) → <b>Create Account</b>.</li>
-          <li>Verifikasi email: OpenCode mengirim email → buka → klik link verifikasi.</li>
-          <li>Login: buka opencode.ai lagi → <b>Sign In</b> → masukkan email &amp; password.</li>
-          <li>Cari menu <b>API Keys</b> / <b>Settings</b>: bisa di sidebar kiri (Settings, API Keys, Integrations) atau di ikon profil kanan-atas.</li>
-          <li>Klik <b>+ Create API Key</b> / <b>+ New</b> / <b>+ Generate</b> → isi nama key, misal <code>Antigravity</code> atau <code>9Router</code> → klik <b>Create / Generate / Save</b>.</li>
-          <li><b>Copy API Key segera</b> — key muncul satu kali saja (format <code>sk-xxx-yyy-zzz-...</code>).</li>
-          <li>Simpan ke Notepad dengan nama <code>opencode-api-key.txt</code>. Jangan bagikan ke siapa pun.</li>
-        </ol>
-        <div class="warn">⚠️ API Key hanya ditampilkan <b>SEKALI</b>. Tidak dicopy sekarang = tidak bisa dilihat lagi, harus buat key baru.</div>
-        <figure class="shot"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="Dashboard OpenCode" loading="lazy"><figcaption>Dashboard OpenCode — Free, Ready to Use</figcaption></figure>
-      </div>
-    </article>
-
-    <article class="step" id="s4">
-      <div class="snum">4</div>
-      <div class="sbody">
-        <h3>Connect OpenCode ke 9Router</h3>
-        <p>Di dashboard 9Router, buka menu <b>Providers</b> (atau Endpoint &amp; Key):</p>
-        <ol>
-          <li>Pilih menu <b>Providers</b>.</li>
-          <li>Cari / tambah provider <b>OpenCode</b>.</li>
-          <li>Masukkan API Key OpenCode yang sudah dibuat sebelumnya.</li>
-          <li>Klik <b>Connect</b> / <b>Save</b>.</li>
-        </ol>
-        <p class="ok">✅ Jika berhasil, status OpenCode berubah menjadi <b>Connected</b> (hijau).</p>
-        <div class="shots2">
-          <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Connect provider OpenCode</figcaption></figure>
-          <figure class="shot"><img src="assets/menambah%20apikey%209router.jpeg" alt="Menambah API key" loading="lazy"><figcaption>Paste API Key OpenCode</figcaption></figure>
-        </div>
-      </div>
-    </article>
-
-    <article class="step" id="s5">
-      <div class="snum">5</div>
-      <div class="sbody">
-        <h3>Buat Combo "OpenCode-AI"</h3>
-        <p><b>Combo</b> adalah konfigurasi AI yang menggabungkan <b>Provider + Model</b>. Langkahnya:</p>
-        <ol>
-          <li>Buka menu <b>Combo &amp; Vision Adapter</b> di dashboard 9Router.</li>
-          <li>Klik tombol <b>+ Create Combo</b> (warna orange/merah).</li>
-          <li>Isi konfigurasi: Combo Name: <code>OpenCode-AI</code> · Provider: <code>OpenCode</code> · Model: pilih salah satu (misal Claude Sonnet / Claude Opus / dll).</li>
-          <li>Klik <b>Create</b> / <b>Save Combo</b>.</li>
-        </ol>
-        <p class="ok">✅ Combo "OpenCode-AI" berhasil dibuat. Combo inilah yang nanti dipilih di Antigravity.</p>
-        <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Combo "OpenCode-AI" — Provider + Model</figcaption></figure>
-      </div>
-    </article>
-
-    <article class="step" id="s6">
-      <div class="snum">6</div>
-      <div class="sbody">
-        <h3>Buat API Key 9Router (untuk Antigravity)</h3>
-        <p>Antigravity memerlukan API Key dari 9Router agar bisa terhubung. Caranya:</p>
-        <ol>
-          <li>Di dashboard 9Router, buka menu <b>Endpoint &amp; Key</b>.</li>
-          <li>Klik <b>+ Create API Key</b> / <b>+ New</b>.</li>
-          <li>Isi nama API Key, contoh: <code>Antigravity-Key</code>.</li>
-          <li>Klik <b>Generate</b> / <b>Create</b> → copy key yang dihasilkan. Contoh format: <code>sk-da27a8dd47d3696cc-ukrjjx-626c23b3</code>.</li>
-        </ol>
-        <div class="warn">⚠️ Simpan API Key ini — akan dipakai di Langkah 7!</div>
-        <figure class="shot"><img src="assets/API%20config.jpeg" alt="API config 9Router" loading="lazy"><figcaption>Endpoint &amp; Key — buat API Key baru</figcaption></figure>
-      </div>
-    </article>
-
-    <article class="step" id="s7">
-      <div class="snum">7</div>
-      <div class="sbody">
-        <h3>Setup Antigravity di CLI Tools: Model Selection</h3>
-        <p>Sekarang kita hubungkan Antigravity lewat menu CLI Tools dan pilih model yang dipakai.</p>
-        <ol>
-          <li>Di dashboard 9Router, buka menu <b>CLI Tools</b>.</li>
-          <li>Pilih <b>Antigravity</b> dari daftar tools yang tersedia.</li>
-          <li>Paste <b>API Key dari Langkah 6</b> di field API Key → setelah itu klik <b>Start Server</b>.</li>
-          <li>Klik Antigravity, lalu <b>pilih model</b>:
-            <ul class="check">
-              <li><b>Opsi A:</b> centang checkbox <b>Select All</b> untuk memakai semua model.</li>
-              <li><b>Opsi B:</b> centang model tertentu saja — contoh: Claude Sonnet, Claude Opus, Gemini 3.7, dll.</li>
-            </ul>
-          </li>
-          <li>Klik tombol <b>Select</b> untuk mengonfirmasi model yang dipilih.</li>
-          <li>Klik tombol <b>Start Server</b> (warna orange/merah).</li>
-        </ol>
-        <p class="ok">✅ MITM Server berubah dari <b>Stopped</b> menjadi <b>Running</b> — Antigravity terhubung ke 9Router dengan model pilihan!</p>
-        <div class="shots2">
-          <figure class="shot"><img src="assets/mitm%20proxy.jpeg" alt="MITM Proxy config" loading="lazy"><figcaption>MITM Proxy — config Antigravity</figcaption></figure>
-          <figure class="shot"><img src="assets/mitm%20server.jpeg" alt="MITM server running" loading="lazy"><figcaption>Start Server → status Running</figcaption></figure>
-        </div>
-      </div>
-    </article>
-
-    <article class="step" id="s8">
-      <div class="snum">8</div>
-      <div class="sbody">
-        <h3>Pilih Combo di Antigravity Settings</h3>
-        <p>Terakhir, pilih combo yang sudah dibuat:</p>
-        <ol>
-          <li>Di Antigravity Editor, buka <b>Settings</b> (ikon roda gigi ⚙️).</li>
-          <li>Cari bagian <b>Model Selection</b> / <b>AI Provider</b> / <b>9Router Settings</b>.</li>
-          <li>Pilih combo <b>OpenCode-AI</b> dari dropdown/selector.</li>
-          <li>Klik <b>Save</b> / <b>Connect</b>.</li>
-        </ol>
-        <p class="ok">✅ <b>SELESAI!</b> Antigravity + 9Router + OpenCode + Combo siap digunakan. Sekarang waktunya bikin website portofolio!</p>
-      </div>
-    </article>
-  </div>
-
-  <div class="tablewrap">
-    <h3>Ringkasan Langkah &amp; Perintah</h3>
-    <table>
-      <tr><th>Langkah</th><th>Aksi</th></tr>
-      <tr><td>0</td><td>Install Node.js LTS → verifikasi <code>node -v</code> &amp; <code>npm -v</code></td></tr>
-      <tr><td>1</td><td><code>npm install -g 9router</code></td></tr>
-      <tr><td>2</td><td>Jalankan <code>9router</code> → pilih Web UI</td></tr>
-      <tr><td>3</td><td>Login dashboard dengan password <code>123456</code></td></tr>
-      <tr><td>3B</td><td>Ambil API Key dari <a href="https://opencode.ai" target="_blank" rel="noopener">opencode.ai</a></td></tr>
-      <tr><td>4</td><td>Paste API Key OpenCode di menu Providers → Connect</td></tr>
-      <tr><td>5</td><td>Buat Combo "OpenCode-AI" di Combo &amp; Vision Adapter</td></tr>
-      <tr><td>6</td><td>Buat API Key 9Router di Endpoint &amp; Key</td></tr>
-      <tr><td>7</td><td>CLI Tools → Antigravity → paste key → pilih model → Select → Start Server</td></tr>
-      <tr><td>8</td><td>Pilih Combo "OpenCode-AI" di Antigravity Settings</td></tr>
-    </table>
-  </div>
-</section>
-
-<!-- BAB 4 : TUGAS -->
-<section class="block" id="tugas">
-  <div class="kicker">BAB 4 · MINI PROJECT</div>
-  <h2>Tugas: Membuat Website <span class="grad">Portofolio Siswa</span></h2>
-  <p class="sub">Gunakan Antigravity (yang sudah tersambung 9Router + OpenCode) untuk membuat website portofolio kalian. Buat sebagus dan seprofesional mungkin.</p>
-  <div class="panel">
-    <h3>✅ Syarat Minimal</h3>
-    <ul class="check">
-      <li>Nama + foto + kelas + tentang dirimu.</li>
-      <li><b>Minimal 2 project</b> yang sudah kamu buat selama belajar di sekolah — lengkapi dengan foto/screenshot, deskripsi, dan tools yang dipakai.</li>
-      <li>Navigasi rapi, responsif untuk HP dan laptop.</li>
-      <li>Bagian kontak: WhatsApp / email / GitHub.</li>
-    </ul>
-    <h3>💡 Prompt Contoh untuk Antigravity</h3>
-    <div class="code big"><code>Buatkan website portofolio dark modern, hero + tentang + 2 project sekolah + kontak, responsif, animasi halus</code><button data-copy="Buatkan website portofolio dark modern, hero + tentang + 2 project sekolah + kontak, responsif, animasi halus">copy</button></div>
-    <h3>📤 Pengumpulan Tugas</h3>
-    <p>Kumpulkan melalui Google Drive berikut. Pastikan file/folder diberi nama <b>Nama_Kelas</b> dan link Vercel + GitHub disertakan di dalam folder.</p>
-    <a class="btn primary" href="https://drive.google.com/drive/folders/1rJEwg2t68jakZ0xB9sxJ__4XW9S5XHI1?usp=drive_link" target="_blank" rel="noopener">📁 Buka Folder Pengumpulan Tugas</a>
-    <p class="hint">Nilai tambah: domain rapi, README, dan screenshot project.</p>
-  </div>
-</section>
-
-<!-- BAB 5 : VERCEL -->
-<section class="block" id="vercel">
-  <div class="kicker">BAB 5 · PUBLIKASI</div>
-  <h2>Apa itu <span class="grad">Vercel?</span></h2>
-  <p class="sub"><b>Vercel</b> adalah platform cloud gratis untuk mempublikasikan website. Ia membaca langsung dari repository GitHub, auto-deploy setiap kali kamu push kode, dan memberikan URL publik <code>nama.vercel.app</code> yang bisa diakses dari mana saja.</p>
-  <div class="grid3">
-    <div class="card"><div class="ico">☁️</div><h3>Gratis &amp; Cepat</h3><p>Tanpa biaya sewa hosting. Deploy selesai dalam hitungan menit dengan CDN global.</p></div>
-    <div class="card"><div class="ico">🔄</div><h3>Auto Deploy</h3><p>Setiap push ke GitHub, Vercel otomatis melakukan build ulang. Website selalu terbarui.</p></div>
-    <div class="card"><div class="ico">🌍</div><h3>URL Publik</h3><p>Website bisa dibuka dari HP, laptop, komputer mana pun. Contoh: <code>portfolio-nama.vercel.app</code>.</p></div>
-  </div>
-
-  <h3 class="mt">Langkah 1 — Upload ke GitHub</h3>
-  <p class="sub2">Di folder proyek, buka Terminal dan jalankan perintah berikut secara berurutan:</p>
-  <div class="code"><code>git init</code><button data-copy="git init">copy</button></div>
-  <div class="code"><code>git add .</code><button data-copy="git add .">copy</button></div>
-  <div class="code"><code>git commit -m "Portfolio Website"</code><button data-copy='git commit -m "Portfolio Website"'>copy</button></div>
-  <div class="code"><code>git branch -M main</code><button data-copy="git branch -M main">copy</button></div>
-  <div class="code"><code>git remote add origin https://github.com/USERNAME/portfolio-nama.git</code><button data-copy="git remote add origin https://github.com/USERNAME/portfolio-nama.git">copy</button></div>
-  <div class="code"><code>git push -u origin main</code><button data-copy="git push -u origin main">copy</button></div>
-  <figure class="shot"><img src="assets/tampilan%20repo%20project%20gihub.jpeg" alt="Repo project di GitHub" loading="lazy"><figcaption>Repo project di GitHub</figcaption></figure>
-
-  <h3 class="mt">Langkah 2 — Deploy di Vercel</h3>
-  <ol class="olist">
-    <li>Buka <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> → login dengan akun GitHub.</li>
-    <li>Klik <b>Add New → Project</b> → pilih repository <code>portfolio-nama</code>.</li>
-    <li>Klik <b>Deploy</b> → tunggu proses selesai → akan ada animasi confetti 🎉 &amp; URL publik muncul.</li>
+  <h2>Tujuan pembelajaran</h2>
+  <p>Setelah mengikuti materi ini, siswa diharapkan mampu:</p>
+  <ol class="doc-ol">
+    <li>Menjelaskan fungsi 9Router.</li>
+    <li>Menjelaskan fungsi OpenCode.</li>
+    <li>Membedakan provider, model, dan API Key.</li>
+    <li>Memahami hubungan Antigravity, 9Router, dan OpenCode.</li>
+    <li>Melakukan instalasi dan konfigurasi dasar.</li>
+    <li>Menggunakan workflow tersebut dalam AI Coding.</li>
+    <li>Membuat dan melakukan deployment website sederhana.</li>
   </ol>
-  <div class="shots3">
-    <figure class="shot"><img src="assets/Tampilan%20web%20Vercel%20awal.png" alt="Vercel halaman awal" loading="lazy"><figcaption>Halaman awal Vercel</figcaption></figure>
-    <figure class="shot"><img src="assets/tampilan%20login%20vercel%20click%20continue%20with%20github.png" alt="Login Vercel dengan GitHub" loading="lazy"><figcaption>Continue with GitHub</figcaption></figure>
-    <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20login%20with%20github.png" alt="Setelah login GitHub" loading="lazy"><figcaption>Setelah login GitHub</figcaption></figure>
-    <figure class="shot"><img src="assets/tampilan%20kumpulan%20repo%20github%20di%20vercel%20setelah%20klik%20add%20new-project.jpeg" alt="Pilih repo di Vercel" loading="lazy"><figcaption>Pilih repo → Add New Project</figcaption></figure>
-    <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20klik%20impor%20dan%20ingin%20deploy.jpeg" alt="Import dan deploy" loading="lazy"><figcaption>Import → Deploy</figcaption></figure>
-    <figure class="shot"><img src="assets/tampilan%20vercel%20deployment%20detail.jpeg" alt="Detail deployment" loading="lazy"><figcaption>Detail deployment</figcaption></figure>
-  </div>
-
-  <h3 class="mt">Langkah 3 — Dapatkan URL Live</h3>
-  <div class="code big"><code>https://portfolio-nama-siswa.vercel.app</code><button data-copy="https://portfolio-nama-siswa.vercel.app">copy</button></div>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20deploy%20berhasil.jpeg" alt="Deploy Vercel berhasil" loading="lazy"><figcaption>Deploy berhasil + confetti 🎉</figcaption></figure>
-  <p class="ok">✅ Website kamu sudah LIVE! Bisa dibuka dari HP, laptop, komputer mana pun. Tempel link-nya ke tugas portofolio.</p>
+  <div class="pager"><span></span><a class="btn" href="#router">02 · 9Router →</a></div>
 </section>
 
-</main>
+<!-- 02 -->
+<section class="chapter" id="router" data-name="9Router">
+  <p class="eyebrow">02 / 9ROUTER</p>
+  <h1>Apa itu 9Router?</h1>
+  <p><b>9Router adalah aplikasi yang dijalankan secara lokal di komputer dan berfungsi sebagai gateway / perantara antara aplikasi yang mengirim request dengan provider AI yang telah dikonfigurasi.</b></p>
+  <ul class="doc-ul">
+    <li>Berjalan sebagai <b>local server</b> di port default <b>20128</b> → <code>http://localhost:20128</code></li>
+    <li>Dijalankan lewat <b>CMD</b></li>
+    <li>Punya <b>dashboard Web UI</b> yang dibuka lewat browser</li>
+    <li>Menyimpan <b>log request</b> untuk melihat aktivitas yang masuk</li>
+  </ul>
 
-<footer class="foot"><p>Kelompok 8 · Alfian · Adrian · Fino · Irsyad · SMK Negeri 2 Surakarta · 2026</p></footer>
+  <h2>Kenapa menggunakan 9Router?</h2>
+  <p>Sederhananya: biar pengaturan AI rapi dan gampang dipantau dari satu tempat.</p>
+  <h3>Pengaturan terpusat</h3><p>Provider dan model dapat dikelola dari satu tempat.</p>
+  <h3>Provider alternatif</h3><p>Kita dapat menyiapkan provider lain ketika provider utama mengalami keterbatasan atau error.</p>
+  <h3>Routing</h3><p>Request dapat diteruskan berdasarkan konfigurasi yang dibuat.</p>
+  <h3>Monitoring</h3><p>Aktivitas request dapat dilihat melalui log yang tersedia.</p>
+  <h3>Fleksibilitas model</h3><p>Provider dan model dapat dikonfigurasi sesuai kebutuhan.</p>
+
+  <h2>Tanpa vs dengan 9Router</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Kondisi</th><th>Tanpa 9Router</th><th>Dengan 9Router</th></tr>
+    <tr><td>Pengaturan provider</td><td>Dapat dilakukan secara terpisah</td><td>Dapat dikelola melalui satu gateway</td></tr>
+    <tr><td>Pilihan provider</td><td>Bergantung pada konfigurasi aplikasi</td><td>Dapat mengatur beberapa provider</td></tr>
+    <tr><td>Monitoring</td><td>Tidak selalu terpusat</td><td>Request dapat dilihat melalui log 9Router</td></tr>
+    <tr><td>Pengaturan model</td><td>Bergantung pada aplikasi / provider</td><td>Dapat dikonfigurasi melalui gateway</td></tr>
+    <tr><td>Provider bermasalah</td><td>Perlu mengganti konfigurasi secara manual</td><td>Dapat menyiapkan provider alternatif sesuai konfigurasi</td></tr>
+  </table></div>
+
+  <h2>Fungsi 9Router</h2>
+  <div class="duo">
+    <div class="mini"><b>🚦 Routing</b><p>Meneruskan request ke provider sesuai konfigurasi.</p></div>
+    <div class="mini"><b>🔄 Failover</b><p>Jika fitur failover dikonfigurasi, request dapat dialihkan ke provider alternatif ketika provider utama mengalami masalah.</p></div>
+    <div class="mini"><b>🧩 Combo &amp; Model</b><p>Menggabungkan provider dan model menjadi konfigurasi yang dapat dipilih.</p></div>
+    <div class="mini"><b>🔑 API Key</b><p>Mengelola kredensial provider yang digunakan dalam konfigurasi.</p></div>
+    <div class="mini"><b>📊 Log &amp; Monitoring</b><p>Melihat request dan status aktivitas yang diterima server.</p></div>
+    <div class="mini"><b>🖥️ Dashboard</b><p>Mengatur provider, model, API Key, dan konfigurasi melalui Web UI.</p></div>
+  </div>
+  <div class="callout"><b>MITM Server</b> merupakan server perantara yang digunakan dalam konfigurasi 9Router untuk menangani request dari aplikasi yang terhubung. Jika status di dashboard masih <b>Stopped</b>, klik <b>Start Server</b> sampai jadi <b>Running</b> agar konfigurasi yang membutuhkannya dapat digunakan.</div>
+
+  <h2>Cara kerja 9Router</h2>
+  <p>Alurnya sederhana: prompt dikirim, diatur, diproses, lalu hasilnya kembali.</p>
+  <ol class="doc-ol">
+    <li><b>Prompt</b> — pengguna memberikan prompt melalui Antigravity.</li>
+    <li><b>Request</b> — Antigravity mengirim request melalui endpoint yang telah dikonfigurasi.</li>
+    <li><b>9Router</b> — menerima request dan memprosesnya berdasarkan konfigurasi provider / model.</li>
+    <li><b>Provider</b> — request diteruskan ke provider yang dipilih.</li>
+    <li><b>Model AI</b> — memproses prompt dan menghasilkan response.</li>
+    <li><b>Response</b> — dikembalikan melalui jalur yang sama menuju Antigravity.</li>
+    <li><b>Hasil</b> — Antigravity menampilkan hasil kepada pengguna.</li>
+  </ol>
+  <div class="pager"><a class="btn outline" href="#pengenalan">← Sebelumnya</a><a class="btn" href="#opencode">03 · OpenCode →</a></div>
+</section>
+
+<!-- 03 -->
+<section class="chapter" id="opencode" data-name="OpenCode">
+  <p class="eyebrow">03 / OPENCODE</p>
+  <h1>Apa itu OpenCode?</h1>
+  <p><b>OpenCode adalah salah satu provider / layanan yang menyediakan akses ke model AI melalui API.</b></p>
+  <p>Layanan ini berbasis website dan berbeda dengan 9Router. Kalau 9Router dijalankan lokal lewat CMD, OpenCode cukup diakses lewat browser — tidak perlu di-install.</p>
+  <h2>Apa &amp; kenapa dipakai</h2>
+  <h3>Layanannya</h3><p>OpenCode tersedia di <code>opencode.ai</code>. Di dashboardnya kita bisa melihat daftar provider dan model yang didukung. Dalam training ini, OpenCode kita manfaatkan sebagai <b>provider</b> yang nantinya dihubungkan ke 9Router.</p>
+  <h3>Alasan dipakai</h3><p>OpenCode digunakan sebagai salah satu provider yang dapat dihubungkan ke 9Router, sehingga request dari workflow AI Coding dapat diarahkan ke layanan tersebut sesuai konfigurasi. Ketersediaan model mengikuti layanan dan konfigurasi yang digunakan — tidak semua model selalu ada.</p>
+  <h3>Provider, Model, API Key — bedanya apa?</h3><p><b>Provider</b> adalah sumber / layanan AI-nya. <b>Model</b> adalah otak AI yang memproses prompt-nya. <b>API Key</b> adalah kredensial / kunci akses yang dipakai untuk mengautentikasi koneksi ke layanan tertentu. Sederhananya: <b>API Key = kunci akses</b>.</p>
+
+  <h2>Provider vs Model</h2>
+  <p>Bagian ini wajib dipahami agar tidak ketukar. Banyak yang mengira OpenCode = Claude Sonnet — padahal keduanya punya peran berbeda.</p>
+  <div class="duo">
+    <div class="mini hl"><b>Provider</b><p>Layanan yang menyediakan akses ke model AI.</p><code>Contoh: OpenCode</code></div>
+    <div class="mini hl"><b>Model</b><p>Model AI yang memproses request.</p><code>Contoh: Claude Sonnet</code></div>
+  </div>
+  <div class="success">✅ Benar: <b>Provider → OpenCode</b> · <b>Model → Claude Sonnet</b> &nbsp;|&nbsp; ❌ Salah: OpenCode = Claude Sonnet</div>
+  <p>Katakanlah OpenCode itu seperti penyedia listrik, dan Claude Sonnet itu seperti lampu yang kita colok. Listriknya dari OpenCode, yang menyala adalah modelnya.</p>
+
+  <h2>Contoh Combo: OpenCode + Claude Sonnet</h2>
+  <p><b>Provider:</b> OpenCode · <b>Model:</b> Claude Sonnet</p>
+  <p>Combo merupakan konfigurasi yang menggabungkan provider dan model agar dapat digunakan sebagai satu pilihan dalam workflow. Jadi nanti di 9Router kita akan membuat satu combo bernama misal <code>OpenCode-AI</code> yang isinya OpenCode + model pilihan — lalu combo itulah yang dipilih di Antigravity.</p>
+
+  <h2>🔐 Keamanan API Key (yang nanti kita buat di 9Router)</h2>
+  <p>Pada praktik nanti kita akan membuat <b>API Key 9Router</b> untuk Antigravity. Karena itu kunci akses, perlakukan dengan hati-hati:</p>
+  <ul class="doc-ul">
+    <li>Jangan membagikan API Key kepada orang lain.</li>
+    <li>Jangan upload API Key ke GitHub.</li>
+    <li>Jangan memasukkan API Key langsung ke source code yang akan dipublikasikan.</li>
+    <li>Jangan menampilkan API Key pada screenshot yang dibagikan — gunakan placeholder <code>sk-xxxxxxxxxxxxxxxx</code>.</li>
+    <li>Simpan credential di tempat yang aman.</li>
+    <li>Jika API Key bocor, segera revoke atau regenerate.</li>
+  </ul>
+  <figure class="shot"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="Dashboard OpenCode" loading="lazy"><figcaption>Gambar 01 — Dashboard OpenCode</figcaption></figure>
+  <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Gambar 02 — Connect OpenCode di menu Providers 9Router</figcaption></figure>
+  <div class="pager"><a class="btn outline" href="#router">← Sebelumnya</a><a class="btn" href="#workflow">04 · Workflow →</a></div>
+</section>
+
+<!-- 04 -->
+<section class="chapter" id="workflow" data-name="Workflow">
+  <p class="eyebrow">04 / WORKFLOW</p>
+  <h1>Antigravity → 9Router → OpenCode</h1>
+  <p>Ketiga komponen bekerja dalam satu alur. 9Router ada di tengah sebagai pengatur, OpenCode sebagai provider, Antigravity sebagai tempat kerja.</p>
+  <div class="vdiag">
+    <div class="vnode"><b>ANTIGRAVITY</b><span>Coding / Prompt — tempat memberikan prompt dan melakukan coding.</span></div><div class="vline"></div>
+    <div class="vnode hot"><b>9ROUTER</b><span>Request Manager — menerima dan meneruskan request berdasarkan konfigurasi.</span></div><div class="vline"></div>
+    <div class="vnode"><b>OPENCODE</b><span>AI Provider — provider yang menerima request.</span></div><div class="vline"></div>
+    <div class="vnode"><b>AI MODEL</b><span>Memproses prompt (misal Claude Sonnet).</span></div><div class="vline"></div>
+    <div class="vnode"><b>HASIL</b><span>Response kembali melalui jalur yang sama.</span></div><div class="vline"></div>
+    <div class="vnode"><b>ANTIGRAVITY</b><span>Menerima dan menampilkan hasil.</span></div>
+  </div>
+  <div class="callout"><b>Sederhananya: Antigravity mengirim → 9Router mengatur → provider memproses → hasil kembali ke Antigravity.</b></div>
+  <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity</pre></div>
+  <div class="pager"><a class="btn outline" href="#opencode">← Sebelumnya</a><a class="btn" href="#instalasi">05 · Instalasi →</a></div>
+</section>
+
+<!-- 05 -->
+<section class="chapter" id="instalasi" data-name="Instalasi &amp; Setup">
+  <p class="eyebrow">05 / INSTALASI &amp; SETUP</p>
+  <h1>Menyiapkan 9Router</h1>
+  <p>Bagian paling detail. Ikuti <b>STEP 01–10</b> berurutan, jangan loncat. Estimasi 30–45 menit. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
+
+  <div class="tut" id="tutNav">
+    <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a>
+  </div>
+
+  <article class="step" id="step1">
+    <p class="step-k">STEP 01</p><h2>Install Node.js</h2>
+    <h3>Tujuan</h3><p>Pada langkah ini kita akan memasang Node.js yang dibutuhkan untuk menjalankan 9Router. 9Router dibangun di atas Node.js, jadi tanpa Node.js, command <code>9router</code> tidak akan dikenali.</p>
+    <hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Buka <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>.</li>
+      <li>Pilih versi <b>LTS</b> (Long Term Support).</li>
+      <li>Download installer Windows — filenya biasanya <code>node-v20.x.x.msi</code>.</li>
+      <li>Jalankan installer → klik <b>Next</b> beberapa kali → pilih <b>I Accept</b> untuk terms &amp; conditions.</li>
+      <li>Pastikan opsi <b>Add to PATH</b> tercentang sebelum klik <b>Install</b>.</li>
+      <li>Tunggu proses instalasi selesai (sekitar 5–10 menit).</li>
+      <li>Setelah selesai, <b>buka CMD / Terminal baru</b> (jangan pakai terminal lama).</li>
+    </ol>
+    <h3>Cek instalasi</h3>
+    <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="node -v">Copy</button></div><pre>node -v</pre></div>
+    <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="npm -v">Copy</button></div><pre>npm -v</pre></div>
+    <hr><h3>Hasil</h3><div class="success">✓ Jika muncul versi, misal <code>v20.11.0</code> dan <code>10.2.3</code>, berarti instalasi berhasil. Jika belum muncul, tutup terminal lalu buka lagi atau restart laptop.</div>
+    <figure class="shot"><img src="assets/install%20node.png" alt="Installer Node.js" loading="lazy"><figcaption>Gambar 01 — Installer Node.js LTS</figcaption></figure>
+    <figure class="shot"><img src="assets/node%20-v.png" alt="Verifikasi node -v" loading="lazy"><figcaption>Gambar 02 — Verifikasi: <code>node -v</code> dan <code>npm -v</code></figcaption></figure>
+  </article>
+
+  <article class="step" id="step2">
+    <p class="step-k">STEP 02</p><h2>Install 9Router</h2>
+    <h3>Tujuan</h3><p>Memasang 9Router secara global agar command <code>9router</code> dapat dijalankan dari terminal mana pun.</p>
+    <hr><h3>Langkah</h3>
+    <ol class="doc-ol"><li>Pastikan Node.js sudah terpasang (cek <code>node -v</code> di atas).</li><li>Buka <b>CMD / Terminal baru</b>.</li><li>Jalankan command berikut lalu tekan Enter:</li></ol>
+    <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="npm install -g 9router">Copy</button></div><pre>npm install -g 9router</pre></div>
+    <p>Perintah <code>-g</code> artinya global — 9Router dipasang untuk seluruh sistem, bukan cuma satu folder.</p>
+    <hr><h3>Hasil</h3><div class="success">✓ Tunggu sampai muncul tulisan <code>added packages</code>. Pastikan tidak ada tulisan error merah di terminal.</div>
+    <figure class="shot"><img src="assets/install%209router.png" alt="Install 9router global" loading="lazy"><figcaption>Gambar 03 — Install 9Router via <code>npm install -g 9router</code></figcaption></figure>
+    <div class="stepnav"><a class="btn outline" href="#step1">← Sebelumnya</a><span>02 / 10</span><a class="btn" href="#step3">Berikutnya →</a></div>
+  </article>
+
+  <article class="step" id="step3">
+    <p class="step-k">STEP 03</p><h2>Jalankan 9Router &amp; Buka Web UI</h2>
+    <h3>Tujuan</h3><p>Menjalankan server lokal 9Router dan membuka dashboard pengaturannya.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol"><li>Buka CMD.</li><li>Ketik:</li></ol>
+    <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="9router">Copy</button></div><pre>9router</pre></div>
+    <ol class="doc-ol" start="3"><li>Akan muncul beberapa pilihan menu. Pilih <b>Web UI (Open in Browser)</b>.</li></ol>
+    <hr><h3>Hasil</h3><div class="success">✓ Browser terbuka otomatis ke dashboard 9Router di <code>http://localhost:20128</code>. Jika tidak terbuka otomatis, ketik alamat tersebut manual di browser.</div>
+    <div class="callout">💡 Setelah langkah ini, 9Router mulai menjalankan server lokal yang dapat menerima request sesuai konfigurasi.</div>
+    <figure class="shot"><img src="assets/Menu%20Pilihan%209router%20(Web%20UI).jpg" alt="Menu pilihan 9Router" loading="lazy"><figcaption>Gambar 04 — Pilih Web UI (Open in Browser)</figcaption></figure>
+  </article>
+
+  <article class="step" id="step4">
+    <p class="step-k">STEP 04</p><h2>Login / Akses Dashboard 9Router</h2>
+    <h3>Tujuan</h3><p>Masuk ke halaman utama dashboard untuk mulai mengatur provider dan model.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Tunggu halaman dashboard terbuka di browser.</li>
+      <li>Jika diminta login, masukkan kredensial sesuai tampilan versi 9Router yang dipakai saat praktik. Ikuti instruksi yang diberikan instruktur di kelas.</li>
+      <li>Jika langsung masuk tanpa login, lanjut ke langkah berikutnya.</li>
+    </ol>
+    <p class="small">Catatan: tampilan login bisa berbeda tiap versi 9Router. Yang penting kamu berhasil masuk ke halaman utama dashboard.</p>
+    <hr><h3>Hasil</h3><div class="success">✓ Halaman utama dashboard 9Router tampil dan kamu bisa melihat menu seperti Providers, Combo, dan Settings.</div>
+    <figure class="shot"><img src="assets/login%209router.jpeg" alt="Login dashboard 9Router" loading="lazy"><figcaption>Gambar 05 — Halaman login / dashboard 9Router</figcaption></figure>
+  </article>
+
+  <article class="step" id="step5">
+    <p class="step-k">STEP 05</p><h2>Connect OpenCode Free ke 9Router</h2>
+    <h3>Tujuan</h3><p>Menghubungkan provider <b>OpenCode Free</b> ke 9Router sehingga request AI bisa diteruskan ke sana.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Buka dashboard 9Router.</li>
+      <li>Masuk ke menu <b>Providers</b>.</li>
+      <li>Cari <b>OpenCode Free</b> pada daftar provider.</li>
+      <li>Klik <b>Connect</b>.</li>
+      <li>Tunggu sampai status provider siap digunakan (biasanya muncul indikator Connected / Active).</li>
+    </ol>
+    <hr><h3>Hasil</h3><div class="success">✓ Provider <b>OpenCode Free</b> berstatus siap digunakan. Jika gagal, cek koneksi internet dan coba klik Connect lagi.</div>
+    <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Gambar 06 — Connect OpenCode Free di menu Providers</figcaption></figure>
+  </article>
+
+  <article class="step" id="step6">
+    <p class="step-k">STEP 06</p><h2>Buat Combo</h2>
+    <h3>Tujuan</h3><p>Menggabungkan provider dan model menjadi satu konfigurasi yang dapat dipilih. Combo inilah yang nanti dipakai di Antigravity.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Masuk ke menu <b>Combo &amp; Vision Adapter</b>.</li>
+      <li>Klik <b>Create Combo</b> (tombol orange/merah di pojok).</li>
+      <li>Berikan nama combo, misalnya <code>OpenCode-AI</code>.</li>
+      <li>Pilih <b>Provider: OpenCode</b>.</li>
+      <li>Pilih <b>Model</b> yang tersedia (misal Claude Sonnet atau model lain yang muncul di daftar).</li>
+      <li>Klik <b>Create / Save Combo</b>.</li>
+    </ol>
+    <div class="callout">Provider = sumber layanan AI yang digunakan. Model = model AI yang dipilih dari provider tersebut. Combo = bungkus keduanya jadi satu pilihan.</div>
+    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>OpenCode-AI</b> berhasil dibuat dan muncul di daftar combo. Combo ini yang nanti kita pilih di Antigravity.</div>
+    <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Model → <code>OpenCode-AI</code></figcaption></figure>
+  </article>
+
+  <article class="step" id="step7">
+    <p class="step-k">STEP 07</p><h2>Buat API Key 9Router untuk Antigravity</h2>
+    <h3>Tujuan</h3><p>Membuat kunci akses 9Router agar Antigravity diizinkan terhubung ke gateway. Ini adalah <b>API Key 9Router</b> — bukan API Key OpenCode.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Masuk ke menu <b>Endpoint &amp; Key</b> di dashboard 9Router.</li>
+      <li>Klik <b>Create API Key</b> / <b>+ New</b>.</li>
+      <li>Berikan nama, misalnya <code>Antigravity-Key</code>.</li>
+      <li>Klik <b>Generate / Create</b> → copy API key yang dihasilkan.</li>
+    </ol>
+    <div class="codeblock"><div class="cb-head"><span>Contoh format — jangan pakai key asli</span><button data-copy="sk-xxxxxxxxxxxxxxxx">Copy</button></div><pre>sk-xxxxxxxxxxxxxxxx</pre></div>
+    <div class="warning">⚠️ Jangan pernah menampilkan API key asli pada screenshot atau mengunggahnya ke GitHub. Simpan di tempat aman dan jangan dibagikan. Jika bocor, segera revoke / regenerate.</div>
+    <hr><h3>Hasil</h3><div class="success">✓ API Key 9Router berhasil dibuat dan tersalin. Simpan sementara — akan dipakai di langkah berikutnya.</div>
+    <figure class="shot"><img src="assets/API%20config.jpeg" alt="Endpoint &amp; Key" loading="lazy"><figcaption>Gambar 09 — Endpoint &amp; Key → Create API Key 9Router</figcaption></figure>
+    <div class="stepnav"><a class="btn outline" href="#step6">← Sebelumnya</a><span>07 / 10</span><a class="btn" href="#step8">Berikutnya →</a></div>
+  </article>
+
+  <article class="step" id="step8">
+    <p class="step-k">STEP 08</p><h2>Setup Antigravity di CLI Tools</h2>
+    <h3>Tujuan</h3><p>Menghubungkan Antigravity ke 9Router dan mengaktifkan jalur request-nya.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Buka menu <b>CLI Tools</b> di dashboard 9Router.</li>
+      <li>Pilih <b>Antigravity</b> dari daftar tools.</li>
+      <li>Paste <b>API Key 9Router</b> dari Langkah 07 ke field yang tersedia.</li>
+      <li>Pilih model / configuration yang tersedia → klik <b>Select</b>.</li>
+      <li>Klik <b>Start Server</b>.</li>
+      <li>Pastikan status server berubah dari <b>Stopped</b> menjadi <b>Running</b>.</li>
+    </ol>
+    <hr><h3>Hasil</h3><div class="success">✓ Status MITM Server: <b>Running</b>. Artinya jalur antara Antigravity dan 9Router sudah aktif.</div>
+    <div class="callout">💡 MITM Server merupakan server perantara yang digunakan dalam konfigurasi 9Router untuk menangani request dari aplikasi yang terhubung. Jika masih Stopped, request tidak akan diproses.</div>
+    <figure class="shot"><img src="assets/mitm%20proxy.jpeg" alt="MITM Proxy" loading="lazy"><figcaption>Gambar 10 — CLI Tools → Antigravity → Paste API Key 9Router</figcaption></figure>
+    <figure class="shot"><img src="assets/mitm%20server.jpeg" alt="MITM Running" loading="lazy"><figcaption>Gambar 11 — Start Server → status Running</figcaption></figure>
+  </article>
+
+  <article class="step" id="step9">
+    <p class="step-k">STEP 09</p><h2>Pilih Combo di Antigravity</h2>
+    <h3>Tujuan</h3><p>Menentukan konfigurasi mana yang dipakai Antigravity saat mengirim request AI.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Buka <b>Antigravity → Settings → Model Selection</b> (ikon ⚙️).</li>
+      <li>Pilih combo yang tadi dibuat, misalnya <code>OpenCode-AI</code>.</li>
+      <li>Klik <b>Save</b> / <b>Connect</b>.</li>
+    </ol>
+    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>OpenCode-AI</b> terpilih di Antigravity. Combo ini yang menjadi jembatan antara Antigravity dengan provider yang sudah disiapkan di 9Router.</div>
+    <div class="stepnav"><a class="btn outline" href="#step8">← Sebelumnya</a><span>09 / 10</span><a class="btn" href="#step10">Berikutnya →</a></div>
+  </article>
+
+  <article class="step" id="step10">
+    <p class="step-k">STEP 10</p><h2>Testing Koneksi</h2>
+    <h3>Tujuan</h3><p>Memastikan setup benar-benar berhasil — bukan cuma Running di dashboard.</p><hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Buka project apa pun di Antigravity.</li>
+      <li>Kirim prompt sederhana, misal: <i>"Buatkan navbar responsif sederhana"</i>.</li>
+      <li>Tunggu sampai AI memberikan respons.</li>
+      <li>Pastikan tidak muncul error koneksi.</li>
+      <li>Jika diperlukan, cek <b>Request Logs</b> di 9Router untuk melihat request tercatat.</li>
+    </ol>
+    <hr><h3>Hasil</h3><div class="success">✓ Antigravity berhasil memberikan respons AI melalui konfigurasi yang sudah dibuat. Jika response muncul dan log bertambah, berarti setup berhasil.</div>
+    <div class="deploy-ok" style="margin-top:18px"><p>✓ SETUP SELESAI</p><span>9Router Connected · OpenCode Connected · Antigravity Ready</span></div>
+    <p>Setup selesai — lanjut ke tugas berikutnya.</p>
+  </article>
+
+  <div class="pager"><a class="btn outline" href="#workflow">← Sebelumnya</a><a class="btn" href="#tugas">06 · Tugas →</a></div>
+</section>
+
+<!-- 06 -->
+<section class="chapter task" id="tugas" data-name="Tugas Praktik">
+  <p class="eyebrow">06 / TUGAS PRAKTIK</p>
+  <h1>Buat Website Portfolio</h1>
+  <p>Setelah memahami workflow 9Router + OpenCode, sekarang gunakan workflow tersebut untuk membuat website portfolio.</p>
+  <div class="callout"><b>Tujuan tugas</b> adalah menerapkan workflow AI Coding yang sudah dipelajari ke dalam sebuah project nyata.</div>
+  <h2>Requirements</h2>
+  <div class="req"><div><span>01</span><b>Identitas</b><p>Nama + foto + kelas.</p></div><div><span>02</span><b>Tentang Saya</b><p>Cerita singkat tentang dirimu.</p></div><div><span>03</span><b>Skills</b><p>Kemampuan / tools yang dikuasai.</p></div><div><span>04</span><b>Projects</b><p>Minimal 2 project sekolah + foto, deskripsi, tools.</p></div></div>
+  <h2>Bebas berkreasi</h2>
+  <p>Siswa bebas menentukan:</p>
+  <ul class="doc-ul"><li>Warna</li><li>Layout</li><li>Style</li><li>Animasi</li><li>Struktur tambahan</li></ul>
+  <p>Tujuan utama adalah menerapkan workflow AI Coding, bukan membuat website yang terlalu kompleks. Navigasi rapi + responsif HP &amp; laptop sudah cukup.</p>
+
+
+<!-- 08 -->
+<section class="chapter" id="github" data-name="GitHub">
+  <p class="eyebrow">08 / GITHUB</p>
+  <h1>Simpan Project</h1>
+  <p>GitHub digunakan untuk menyimpan source code website agar aman dan bisa dihubungkan ke Vercel.</p>
+  <h2>01 — Buat repository</h2>
+  <p>Buka GitHub → <b>New repository</b> → nama misal <code>portfolio-nama</code> → <b>Create</b>.</p>
+  <figure class="shot"><img src="assets/buat%20repo%20github.png" alt="Buat repo GitHub" loading="lazy"><figcaption>Gambar 13 — Buat repository baru di GitHub</figcaption></figure>
+  <h2>02 — Hubungkan project</h2>
+  <p>Di folder proyek, jalankan berurutan:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git init">Copy</button></div><pre>git init</pre></div>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git add .">Copy</button></div><pre>git add .</pre></div>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy='git commit -m "Portfolio Website"'>Copy</button></div><pre>git commit -m "Portfolio Website"</pre></div>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git branch -M main">Copy</button></div><pre>git branch -M main</pre></div>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git remote add origin https://github.com/USERNAME/portfolio-nama.git">Copy</button></div><pre>git remote add origin https://github.com/USERNAME/portfolio-nama.git</pre></div>
+  <h2>03 — Push source code</h2>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git push -u origin main">Copy</button></div><pre>git push -u origin main</pre></div>
+  <div class="warning">⚠️ Jangan upload API Key ke GitHub. Pastikan tidak ada credential 9Router yang ikut ter-push.</div>
+  <h2>04 — Pastikan repository tersedia</h2>
+  <p>Buka URL repo → file tampil lengkap, branch <b>main</b> aktif. Siap dihubungkan ke Vercel.</p>
+  <div class="pager"><a class="btn outline" href="#tugas">← Sebelumnya</a><a class="btn" href="#vercel">08 · Vercel →</a></div>
+</section>
+
+<!-- 09 -->
+<section class="chapter" id="vercel" data-name="Vercel">
+  <p class="eyebrow">09 / DEPLOYMENT</p>
+  <h1>Publish Website</h1>
+  <p>Vercel digunakan untuk mempublikasikan website sehingga dapat diakses melalui internet. Tahap ini dilakukan <b>setelah</b> project selesai dan sudah ada di GitHub.</p>
+  <div class="vdiag">
+    <div class="vnode"><b>PROJECT</b><span>Website portfolio selesai.</span></div><div class="vline"></div>
+    <div class="vnode"><b>GITHUB</b><span>Source code tersimpan.</span></div><div class="vline"></div>
+    <div class="vnode hot"><b>VERCEL</b><span>Platform deployment.</span></div><div class="vline"></div>
+    <div class="vnode"><b>LIVE WEBSITE</b><span>Dapat diakses publik.</span></div>
+  </div>
+  <h2>01 — Login Vercel</h2>
+  <p>Buka <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> → <b>Continue with GitHub</b> → authorize.</p>
+  <figure class="shot"><img src="assets/Tampilan%20web%20Vercel%20awal.png" alt="Vercel" loading="lazy"><figcaption>Gambar 14 — Halaman awal Vercel</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20login%20vercel%20click%20continue%20with%20github.png" alt="Login" loading="lazy"><figcaption>Gambar 15 — Continue with GitHub</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20login%20with%20github.png" alt="Dashboard" loading="lazy"><figcaption>Gambar 16 — Setelah login GitHub</figcaption></figure>
+  <h2>02 — Connect GitHub &amp; pilih repository</h2>
+  <p>Klik <b>Add New → Project</b> → pilih repo <code>portfolio-nama</code> → <b>Import</b>. Biarkan konfigurasi default.</p>
+  <figure class="shot"><img src="assets/tampilan%20kumpulan%20repo%20github%20di%20vercel%20setelah%20klik%20add%20new-project.jpeg" alt="Pilih repo" loading="lazy"><figcaption>Gambar 17 — Pilih repository</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20klik%20impor%20dan%20ingin%20deploy.jpeg" alt="Import" loading="lazy"><figcaption>Gambar 18 — Import project</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20deployment%20detail.jpeg" alt="Detail" loading="lazy"><figcaption>Gambar 19 — Detail deployment</figcaption></figure>
+  <h2>03 — Deploy &amp; open website</h2>
+  <p>Klik <b>Deploy</b> → tunggu selesai → copy URL publik.</p>
+  <div class="codeblock"><div class="cb-head"><span>URL</span><button data-copy="https://portfolio-nama-siswa.vercel.app">Copy</button></div><pre>https://portfolio-nama-siswa.vercel.app</pre></div>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20deploy%20berhasil.jpeg" alt="Berhasil" loading="lazy"><figcaption>Gambar 20 — Deploy berhasil</figcaption></figure>
+  <div class="deploy-ok"><p>✓ DEPLOYMENT SUCCESSFUL</p><span>Website kamu sudah online.</span></div>
+
+  <h2>Project selesai</h2>
+  <div class="duo">
+    <div class="mini"><b>✓ Website Portfolio</b><p>Dibuat dengan workflow AI Coding.</p></div>
+    <div class="mini"><b>✓ Source Code di GitHub</b><p>Tersimpan rapi di repository.</p></div>
+    <div class="mini"><b>✓ Website di-deploy</b><p>Proses deploy Vercel berhasil.</p></div>
+    <div class="mini"><b>✓ Link Vercel aktif</b><p>Dapat diakses dari mana pun.</p></div>
+  </div>
+  <h2>Pengumpulan</h2>
+  <p>Yang dikumpulkan:</p>
+  <ol class="doc-ol"><li>Link repository GitHub.</li><li>Link website Vercel.</li><li>Screenshot website.</li></ol>
+  <p>Nama folder <b>Nama_Kelas</b>, sertakan ketiganya di dalam folder.</p>
+  <p><a class="btn" href="https://drive.google.com/drive/folders/1rJEwg2t68jakZ0xB9sxJ__4XW9S5XHI1?usp=drive_link" target="_blank" rel="noopener">📁 Buka Folder Pengumpulan</a></p>
+
+  <h2>Troubleshooting</h2>
+  <div class="duo">
+    <div class="mini"><b>9Router tidak dikenali</b><p>Pastikan Node.js sudah terinstall dan terminal sudah direstart.</p></div>
+    <div class="mini"><b>Provider tidak terhubung</b><p>Periksa API Key dan konfigurasi provider.</p></div>
+    <div class="mini"><b>Server masih Stopped</b><p>Pastikan server sudah dijalankan dan tidak ada error pada terminal.</p></div>
+    <div class="mini"><b>Antigravity tidak dapat response</b><p>Periksa endpoint, provider, model, API Key, dan status server.</p></div>
+  </div>
+  <div class="pager"><a class="btn outline" href="#github">← Sebelumnya</a><a class="btn" href="#pengenalan">Kembali ke awal ↑</a></div>
+  <footer class="foot"><p>Kelompok 8 · Alfian · Adrian · Fino · Irsyad · SMK Negeri 2 Surakarta · 2026</p></footer>
+</section>
+
+</div>
+</main>
+</div>
 
 <div class="lightbox" id="lightbox"><img id="lbimg" alt="preview"></div>
-<button class="totop" id="totop" aria-label="ke atas">↑</button>
 <script src="app.js"></script>
 </body>
 </html>
