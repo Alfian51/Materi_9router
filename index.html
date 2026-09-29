@@ -81,7 +81,7 @@
   <h2>Empat komponen yang dipakai</h2>
   <div class="duo">
     <div class="mini"><b>🚦 9Router</b><p>Gateway yang meneruskan dan mengatur request sesuai konfigurasi.</p></div>
-    <div class="mini"><b>🔑 OpenCode</b><p>Salah satu provider yang menyediakan akses ke model AI.</p></div>
+    <div class="mini"><b>🤖 OpenCode Free</b><p>Provider AI yang dipakai pada praktikum ini. Dipakai tanpa API key.</p></div>
     <div class="mini"><b>🧠 Antigravity</b><p>Lingkungan / editor untuk coding dengan bantuan AI.</p></div>
     <div class="mini"><b>☁️ Vercel</b><p>Platform untuk mempublikasikan website. Dipakai di tahap akhir.</p></div>
   </div>
@@ -91,7 +91,7 @@
   <ol class="doc-ol">
     <li>Menjelaskan fungsi 9Router.</li>
     <li>Menjelaskan fungsi OpenCode.</li>
-    <li>Membedakan provider, model, dan API Key.</li>
+    <li>Membedakan provider, model, dan API Key 9Router.</li>
     <li>Memahami hubungan Antigravity, 9Router, dan OpenCode.</li>
     <li>Melakukan instalasi dan konfigurasi dasar.</li>
     <li>Menggunakan workflow tersebut dalam AI Coding.</li>
@@ -124,7 +124,7 @@
     <div class="mini"><b>🚦 Routing</b><p>Meneruskan request ke provider sesuai konfigurasi.</p></div>
     <div class="mini"><b>🔄 Failover</b><p>Jika fitur failover dikonfigurasi, request dapat dialihkan ke provider alternatif ketika provider utama mengalami masalah.</p></div>
     <div class="mini"><b>🧩 Combo &amp; Model</b><p>Menggabungkan provider dan model menjadi konfigurasi yang dapat dipilih.</p></div>
-    <div class="mini"><b>🔑 API Key</b><p>Mengelola kredensial provider yang digunakan dalam konfigurasi.</p></div>
+    <div class="mini"><b>🔑 API Key 9Router</b><p>Kunci akses yang dibuat dari 9Router untuk menghubungkan konfigurasi ke Antigravity.</p></div>
     <div class="mini"><b>📊 Log &amp; Monitoring</b><p>Melihat request dan status aktivitas yang diterima server.</p></div>
     <div class="mini"><b>🖥️ Dashboard</b><p>Mengatur provider, model, API Key, dan konfigurasi melalui Web UI.</p></div>
   </div>
@@ -147,32 +147,32 @@
 <section class="chapter" id="opencode" data-name="OpenCode">
   <p class="eyebrow">03 / OPENCODE</p>
   <h1>Apa itu OpenCode?</h1>
-  <p><b>OpenCode adalah salah satu provider / layanan yang menyediakan akses ke model AI melalui API.</b></p>
-  <p>Layanan ini berbasis website dan berbeda dengan 9Router. Kalau 9Router dijalankan lokal lewat CMD, OpenCode cukup diakses lewat browser — tidak perlu di-install.</p>
-  <div class="callout"><b>OpenCode adalah provider AI yang SUDAH TERMASUK dalam 9Router.</b> Tidak perlu download, install, atau setup tambahan.</div>
+  <p><b>OpenCode adalah salah satu provider AI yang dapat digunakan melalui 9Router. Pada praktikum ini kita menggunakan OpenCode Free sebagai provider tanpa API key.</b></p>
+  <p>OpenCode adalah layanan berbasis website dan berbeda dengan 9Router. Kalau 9Router dijalankan lokal lewat CMD, OpenCode cukup diakses lewat browser — tidak perlu di-install.</p>
+  <div class="callout"><b>OpenCode Free adalah provider AI yang sudah tersedia di dalam 9Router.</b> Tidak perlu download, install, atau setup tambahan. Dalam praktikum ini tidak ada API key yang perlu dicari dari sisi OpenCode.</div>
   <h3>Definisi</h3>
   <div class="duo">
-    <div class="mini hl"><b>Provider</b><p>Layanan yang menyediakan model AI.</p></div>
-    <div class="mini hl"><b>OpenCode</b><p>Salah satu provider yang sudah built-in di 9Router.</p></div>
+    <div class="mini hl"><b>Provider</b><p>Layanan AI yang dipakai pada konfigurasi 9Router. Pada praktikum ini: <b>OpenCode Free</b>.</p></div>
+    <div class="mini hl"><b>Model</b><p>Model AI yang dipilih di dalam konfigurasi provider / combo.</p></div>
   </div>
   <h3>Kenapa dipakai dalam materi ini</h3>
   <ul class="doc-ul">
     <li>✓ Gratis (OpenCode Free dengan model-model gratis)</li>
     <li>✓ Multiple models (banyak pilihan AI yang berbeda)</li>
-    <li>✓ Built-in di 9Router (sudah termasuk, tinggal pakai)</li>
-    <li>✓ Tidak perlu membuat akun</li>
-    <li>✓ Tidak perlu API Key OpenCode</li>
+    <li>✓ Sudah tersedia di 9Router (tinggal connect di menu Providers)</li>
+    <li>✓ Dipakai tanpa API key</li>
+    <li>✓ Tidak perlu mencari atau membuat API key tambahan</li>
     <li>✓ Ready-to-use (sudah siap tanpa setup)</li>
   </ul>
   <h3>Flow dalam workflow</h3>
-  <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode → AI Model → Response
+  <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity
                         ↑
                     (Provider)</pre></div>
-  <p>OpenCode adalah <b>penyedia</b> dalam alur tersebut.</p>
+  <p>OpenCode Free berperan sebagai <b>provider</b> dalam alur tersebut.</p>
   <h2>Apa &amp; kenapa dipakai</h2>
-  <h3>Layanannya</h3><p>OpenCode tersedia di <code>opencode.ai</code>. Di dashboardnya kita bisa melihat daftar provider dan model yang didukung. Dalam training ini, OpenCode kita manfaatkan sebagai <b>provider</b> yang nantinya dihubungkan ke 9Router.</p>
+  <h3>Layanannya</h3><p>OpenCode adalah layanan berbasis website yang diakses melalui browser. Daftar provider dan model yang didukung dapat dilihat dari dashboard layanan tersebut. Dalam praktikum ini, OpenCode digunakan sebagai <b>provider</b> yang dihubungkan ke 9Router.</p>
   <h3>Alasan dipakai</h3><p>OpenCode digunakan sebagai salah satu provider yang dapat dihubungkan ke 9Router, sehingga request dari workflow AI Coding dapat diarahkan ke layanan tersebut sesuai konfigurasi. Ketersediaan model mengikuti layanan dan konfigurasi yang digunakan — tidak semua model selalu ada.</p>
-  <h3>Provider, Model, API Key — bedanya apa?</h3><p><b>Provider</b> adalah sumber / layanan AI-nya. <b>Model</b> adalah otak AI yang memproses prompt-nya. <b>API Key</b> adalah kredensial / kunci akses yang dipakai untuk mengautentikasi koneksi ke layanan tertentu. Sederhananya: <b>API Key = kunci akses</b>.</p>
+  <h3>Provider, Model, API Key — bedanya apa?</h3><p><b>Provider</b> adalah layanan AI-nya, pada praktikum ini <b>OpenCode Free</b>. <b>Model</b> adalah model AI yang dipilih di dalam konfigurasi provider / combo. <b>API Key 9Router</b> adalah kunci akses yang dibuat dari 9Router untuk menghubungkan konfigurasi ke Antigravity. Provider OpenCode Free sendiri tidak membutuhkan API key.</p>
 
   <h2>Provider vs Model</h2>
   <p>Bagian ini wajib dipahami agar tidak ketukar. Banyak yang mengira OpenCode = Claude Sonnet — padahal keduanya punya peran berbeda.</p>
@@ -184,22 +184,22 @@
   <p>Katakanlah OpenCode itu seperti penyedia listrik, dan Claude Sonnet itu seperti lampu yang kita colok. Listriknya dari OpenCode, yang menyala adalah modelnya.</p>
 
   <h2>"No Authentication Required" — apa artinya?</h2>
-  <p>Saat connect OpenCode di 9Router, akan terlihat tulisan status <b>"No authentication required"</b> (warna hijau).</p>
+  <p>Saat connect OpenCode Free di 9Router, akan terlihat tulisan status <b>"No authentication required"</b> (warna hijau).</p>
   <p>Artinya:</p>
   <ul class="doc-ul">
-    <li>✅ OpenCode sudah ready pakai tanpa setup</li>
-    <li>✅ Tidak perlu login ke opencode.ai</li>
-    <li>✅ Tidak perlu membuat API Key OpenCode</li>
+    <li>✅ OpenCode Free sudah siap pakai tanpa setup tambahan</li>
+    <li>✅ Tidak perlu mencari kunci akses dari sisi OpenCode</li>
+    <li>✅ Tidak perlu membuat API key tambahan</li>
     <li>✅ Tidak perlu authorization/approve apapun</li>
-    <li>✅ Langsung bisa select model dan digunakan</li>
+    <li>✅ Langsung bisa pilih model dan digunakan</li>
   </ul>
-  <p>Dibandingkan provider lain yang butuh:</p>
+  <p>Dibandingkan provider lain yang biasanya butuh:</p>
   <ul class="doc-ul">
-    <li>❌ Login</li>
-    <li>❌ API Key</li>
-    <li>❌ Authorization</li>
+    <li>❌ Login ke layanan terpisah</li>
+    <li>❌ API key dari provider tersebut</li>
+    <li>❌ Authorization tambahan</li>
   </ul>
-  <div class="callout">OpenCode Free lebih simple karena sudah included di 9Router.</div>
+  <div class="callout">OpenCode Free lebih sederhana karena sudah tersedia di dalam 9Router.</div>
 
   <h2>Model-model available di OpenCode Free</h2>
   <p>Daftar model gratis yang bisa dipilih:</p>
@@ -221,12 +221,14 @@
   <p><b>Provider:</b> OpenCode · <b>Model:</b> Claude Sonnet</p>
   <p>Combo merupakan konfigurasi yang menggabungkan provider dan model agar dapat digunakan sebagai satu pilihan dalam workflow. Jadi nanti di 9Router kita akan membuat satu combo bernama misal <code>OpenCode-AI</code> yang isinya OpenCode + model pilihan — lalu combo itulah yang dipilih di Antigravity.</p>
 
-  <h2>🔐 API Key — penting dicatat</h2>
-  <p>Ada 2 jenis API Key yang berbeda:</p>
+  <h2>🔐 API Key 9Router — penting dicatat</h2>
+  <p>Yang dibuat pada materi ini adalah <b>API Key 9Router</b>. Jangan tertukar dengan tiga hal berikut:</p>
   <div class="duo">
-    <div class="mini hl"><b>1️⃣ API Key 9Router</b><p>→ WAJIB dibuat di STEP 07<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai untuk Antigravity<br>→ SIMPAN dengan aman<br>→ Jangan bagikan / upload ke GitHub</p></div>
-    <div class="mini"><b>2️⃣ API Key OpenCode</b><p>→ TIDAK PERLU DIBUAT<br>→ OpenCode Free sudah included<br>→ Tidak butuh login atau API Key</p></div>
+    <div class="mini hl"><b>1️⃣ Provider</b><p><b>OpenCode Free</b><br>→ Layanan AI yang dipakai pada praktikum ini<br>→ Dipakai tanpa API key</p></div>
+    <div class="mini hl"><b>2️⃣ Model</b><p>Model AI yang dipilih di dalam konfigurasi provider / combo<br>→ Contoh: <code>oc/muse-spark-1.3-contributor-free</code></p></div>
+    <div class="mini hl"><b>3️⃣ API Key 9Router</b><p>→ Dibuat di STEP 07 dari 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai untuk menghubungkan Antigravity dengan gateway 9Router<br>→ SIMPAN dengan aman<br>→ Jangan bagikan / upload ke GitHub</p></div>
   </div>
+  <div class="callout">Provider <b>OpenCode Free</b> tidak membutuhkan API key. Satu-satunya API Key yang dibuat pada materi ini adalah <b>API Key 9Router</b>.</div>
   <h3>Security tips</h3>
   <ul class="doc-ul">
     <li>✓ Simpan API Key 9Router di file terpisah</li>
@@ -243,25 +245,25 @@
 <!-- 04 -->
 <section class="chapter" id="workflow" data-name="Workflow">
   <p class="eyebrow">04 / WORKFLOW</p>
-  <h1>Antigravity → 9Router → OpenCode</h1>
-  <p>Ketiga komponen bekerja dalam satu alur. 9Router ada di tengah sebagai pengatur, OpenCode sebagai provider, Antigravity sebagai tempat kerja.</p>
+  <h1>Antigravity → 9Router → OpenCode Free</h1>
+  <p>Antigravity digunakan sebagai tempat bekerja dan memberikan instruksi. 9Router menjadi gateway yang mengatur koneksi ke provider AI. Dalam praktikum ini provider yang digunakan adalah OpenCode Free.</p>
   <div class="vdiag">
     <div class="vnode"><b>ANTIGRAVITY</b><span>Coding / Prompt — tempat memberikan prompt dan melakukan coding.</span></div><div class="vline"></div>
     <div class="vnode hot"><b>9ROUTER</b><span>Request Manager — menerima dan meneruskan request berdasarkan konfigurasi.</span></div><div class="vline"></div>
-    <div class="vnode"><b>OPENCODE</b><span>AI Provider — provider yang menerima request.</span></div><div class="vline"></div>
+    <div class="vnode"><b>OPENCODE FREE</b><span>AI Provider — provider yang dipakai pada praktikum ini dan menerima request.</span></div><div class="vline"></div>
     <div class="vnode"><b>AI MODEL</b><span>Memproses prompt (misal Claude Sonnet).</span></div><div class="vline"></div>
     <div class="vnode"><b>HASIL</b><span>Response kembali melalui jalur yang sama.</span></div><div class="vline"></div>
     <div class="vnode"><b>ANTIGRAVITY</b><span>Menerima dan menampilkan hasil.</span></div>
   </div>
   <div class="callout"><b>Sederhananya: Antigravity mengirim → 9Router mengatur → provider memproses → hasil kembali ke Antigravity.</b></div>
-  <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity</pre></div>
+  <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity</pre></div>
 </section>
 
 <!-- 05 -->
 <section class="chapter" id="instalasi" data-name="Instalasi &amp; Setup">
   <p class="eyebrow">05 / INSTALASI &amp; SETUP</p>
   <h1>Menyiapkan 9Router</h1>
-  <p>Bagian paling detail. Ikuti <b>STEP 01–10</b> berurutan, jangan loncat. Estimasi 30–45 menit. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
+  <p>Bagian paling detail. Ikuti <b>STEP 01–10</b> berurutan, jangan loncat. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
 
   <div class="tut" id="tutNav">
     <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a>
@@ -277,7 +279,7 @@
       <li>Download installer Windows — filenya biasanya <code>node-v20.x.x.msi</code>.</li>
       <li>Jalankan installer → klik <b>Next</b> beberapa kali → pilih <b>I Accept</b> untuk terms &amp; conditions.</li>
       <li>Pastikan opsi <b>Add to PATH</b> tercentang sebelum klik <b>Install</b>.</li>
-      <li>Tunggu proses instalasi selesai (sekitar 5–10 menit).</li>
+      <li>Tunggu sampai proses instalasi selesai.</li>
       <li>Setelah selesai, <b>buka CMD / Terminal baru</b> (jangan pakai terminal lama).</li>
     </ol>
     <h3>Cek instalasi</h3>
@@ -327,7 +329,7 @@
   <article class="step" id="step5">
     <p class="step-k">STEP 05</p><h2>Connect OpenCode Free ke 9Router</h2>
     <h3>Tujuan</h3><p>Menghubungkan provider <b>OpenCode Free</b> ke 9Router sehingga request AI bisa diteruskan ke sana.</p>
-    <div class="callout"><b>OpenCode Free sudah termasuk dalam 9Router, tidak perlu setup lagi.</b> Tidak perlu daftar akun baru, tidak perlu login ke <code>opencode.ai</code>, dan tidak perlu memasukkan API Key apa pun — cukup klik <b>Connect</b>.</div>
+    <div class="callout"><b>OpenCode Free sudah tersedia di dalam 9Router, tidak perlu setup lagi.</b> Tidak perlu daftar akun baru, tidak perlu login ke layanan OpenCode, dan tidak perlu memasukkan API key apa pun — cukup klik <b>Connect</b>.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Buka dashboard 9Router.</li>
@@ -405,8 +407,8 @@ oc/nemotron-3-ultra-free</pre></div>
 
   <article class="step" id="step7">
     <p class="step-k">STEP 07</p><h2>Buat API Key 9Router untuk Antigravity</h2>
-    <h3>Tujuan</h3><p>Membuat kunci akses 9Router agar Antigravity diizinkan terhubung ke gateway. Ini adalah <b>API Key 9Router</b> — bukan API Key OpenCode.</p>
-    <div class="warning"><b>⚠️ PERHATIAN: 2 MACAM API KEY</b><br><br>Ada 2 macam API Key yang berbeda:<br><br><b>1️⃣ API Key 9Router (WAJIB DIBUAT — Langkah ini)</b><br>→ Untuk autentikasi Antigravity ke 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai di STEP 08<br>→ HARUS DISIMPAN dengan aman<br><br><b>2️⃣ API Key OpenCode (TIDAK PERLU DIBUAT)</b><br>→ OpenCode Free sudah included di 9Router<br>→ Tidak perlu login opencode.ai<br>→ Tidak perlu membuat API Key OpenCode<br>→ Sudah otomatis ready<br><br><b>INTINYA:</b><br>Hanya buat API Key 9Router di langkah ini. OpenCode Free sudah siap pakai tanpa setup tambahan.</div>
+    <h3>Tujuan</h3><p>Setelah provider <b>OpenCode Free</b> berhasil terhubung, buat <b>API Key 9Router</b> melalui menu <b>Endpoint &amp; Key</b>. API Key ini dibuat dari 9Router dan digunakan untuk menghubungkan Antigravity dengan gateway 9Router.</p>
+    <div class="warning"><b>⚠️ INGAT: INI API KEY 9ROUTER</b><br><br>API Key yang dibuat pada langkah ini:<br><br><b>API Key 9Router</b><br>→ Untuk menghubungkan Antigravity dengan gateway 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai di STEP 08<br>→ HARUS DISIMPAN dengan aman<br><br>Provider <b>OpenCode Free</b> tidak membutuhkan API key, jadi tidak ada lagi yang perlu dibuat dari sisi provider.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Masuk ke menu <b>Endpoint &amp; Key</b> di dashboard 9Router.</li>
@@ -415,7 +417,7 @@ oc/nemotron-3-ultra-free</pre></div>
       <li>Klik <b>Generate / Create</b> → copy API key yang dihasilkan.</li>
     </ol>
     <div class="codeblock"><div class="cb-head"><span>Contoh format — jangan pakai key asli</span><button data-copy="sk-xxxxxxxxxxxxxxxx">Copy</button></div><pre>sk-xxxxxxxxxxxxxxxx</pre></div>
-    <div class="warning">Jangan pernah:<br>❌ Bagikan API Key kepada orang lain<br>❌ Upload ke GitHub<br>❌ Tampilkan di screenshot asli (gunakan placeholder)<br><br><b>SECURE STORAGE:</b><br>✓ Simpan di Notepad terpisah<br>✓ Atau file .env lokal (jangan di-commit)<br>✓ Jika bocor, segera regenerate di dashboard</div>
+    <div class="warning">Jangan pernah:<br>❌ Bagikan API Key kepada orang lain<br>❌ Upload ke GitHub<br>❌ Masukkan API Key asli ke screenshot atau repository GitHub<br><br><b>SECURE STORAGE:</b><br>✓ Simpan di Notepad terpisah<br>✓ Atau file .env lokal (jangan di-commit)<br>✓ Jika bocor, segera regenerate di dashboard</div>
     <hr><h3>Hasil</h3><div class="success">✓ API Key 9Router berhasil dibuat dan tersalin. Simpan sementara — akan dipakai di langkah berikutnya.</div>
     <figure class="shot"><img src="assets/API%20config.jpeg" alt="Endpoint &amp; Key" loading="lazy"><figcaption>Gambar 09 — Endpoint &amp; Key → Create API Key 9Router</figcaption></figure>
   </article>
@@ -468,7 +470,7 @@ Include: logo, menu links, hamburger menu untuk mobile.</pre></div>
       <li>Tunggu sampai AI memberikan respons.</li>
     </ol>
     <hr><h3>Expected Result (Jika Berhasil) ✅</h3>
-    <div class="success">☑ AI response muncul dalam 10—30 detik<br>☑ Code yang diberikan adalah valid HTML/CSS<br>☑ Tidak ada error message<br>☑ Log di 9Router dashboard bertambah<br>☑ Status di Antigravity: "Connected"</div>
+    <div class="success">☑ AI response muncul di Antigravity<br>☑ Code yang diberikan adalah valid HTML/CSS<br>☑ Tidak ada error message<br>☑ Log di 9Router dashboard bertambah<br>☑ Status di Antigravity: "Connected"</div>
     <h3>Cara Verify di 9Router</h3>
     <ol class="doc-ol">
       <li>Buka dashboard 9Router (<code>http://localhost:20128</code>).</li>
@@ -481,11 +483,11 @@ Include: logo, menu links, hamburger menu untuk mobile.</pre></div>
     <p>Selamat! Setup selesai dan siap digunakan untuk praktik.</p>
     <div class="warning"><b>Jika GAGAL ❌:</b> jangan panik — cocokkan pesan error yang muncul dengan <b>Troubleshooting</b> di bawah, ikuti solusinya langkah per langkah, lalu ulangi test prompt.</div>
     <h3>Troubleshooting</h3>
-    <div class="mini"><b>Masalah 1: Response Timeout / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu 10 detik, coba prompt lagi.</li></ol></div>
-    <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD baru → jalankan <code>9router</code>.</li><li>Tunggu 5 detik, coba di Antigravity lagi.</li></ol></div>
+    <div class="mini"><b>Masalah 1: Response Timeout / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu sampai status server <b>Running</b>, lalu coba prompt lagi.</li></ol></div>
+    <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD baru → jalankan <code>9router</code>.</li><li>Setelah server aktif, coba lagi di Antigravity.</li></ol></div>
     <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum di-set.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa API Key yang di-paste (STEP 08).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba re-paste API Key.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
     <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Combo belum dipilih di Antigravity.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Buka Antigravity Settings (ikon ⚙️).</li><li>Cek Model Selection.</li><li>Pilih combo <code>OpenCode-AI</code>.</li><li>Klik Save/Connect.</li><li>Coba prompt lagi.</li></ol></div>
-    <div class="mini"><b>Masalah 5: Prompt berhasil tapi response lambat (&gt;60 detik)</b><p>→ Kemungkinan: Server sedang busy atau network slow.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Tunggu beberapa menit.</li><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain di Combo (jika ada).</li></ol></div>
+    <div class="mini"><b>Masalah 5: Prompt berhasil tapi response lambat</b><p>→ Kemungkinan: Server sedang busy atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain di Combo (jika ada).</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
     <p>Setup selesai — lanjut ke tugas berikutnya.</p>
   </article>
 
@@ -611,11 +613,11 @@ Root Directory: ./              ← OK, biarkan default</pre></div>
         <div class="callout">💡 Biarkan semua setting default, <b>JANGAN</b> diubah.</div>
       </li>
       <li>Scroll ke bawah, klik tombol besar <b>Deploy</b> (warnanya gray atau biru).</li>
-      <li>Tunggu proses deployment (2—3 menit):
+      <li>Tunggu proses deployment sampai selesai:
         <ul class="doc-ul">
-          <li>⏳ <b>Building...</b> (proses 1—2 menit) — building assets, compiling, dll</li>
-          <li>⏳ <b>Uploading...</b> (proses 30 detik) — upload ke server Vercel</li>
-          <li>⏳ <b>Finalizing...</b> (proses 10—20 detik) — finalisasi deployment</li>
+          <li>🔄 <b>Building...</b> — building assets, compiling, dll</li>
+          <li>🔄 <b>Uploading...</b> — upload ke server Vercel</li>
+          <li>🔄 <b>Finalizing...</b> — finalisasi deployment</li>
           <li>✅ <b>Done!</b> (sukses!) — muncul URL publik</li>
         </ul>
         Halaman yang terlihat:
@@ -659,7 +661,7 @@ URL: [URL akan muncul di sini]</pre></div>
       <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git add .">Copy</button></div><pre>$ git add .
 $ git commit -m 'Update portfolio'
 $ git push origin main</pre></div>
-      <p>Vercel akan otomatis detect dan deploy ulang (2—3 menit) ✓</p>
+      <p>Vercel akan otomatis mendeteksi perubahan dan deploy ulang ✓</p>
     </li>
   </ol>
   <p>Jika ingin unpublish/delete project: → Vercel dashboard → Project → Settings → Delete project → konfirmasi penghapusan.</p>
