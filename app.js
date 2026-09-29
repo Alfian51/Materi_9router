@@ -24,7 +24,7 @@ function onScroll(){
   const curI = order.indexOf(current);
   sideLinks.forEach(a=>{
     const i = order.indexOf(idOf(a.getAttribute('href')));
-    a.classList.toggle('done', i < curI);
+    a.classList.toggle('done', i >= 0 && i < curI);
     const dot = a.querySelector('.st');
     if(!dot) return;
     if(i < curI){ dot.textContent=''; }
@@ -36,8 +36,12 @@ function onScroll(){
     let curStep = steps[0].id;
     const sc2 = window.scrollY + 180;
     steps.forEach(s => { if(sc2 >= s.offsetTop) curStep = s.id; });
-    stepNav.querySelectorAll('a').forEach(a=>{
-      a.classList.toggle('active', idOf(a.getAttribute('href'))===curStep);
+    const tutLinks = [...stepNav.querySelectorAll('a')];
+    let curIdx = 0;
+    tutLinks.forEach((a,i)=>{ if(idOf(a.getAttribute('href'))===curStep) curIdx=i; });
+    tutLinks.forEach((a,i)=>{
+      a.classList.toggle('active', i===curIdx);
+      a.classList.toggle('done', i<curIdx);
     });
   }
 

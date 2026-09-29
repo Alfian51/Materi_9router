@@ -97,7 +97,6 @@
     <li>Menggunakan workflow tersebut dalam AI Coding.</li>
     <li>Membuat dan melakukan deployment website sederhana.</li>
   </ol>
-  <div class="pager"><span></span><a class="btn" href="#router">02 · 9Router →</a></div>
 </section>
 
 <!-- 02 -->
@@ -152,7 +151,6 @@
     <li><b>Response</b> — dikembalikan melalui jalur yang sama menuju Antigravity.</li>
     <li><b>Hasil</b> — Antigravity menampilkan hasil kepada pengguna.</li>
   </ol>
-  <div class="pager"><a class="btn outline" href="#pengenalan">← Sebelumnya</a><a class="btn" href="#opencode">03 · OpenCode →</a></div>
 </section>
 
 <!-- 03 -->
@@ -161,6 +159,26 @@
   <h1>Apa itu OpenCode?</h1>
   <p><b>OpenCode adalah salah satu provider / layanan yang menyediakan akses ke model AI melalui API.</b></p>
   <p>Layanan ini berbasis website dan berbeda dengan 9Router. Kalau 9Router dijalankan lokal lewat CMD, OpenCode cukup diakses lewat browser — tidak perlu di-install.</p>
+  <div class="callout"><b>OpenCode adalah provider AI yang SUDAH TERMASUK dalam 9Router.</b> Tidak perlu download, install, atau setup tambahan.</div>
+  <h3>Definisi</h3>
+  <div class="duo">
+    <div class="mini hl"><b>Provider</b><p>Layanan yang menyediakan model AI.</p></div>
+    <div class="mini hl"><b>OpenCode</b><p>Salah satu provider yang sudah built-in di 9Router.</p></div>
+  </div>
+  <h3>Kenapa dipakai dalam materi ini</h3>
+  <ul class="doc-ul">
+    <li>✓ Gratis (OpenCode Free dengan model-model gratis)</li>
+    <li>✓ Multiple models (banyak pilihan AI yang berbeda)</li>
+    <li>✓ Built-in di 9Router (sudah termasuk, tinggal pakai)</li>
+    <li>✓ Tidak perlu membuat akun</li>
+    <li>✓ Tidak perlu API Key OpenCode</li>
+    <li>✓ Ready-to-use (sudah siap tanpa setup)</li>
+  </ul>
+  <h3>Flow dalam workflow</h3>
+  <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode → AI Model → Response
+                        ↑
+                    (Provider)</pre></div>
+  <p>OpenCode adalah <b>penyedia</b> dalam alur tersebut.</p>
   <h2>Apa &amp; kenapa dipakai</h2>
   <h3>Layanannya</h3><p>OpenCode tersedia di <code>opencode.ai</code>. Di dashboardnya kita bisa melihat daftar provider dan model yang didukung. Dalam training ini, OpenCode kita manfaatkan sebagai <b>provider</b> yang nantinya dihubungkan ke 9Router.</p>
   <h3>Alasan dipakai</h3><p>OpenCode digunakan sebagai salah satu provider yang dapat dihubungkan ke 9Router, sehingga request dari workflow AI Coding dapat diarahkan ke layanan tersebut sesuai konfigurasi. Ketersediaan model mengikuti layanan dan konfigurasi yang digunakan — tidak semua model selalu ada.</p>
@@ -175,23 +193,61 @@
   <div class="success">✅ Benar: <b>Provider → OpenCode</b> · <b>Model → Claude Sonnet</b> &nbsp;|&nbsp; ❌ Salah: OpenCode = Claude Sonnet</div>
   <p>Katakanlah OpenCode itu seperti penyedia listrik, dan Claude Sonnet itu seperti lampu yang kita colok. Listriknya dari OpenCode, yang menyala adalah modelnya.</p>
 
+  <h2>"No Authentication Required" — apa artinya?</h2>
+  <p>Saat connect OpenCode di 9Router, akan terlihat tulisan status <b>"No authentication required"</b> (warna hijau).</p>
+  <p>Artinya:</p>
+  <ul class="doc-ul">
+    <li>✅ OpenCode sudah ready pakai tanpa setup</li>
+    <li>✅ Tidak perlu login ke opencode.ai</li>
+    <li>✅ Tidak perlu membuat API Key OpenCode</li>
+    <li>✅ Tidak perlu authorization/approve apapun</li>
+    <li>✅ Langsung bisa select model dan digunakan</li>
+  </ul>
+  <p>Dibandingkan provider lain yang butuh:</p>
+  <ul class="doc-ul">
+    <li>❌ Login</li>
+    <li>❌ API Key</li>
+    <li>❌ Authorization</li>
+  </ul>
+  <div class="callout">OpenCode Free lebih simple karena sudah included di 9Router.</div>
+
+  <h2>Model-model available di OpenCode Free</h2>
+  <p>Daftar model gratis yang bisa dipilih:</p>
+  <h3>⭐ Recommended untuk praktik</h3>
+  <ul class="doc-ul">
+    <li><code>oc/muse-spark-1.3-contributor-free</code><br>→ Fast &amp; good quality<br>→ Cocok untuk AI coding<br>→ <b>Recommended</b></li>
+    <li><code>oc/mimo-v2.5-free</code><br>→ Good balance speed/quality<br>→ Alternative pilihan</li>
+  </ul>
+  <h3>Alternatif lain</h3>
+  <ul class="doc-ul">
+    <li><code>oc/muse-spark-1.2-contributor-free</code></li>
+    <li><code>oc/big-pickle</code></li>
+    <li><code>oc/nemotron-3-ultra-free</code></li>
+    <li>(list bisa berkembang sesuai update OpenCode)</li>
+  </ul>
+  <div class="callout">💡 <b>Tips:</b> Jika tidak tahu pilih mana, gunakan yang direkomendasikan. Semua model di atas gratis dan berfungsi dengan baik.</div>
+
   <h2>Contoh Combo: OpenCode + Claude Sonnet</h2>
   <p><b>Provider:</b> OpenCode · <b>Model:</b> Claude Sonnet</p>
   <p>Combo merupakan konfigurasi yang menggabungkan provider dan model agar dapat digunakan sebagai satu pilihan dalam workflow. Jadi nanti di 9Router kita akan membuat satu combo bernama misal <code>OpenCode-AI</code> yang isinya OpenCode + model pilihan — lalu combo itulah yang dipilih di Antigravity.</p>
 
-  <h2>🔐 Keamanan API Key (yang nanti kita buat di 9Router)</h2>
-  <p>Pada praktik nanti kita akan membuat <b>API Key 9Router</b> untuk Antigravity. Karena itu kunci akses, perlakukan dengan hati-hati:</p>
+  <h2>🔐 API Key — penting dicatat</h2>
+  <p>Ada 2 jenis API Key yang berbeda:</p>
+  <div class="duo">
+    <div class="mini hl"><b>1️⃣ API Key 9Router</b><p>→ WAJIB dibuat di STEP 07<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai untuk Antigravity<br>→ SIMPAN dengan aman<br>→ Jangan bagikan / upload ke GitHub</p></div>
+    <div class="mini"><b>2️⃣ API Key OpenCode</b><p>→ TIDAK PERLU DIBUAT<br>→ OpenCode Free sudah included<br>→ Tidak butuh login atau API Key</p></div>
+  </div>
+  <h3>Security tips</h3>
   <ul class="doc-ul">
-    <li>Jangan membagikan API Key kepada orang lain.</li>
-    <li>Jangan upload API Key ke GitHub.</li>
-    <li>Jangan memasukkan API Key langsung ke source code yang akan dipublikasikan.</li>
-    <li>Jangan menampilkan API Key pada screenshot yang dibagikan — gunakan placeholder <code>sk-xxxxxxxxxxxxxxxx</code>.</li>
-    <li>Simpan credential di tempat yang aman.</li>
-    <li>Jika API Key bocor, segera revoke atau regenerate.</li>
+    <li>✓ Simpan API Key 9Router di file terpisah</li>
+    <li>✓ Jangan upload ke GitHub</li>
+    <li>✓ Jangan tampilkan di screenshot (gunakan placeholder)</li>
+    <li>✓ Jangan bagikan ke orang lain</li>
+    <li>✓ Jika bocor, regenerate di dashboard 9Router</li>
   </ul>
+  <div class="warning"><b>Jangan sampai:</b><br>❌ Paste API Key di source code<br>❌ Commit API Key ke GitHub<br>❌ Share screenshot dengan API Key terlihat<br>❌ Hardcode API Key di file yang di-push</div>
   <figure class="shot"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="Dashboard OpenCode" loading="lazy"><figcaption>Gambar 01 — Dashboard OpenCode</figcaption></figure>
   <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Gambar 02 — Connect OpenCode di menu Providers 9Router</figcaption></figure>
-  <div class="pager"><a class="btn outline" href="#router">← Sebelumnya</a><a class="btn" href="#workflow">04 · Workflow →</a></div>
 </section>
 
 <!-- 04 -->
@@ -209,7 +265,6 @@
   </div>
   <div class="callout"><b>Sederhananya: Antigravity mengirim → 9Router mengatur → provider memproses → hasil kembali ke Antigravity.</b></div>
   <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode → Model AI → 9Router → Antigravity</pre></div>
-  <div class="pager"><a class="btn outline" href="#opencode">← Sebelumnya</a><a class="btn" href="#instalasi">05 · Instalasi →</a></div>
 </section>
 
 <!-- 05 -->
@@ -252,7 +307,6 @@
     <p>Perintah <code>-g</code> artinya global — 9Router dipasang untuk seluruh sistem, bukan cuma satu folder.</p>
     <hr><h3>Hasil</h3><div class="success">✓ Tunggu sampai muncul tulisan <code>added packages</code>. Pastikan tidak ada tulisan error merah di terminal.</div>
     <figure class="shot"><img src="assets/install%209router.png" alt="Install 9router global" loading="lazy"><figcaption>Gambar 03 — Install 9Router via <code>npm install -g 9router</code></figcaption></figure>
-    <div class="stepnav"><a class="btn outline" href="#step1">← Sebelumnya</a><span>02 / 10</span><a class="btn" href="#step3">Berikutnya →</a></div>
   </article>
 
   <article class="step" id="step3">
@@ -281,37 +335,88 @@
 
   <article class="step" id="step5">
     <p class="step-k">STEP 05</p><h2>Connect OpenCode Free ke 9Router</h2>
-    <h3>Tujuan</h3><p>Menghubungkan provider <b>OpenCode Free</b> ke 9Router sehingga request AI bisa diteruskan ke sana.</p><hr><h3>Langkah</h3>
+    <h3>Tujuan</h3><p>Menghubungkan provider <b>OpenCode Free</b> ke 9Router sehingga request AI bisa diteruskan ke sana.</p>
+    <div class="callout"><b>OpenCode Free sudah termasuk dalam 9Router, tidak perlu setup lagi.</b> Tidak perlu daftar akun baru, tidak perlu login ke <code>opencode.ai</code>, dan tidak perlu memasukkan API Key apa pun — cukup klik <b>Connect</b>.</div>
+    <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Buka dashboard 9Router.</li>
       <li>Masuk ke menu <b>Providers</b>.</li>
       <li>Cari <b>OpenCode Free</b> pada daftar provider.</li>
       <li>Klik <b>Connect</b>.</li>
-      <li>Tunggu sampai status provider siap digunakan (biasanya muncul indikator Connected / Active).</li>
+      <li>Perhatikan tampilan setelah klik <b>Connect</b>: panel detail provider akan terbuka dan menampilkan daftar <b>Available Models</b> secara otomatis — inilah model-model gratis yang langsung bisa dipakai tanpa konfigurasi tambahan.</li>
+      <li>Tunggu sampai status provider siap digunakan. Status yang diharapkan: <b>"No authentication required"</b> dengan indikator <b>hijau</b> — artinya provider aktif dan tidak membutuhkan autentikasi tambahan.</li>
     </ol>
-    <hr><h3>Hasil</h3><div class="success">✓ Provider <b>OpenCode Free</b> berstatus siap digunakan. Jika gagal, cek koneksi internet dan coba klik Connect lagi.</div>
+    <h3>Model yang akan tampil</h3>
+    <p>Setelah Connect berhasil, minimal 5 model berikut akan muncul di daftar Available Models:</p>
+    <div class="codeblock"><div class="cb-head"><span>Available Models — OpenCode Free</span><button data-copy="oc/muse-spark-1.3-contributor-free">Copy</button></div><pre>oc/muse-spark-1.3-contributor-free
+oc/muse-spark-1.2-contributor-free
+oc/big-pickle
+oc/mimo-v2.5-free
+oc/nemotron-3-ultra-free</pre></div>
+    <ul class="doc-ul">
+      <li><code>oc/muse-spark-1.3-contributor-free</code> — <b>RECOMMENDED</b>, versi terbaru dan paling stabil.</li>
+      <li><code>oc/muse-spark-1.2-contributor-free</code> — versi sebelumnya, cadangan jika 1.3 bermasalah.</li>
+      <li><code>oc/big-pickle</code>, <code>oc/mimo-v2.5-free</code>, <code>oc/nemotron-3-ultra-free</code> — alternatif gratis untuk variasi / fallback.</li>
+    </ul>
+    <hr><h3>Hasil</h3><div class="success">✓ Provider <b>OpenCode Free</b> berstatus siap digunakan — indikator hijau <b>"No authentication required"</b>. Jika gagal, cek koneksi internet dan coba klik Connect lagi.</div>
     <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Gambar 06 — Connect OpenCode Free di menu Providers</figcaption></figure>
+    <figure class="shot"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="Available Models OpenCode Free" loading="lazy"><figcaption>Gambar 06B — Available Models yang tampil setelah Connect (No authentication required)</figcaption></figure>
   </article>
 
   <article class="step" id="step6">
-    <p class="step-k">STEP 06</p><h2>Buat Combo</h2>
-    <h3>Tujuan</h3><p>Menggabungkan provider dan model menjadi satu konfigurasi yang dapat dipilih. Combo inilah yang nanti dipakai di Antigravity.</p><hr><h3>Langkah</h3>
+    <p class="step-k">STEP 06</p><h2>Buat Combo (Konfigurasi Provider + Multiple Models)</h2>
+    <h3>Tujuan</h3><p>Menggabungkan provider <b>OpenCode</b> dengan <b>MULTIPLE MODELS</b> dalam satu konfigurasi yang dapat digunakan di Antigravity.</p>
+    <hr><h3>Kenapa Harus Buat Combo?</h3>
+    <p>Saat menggunakan hanya 1 model, jika model tersebut mencapai rate limit, request akan ditolak dan pekerjaan terhenti. Dengan combo yang berisi multiple models, jika 1 model limit, sistem secara otomatis akan switch ke model lain. Pekerjaan tetap berjalan tanpa perlu menunggu.</p>
+    <hr><h3>Manfaat Combo dengan Multiple Models</h3>
+    <div class="duo">
+      <div class="mini"><b>1️⃣ Redundancy (Backup System)</b><p>Jika 1 model limit, otomatis switch ke model lain. Request tidak pernah ditolak. Pekerjaan tidak terganggu.</p></div>
+      <div class="mini"><b>2️⃣ Flexibility (Fleksibilitas)</b><p>Mudah ganti/tambah/kurangi model dari dashboard. Tidak perlu restart Antigravity. Konfigurasi bisa diubah kapan saja.</p></div>
+      <div class="mini"><b>3️⃣ Load Balancing (Distribusi Beban)</b><p>Request terdistribusi ke beberapa model (Round Robin). Tidak ada 1 model yang overload. Response lebih konsisten dan cepat.</p></div>
+      <div class="mini"><b>4️⃣ Strategy Options (Berbagai Pilihan Routing)</b><p>Round Robin: rotate ke model berbeda setiap request. Fallback: try model utama, jika gagal coba backup. Pilih sesuai kebutuhan.</p></div>
+    </div>
+    <hr><h3>Langkah-Langkah</h3>
+    <h3>Langkah 1: Masuk ke Menu Combo &amp; Vision Adapter</h3>
     <ol class="doc-ol">
-      <li>Masuk ke menu <b>Combo &amp; Vision Adapter</b>.</li>
-      <li>Klik <b>Create Combo</b> (tombol orange/merah di pojok).</li>
-      <li>Berikan nama combo, misalnya <code>OpenCode-AI</code>.</li>
-      <li>Pilih <b>Provider: OpenCode</b>.</li>
-      <li>Pilih <b>Model</b> yang tersedia (misal Claude Sonnet atau model lain yang muncul di daftar).</li>
-      <li>Klik <b>Create / Save Combo</b>.</li>
+      <li>Buka dashboard 9Router: <b>http://localhost:20128</b></li>
+      <li>Di sidebar kiri, klik <b>Combo &amp; Vision Adapter</b>.</li>
+      <li>Klik tombol <b>+ Create Combo</b> (orange, pojok kanan).</li>
     </ol>
-    <div class="callout">Provider = sumber layanan AI yang digunakan. Model = model AI yang dipilih dari provider tersebut. Combo = bungkus keduanya jadi satu pilihan.</div>
-    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>OpenCode-AI</b> berhasil dibuat dan muncul di daftar combo. Combo ini yang nanti kita pilih di Antigravity.</div>
-    <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Model → <code>OpenCode-AI</code></figcaption></figure>
+    <h3>Langkah 2: Isi Form</h3>
+    <ul class="doc-ul">
+      <li><b>Combo Name:</b> <code>OpenCode-AI</code></li>
+      <li><b>Select Provider:</b> <code>OpenCode</code></li>
+      <li><b>Models:</b> centang MINIMAL 3 MODEL:
+        <ul class="doc-ul">
+          <li>✓ <code>oc/muse-spark-1.3-contributor-free</code> <b>(PRIMARY)</b></li>
+          <li>✓ <code>oc/mimo-v2.5-free</code> <b>(BACKUP 1)</b></li>
+          <li>✓ <code>oc/nemotron-3-ultra-free</code> <b>(BACKUP 2)</b></li>
+        </ul>
+      </li>
+      <li><b>Strategy:</b> <code>Round Robin</code> (untuk praktik)</li>
+    </ul>
+    <div class="warning"><b>⚠️ PENTING:</b> Jangan hanya pilih 1 model! Minimal 3 untuk redundancy yang baik.</div>
+    <h3>Langkah 3: Klik Create</h3>
+    <p>Setelah semua field terisi, klik tombol <b>Create</b>.</p>
+    <h3>Langkah 4: Verifikasi</h3>
+    <div class="success">✓ Combo <b>OpenCode-AI</b> muncul di daftar<br>✓ 3 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
+    <hr><h3>Mengapa Minimal 3 Model?</h3>
+    <div class="tablewrap"><table>
+      <tr><th>Jumlah</th><th>Risk</th><th>Kejelasan</th></tr>
+      <tr><td>1 model</td><td>TINGGI</td><td>Jika limit, tidak ada backup — harus tunggu</td></tr>
+      <tr><td>2 model</td><td>MEDIUM</td><td>Ada backup, tapi kalau keduanya limit buntu</td></tr>
+      <tr><td>3+ model</td><td>RENDAH</td><td>Selalu ada model yang bisa dipakai ✓</td></tr>
+    </table></div>
+    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>OpenCode-AI</b> berhasil dibuat<br>✓ Models: <code>oc/muse-spark-1.3-contributor-free</code> + <code>oc/mimo-v2.5-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
+    <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Multiple Models → <code>OpenCode-AI</code></figcaption></figure>
+    <h3>Next Step</h3><p>Combo berhasil dibuat! Lanjut ke <b><a href="#step7">STEP 07: Buat API Key 9Router</a></b>.</p>
   </article>
 
   <article class="step" id="step7">
     <p class="step-k">STEP 07</p><h2>Buat API Key 9Router untuk Antigravity</h2>
-    <h3>Tujuan</h3><p>Membuat kunci akses 9Router agar Antigravity diizinkan terhubung ke gateway. Ini adalah <b>API Key 9Router</b> — bukan API Key OpenCode.</p><hr><h3>Langkah</h3>
+    <h3>Tujuan</h3><p>Membuat kunci akses 9Router agar Antigravity diizinkan terhubung ke gateway. Ini adalah <b>API Key 9Router</b> — bukan API Key OpenCode.</p>
+    <div class="warning"><b>⚠️ PERHATIAN: 2 MACAM API KEY</b><br><br>Ada 2 macam API Key yang berbeda:<br><br><b>1️⃣ API Key 9Router (WAJIB DIBUAT — Langkah ini)</b><br>→ Untuk autentikasi Antigravity ke 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai di STEP 08<br>→ HARUS DISIMPAN dengan aman<br><br><b>2️⃣ API Key OpenCode (TIDAK PERLU DIBUAT)</b><br>→ OpenCode Free sudah included di 9Router<br>→ Tidak perlu login opencode.ai<br>→ Tidak perlu membuat API Key OpenCode<br>→ Sudah otomatis ready<br><br><b>INTINYA:</b><br>Hanya buat API Key 9Router di langkah ini. OpenCode Free sudah siap pakai tanpa setup tambahan.</div>
+    <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Masuk ke menu <b>Endpoint &amp; Key</b> di dashboard 9Router.</li>
       <li>Klik <b>Create API Key</b> / <b>+ New</b>.</li>
@@ -319,10 +424,9 @@
       <li>Klik <b>Generate / Create</b> → copy API key yang dihasilkan.</li>
     </ol>
     <div class="codeblock"><div class="cb-head"><span>Contoh format — jangan pakai key asli</span><button data-copy="sk-xxxxxxxxxxxxxxxx">Copy</button></div><pre>sk-xxxxxxxxxxxxxxxx</pre></div>
-    <div class="warning">⚠️ Jangan pernah menampilkan API key asli pada screenshot atau mengunggahnya ke GitHub. Simpan di tempat aman dan jangan dibagikan. Jika bocor, segera revoke / regenerate.</div>
+    <div class="warning">Jangan pernah:<br>❌ Bagikan API Key kepada orang lain<br>❌ Upload ke GitHub<br>❌ Tampilkan di screenshot asli (gunakan placeholder)<br><br><b>SECURE STORAGE:</b><br>✓ Simpan di Notepad terpisah<br>✓ Atau file .env lokal (jangan di-commit)<br>✓ Jika bocor, segera regenerate di dashboard</div>
     <hr><h3>Hasil</h3><div class="success">✓ API Key 9Router berhasil dibuat dan tersalin. Simpan sementara — akan dipakai di langkah berikutnya.</div>
     <figure class="shot"><img src="assets/API%20config.jpeg" alt="Endpoint &amp; Key" loading="lazy"><figcaption>Gambar 09 — Endpoint &amp; Key → Create API Key 9Router</figcaption></figure>
-    <div class="stepnav"><a class="btn outline" href="#step6">← Sebelumnya</a><span>07 / 10</span><a class="btn" href="#step8">Berikutnya →</a></div>
   </article>
 
   <article class="step" id="step8">
@@ -351,25 +455,49 @@
       <li>Klik <b>Save</b> / <b>Connect</b>.</li>
     </ol>
     <hr><h3>Hasil</h3><div class="success">✓ Combo <b>OpenCode-AI</b> terpilih di Antigravity. Combo ini yang menjadi jembatan antara Antigravity dengan provider yang sudah disiapkan di 9Router.</div>
-    <div class="stepnav"><a class="btn outline" href="#step8">← Sebelumnya</a><span>09 / 10</span><a class="btn" href="#step10">Berikutnya →</a></div>
   </article>
 
   <article class="step" id="step10">
-    <p class="step-k">STEP 10</p><h2>Testing Koneksi</h2>
-    <h3>Tujuan</h3><p>Memastikan setup benar-benar berhasil — bukan cuma Running di dashboard.</p><hr><h3>Langkah</h3>
+    <p class="step-k">STEP 10</p><h2>Testing Koneksi — Verify Setup Berhasil</h2>
+    <h3>Tujuan</h3><p>Memastikan setup benar-benar berhasil — bukan cuma Running di dashboard.</p>
+    <hr><h3>Pre-Test Checklist</h3>
+    <p>Sebelum kirim test prompt, pastikan ketiganya sudah beres:</p>
+    <ul class="doc-ul">
+      <li>☑ 9Router masih jalan di CMD? (server harus Running)</li>
+      <li>☑ Combo <code>OpenCode-AI</code> sudah dibuat? (di STEP 06)</li>
+      <li>☑ Combo sudah dipilih di Antigravity? (STEP 09)</li>
+    </ul>
+    <hr><h3>Test Prompt</h3>
+    <p>Gunakan prompt berikut untuk testing:</p>
+    <div class="codeblock"><div class="cb-head"><span>Test prompt</span><button data-copy="Buatkan navbar HTML responsif dengan HTML & CSS. Include: logo, menu links, hamburger menu untuk mobile.">Copy</button></div><pre>Buatkan navbar HTML responsif dengan HTML &amp; CSS.
+Include: logo, menu links, hamburger menu untuk mobile.</pre></div>
     <ol class="doc-ol">
       <li>Buka project apa pun di Antigravity.</li>
-      <li>Kirim prompt sederhana, misal: <i>"Buatkan navbar responsif sederhana"</i>.</li>
+      <li>Kirim test prompt di atas.</li>
       <li>Tunggu sampai AI memberikan respons.</li>
-      <li>Pastikan tidak muncul error koneksi.</li>
-      <li>Jika diperlukan, cek <b>Request Logs</b> di 9Router untuk melihat request tercatat.</li>
     </ol>
-    <hr><h3>Hasil</h3><div class="success">✓ Antigravity berhasil memberikan respons AI melalui konfigurasi yang sudah dibuat. Jika response muncul dan log bertambah, berarti setup berhasil.</div>
-    <div class="deploy-ok" style="margin-top:18px"><p>✓ SETUP SELESAI</p><span>9Router Connected · OpenCode Connected · Antigravity Ready</span></div>
+    <hr><h3>Expected Result (Jika Berhasil) ✅</h3>
+    <div class="success">☑ AI response muncul dalam 10—30 detik<br>☑ Code yang diberikan adalah valid HTML/CSS<br>☑ Tidak ada error message<br>☑ Log di 9Router dashboard bertambah<br>☑ Status di Antigravity: "Connected"</div>
+    <h3>Cara Verify di 9Router</h3>
+    <ol class="doc-ol">
+      <li>Buka dashboard 9Router (<code>http://localhost:20128</code>).</li>
+      <li>Buka menu <b>Usage</b> atau <b>Log</b>.</li>
+      <li>Lihat request log bertambah.</li>
+      <li>Status: <b>Success</b> (hijau).</li>
+    </ol>
+    <hr><h3>Hasil</h3>
+    <div class="deploy-ok"><p>✓ SETUP SELESAI</p><span>9Router Connected — OpenCode Connected — Antigravity Ready</span></div>
+    <p>Selamat! Setup selesai dan siap digunakan untuk praktik.</p>
+    <div class="warning"><b>Jika GAGAL ❌:</b> jangan panik — cocokkan pesan error yang muncul dengan <b>Troubleshooting</b> di bawah, ikuti solusinya langkah per langkah, lalu ulangi test prompt.</div>
+    <h3>Troubleshooting</h3>
+    <div class="mini"><b>Masalah 1: Response Timeout / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu 10 detik, coba prompt lagi.</li></ol></div>
+    <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD baru → jalankan <code>9router</code>.</li><li>Tunggu 5 detik, coba di Antigravity lagi.</li></ol></div>
+    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum di-set.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa API Key yang di-paste (STEP 08).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba re-paste API Key.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
+    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Combo belum dipilih di Antigravity.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Buka Antigravity Settings (ikon ⚙️).</li><li>Cek Model Selection.</li><li>Pilih combo <code>OpenCode-AI</code>.</li><li>Klik Save/Connect.</li><li>Coba prompt lagi.</li></ol></div>
+    <div class="mini"><b>Masalah 5: Prompt berhasil tapi response lambat (&gt;60 detik)</b><p>→ Kemungkinan: Server sedang busy atau network slow.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Tunggu beberapa menit.</li><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain di Combo (jika ada).</li></ol></div>
     <p>Setup selesai — lanjut ke tugas berikutnya.</p>
   </article>
 
-  <div class="pager"><a class="btn outline" href="#workflow">← Sebelumnya</a><a class="btn" href="#tugas">06 · Tugas →</a></div>
 </section>
 
 <!-- 06 -->
@@ -385,6 +513,24 @@
   <ul class="doc-ul"><li>Warna</li><li>Layout</li><li>Style</li><li>Animasi</li><li>Struktur tambahan</li></ul>
   <p>Tujuan utama adalah menerapkan workflow AI Coding, bukan membuat website yang terlalu kompleks. Navigasi rapi + responsif HP &amp; laptop sudah cukup.</p>
 
+</section>
+
+<!-- 07 -->
+<section class="chapter" id="praktik" data-name="Membuat Portfolio">
+  <p class="eyebrow">07 / MEMBUAT PORTFOLIO</p>
+  <h1>Bangun Website Portfolio</h1>
+  <p>Setup sudah beres dan combo <code>OpenCode-AI</code> sudah terpilih di Antigravity (STEP 09). Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
+  <h2>Cara mengerjakan</h2>
+  <ol class="doc-ol">
+    <li>Buka folder project portfolio di Antigravity.</li>
+    <li>Pastikan combo <code>OpenCode-AI</code> masih aktif di Settings → Model Selection.</li>
+    <li>Kerjakan per bagian (Identitas, Tentang Saya, Skills, Projects) dengan prompt yang spesifik — satu bagian per prompt agar hasilnya rapi.</li>
+    <li>Cek hasilnya di browser setiap selesai satu bagian, lalu lanjutkan ke bagian berikutnya.</li>
+  </ol>
+  <p>Contoh prompt per bagian:</p>
+  <div class="codeblock"><div class="cb-head"><span>Contoh prompt</span><button data-copy="Buatkan section Tentang Saya untuk portfolio siswa SMK, 2 paragraf singkat, gaya bahasa santai dan rapi">Copy</button></div><pre>Buatkan section Tentang Saya untuk portfolio siswa SMK, 2 paragraf singkat, gaya bahasa santai dan rapi</pre></div>
+
+</section>
 
 <!-- 08 -->
 <section class="chapter" id="github" data-name="GitHub">
@@ -394,19 +540,83 @@
   <h2>01 — Buat repository</h2>
   <p>Buka GitHub → <b>New repository</b> → nama misal <code>portfolio-nama</code> → <b>Create</b>.</p>
   <figure class="shot"><img src="assets/buat%20repo%20github.png" alt="Buat repo GitHub" loading="lazy"><figcaption>Gambar 13 — Buat repository baru di GitHub</figcaption></figure>
-  <h2>02 — Hubungkan project</h2>
-  <p>Di folder proyek, jalankan berurutan:</p>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git init">Copy</button></div><pre>git init</pre></div>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git add .">Copy</button></div><pre>git add .</pre></div>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy='git commit -m "Portfolio Website"'>Copy</button></div><pre>git commit -m "Portfolio Website"</pre></div>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git branch -M main">Copy</button></div><pre>git branch -M main</pre></div>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git remote add origin https://github.com/USERNAME/portfolio-nama.git">Copy</button></div><pre>git remote add origin https://github.com/USERNAME/portfolio-nama.git</pre></div>
-  <h2>03 — Push source code</h2>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git push -u origin main">Copy</button></div><pre>git push -u origin main</pre></div>
+  <h2>02 — Hubungkan Project Lokal ke GitHub</h2>
+  <p>Setelah website selesai dibuat, langkah berikutnya adalah mengupload project ke GitHub. Dengan Git, kita bisa menyimpan versi project secara online dan melakukan update ketika ada perubahan.</p>
+  <p>Buka CMD/Terminal di dalam folder project yang sudah dibuat.</p>
+  <div class="callout"><b>Catatan:</b> Pastikan terminal berada di folder project yang ingin di-upload, bukan di folder lain.</div>
+  <h3>Command 1️⃣ — Inisialisasi Repository</h3>
+  <p>Jalankan:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git init">Copy</button></div><pre>$ git init</pre></div>
+  <p>Expected Output:</p>
+  <div class="codeblock"><div class="cb-head"><span>Expected output</span></div><pre>Initialized empty Git repository in C:/Users/.../portfolio-nama/.git/</pre></div>
+  <div class="success">✓ Artinya: Folder project sekarang sudah menjadi Git repository dan siap digunakan untuk menyimpan perubahan project.</div>
+  <h3>Command 2️⃣ — Gunakan Branch Main</h3>
+  <p>Jalankan:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git branch -M main">Copy</button></div><pre>$ git branch -M main</pre></div>
+  <p>Expected Output:</p>
+  <p class="small">Tidak ada output. Ini normal.</p>
+  <div class="success">✓ Artinya: Branch utama project menggunakan nama main.</div>
+  <h3>Command 3️⃣ — Tambahkan Semua File</h3>
+  <p>Jalankan:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git add .">Copy</button></div><pre>$ git add .</pre></div>
+  <p>Expected Output:</p>
+  <p class="small">Biasanya tidak ada output. Ini normal.</p>
+  <div class="success">✓ Artinya: Semua file yang ada di dalam folder project ditambahkan ke staging dan siap disimpan dalam commit.</div>
+  <h3>Command 4️⃣ — Buat Commit</h3>
+  <p>Jalankan:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy='git commit -m "Portfolio Website"'>Copy</button></div><pre>$ git commit -m "Portfolio Website"</pre></div>
+  <p>Expected Output:</p>
+  <div class="codeblock"><div class="cb-head"><span>Expected output</span></div><pre>[main (root-commit) a1b2c3d] Portfolio Website
+ 5 files changed, 250 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 style.css
+ ...</pre></div>
+  <div class="success">✓ Artinya: File project sudah disimpan dalam sebuah commit.</div>
+  <p>Commit bisa dianggap sebagai titik penyimpanan perubahan pada project.</p>
+  <h3>Command 5️⃣ — Hubungkan Project ke GitHub</h3>
+  <p>Pastikan kamu sudah membuat repository kosong di GitHub pada langkah sebelumnya.</p>
+  <p>Kemudian jalankan:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git remote add origin https://github.com/USERNAME/portfolio-nama.git">Copy</button></div><pre>$ git remote add origin https://github.com/USERNAME/portfolio-nama.git</pre></div>
+  <p>Ganti bagian:</p>
+  <ul class="doc-ul">
+    <li><code>USERNAME</code> → username GitHub kamu</li>
+    <li><code>portfolio-nama</code> → nama repository yang kamu buat di GitHub</li>
+  </ul>
+  <p>Contoh:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git remote add origin https://github.com/alfianrizki/portfolio-nama.git">Copy</button></div><pre>$ git remote add origin https://github.com/alfianrizki/portfolio-nama.git</pre></div>
+  <p>Expected Output:</p>
+  <p class="small">Tidak ada output. Ini normal.</p>
+  <div class="success">✓ Artinya: Project lokal sekarang sudah terhubung dengan repository GitHub.</div>
+  <div class="callout"><b>Catatan:</b> Command <code>git remote add origin</code> hanya digunakan saat pertama kali menghubungkan project dengan repository tersebut.</div>
+  <h3>Command 6️⃣ — Push ke GitHub</h3>
+  <p>Sekarang kirim project ke GitHub:</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git push -u origin main">Copy</button></div><pre>$ git push -u origin main</pre></div>
+  <p>Expected Output:</p>
+  <div class="codeblock"><div class="cb-head"><span>Expected output</span></div><pre>Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (12/12), 3.45 KiB | 1.15 MiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+To https://github.com/USERNAME/portfolio-nama.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.</pre></div>
+  <div class="success">✓ Artinya: Project berhasil di-push ke GitHub.</div>
+  <p>Sekarang buka repository GitHub yang sudah dibuat dan pastikan file website seperti <code>index.html</code>, <code>style.css</code>, <code>app.js</code>, dan folder <code>assets</code> sudah muncul.</p>
   <div class="warning">⚠️ Jangan upload API Key ke GitHub. Pastikan tidak ada credential 9Router yang ikut ter-push.</div>
-  <h2>04 — Pastikan repository tersedia</h2>
-  <p>Buka URL repo → file tampil lengkap, branch <b>main</b> aktif. Siap dihubungkan ke Vercel.</p>
-  <div class="pager"><a class="btn outline" href="#tugas">← Sebelumnya</a><a class="btn" href="#vercel">08 · Vercel →</a></div>
+  <h2>03 — Verifikasi Repository</h2>
+  <ol class="doc-ol">
+    <li>Buka browser → <code>https://github.com/USERNAME/portfolio-nama</code> (ganti USERNAME dengan username GitHub kamu).</li>
+    <li>Verifikasi:
+      <ul class="doc-ul">
+        <li>✓ File tampil lengkap (index.html, style.css, assets/, dll)</li>
+        <li>✓ Branch <b>main</b> aktif</li>
+        <li>✓ Commit message <code>"Portfolio Website"</code> terlihat</li>
+      </ul>
+    </li>
+  </ol>
+  <div class="success">✓ Jika semua checklist terpenuhi, lanjut ke <b>VERCEL DEPLOYMENT</b>.</div>
 </section>
 
 <!-- 09 -->
@@ -414,6 +624,15 @@
   <p class="eyebrow">09 / DEPLOYMENT</p>
   <h1>Publish Website</h1>
   <p>Vercel digunakan untuk mempublikasikan website sehingga dapat diakses melalui internet. Tahap ini dilakukan <b>setelah</b> project selesai dan sudah ada di GitHub.</p>
+  <h2>Apa itu Vercel?</h2>
+  <p><b>Vercel adalah platform cloud hosting</b> yang digunakan untuk mempublikasikan website agar bisa diakses dari internet. Tanpa Vercel, website hanya bisa diakses di komputer lokal. Dengan Vercel, website bisa diakses oleh siapa saja dari mana saja melalui URL publik.</p>
+  <h2>Kenapa pakai Vercel?</h2>
+  <div class="duo">
+    <div class="mini"><b>1️⃣ Free &amp; Mudah</b><p>Gratis untuk project sederhana (seperti portfolio). Tidak perlu konfigurasi rumit. Sign up hanya butuh akun GitHub.</p></div>
+    <div class="mini"><b>2️⃣ Auto Deploy dari GitHub</b><p>Setiap push code ke GitHub, Vercel otomatis deploy. Tidak perlu upload file manual. Update website hanya perlu <code>git push</code>.</p></div>
+    <div class="mini"><b>3️⃣ Auto HTTPS &amp; Custom Domain</b><p>Website otomatis secure (HTTPS). URL publik: <code>https://portfolio-nama.vercel.app</code>. Bisa pakai custom domain jika mau.</p></div>
+    <div class="mini"><b>4️⃣ Performance Optimized</b><p>Website loading cepat. Server distributed globally. Cocok untuk production.</p></div>
+  </div>
   <div class="vdiag">
     <div class="vnode"><b>PROJECT</b><span>Website portfolio selesai.</span></div><div class="vline"></div>
     <div class="vnode"><b>GITHUB</b><span>Source code tersimpan.</span></div><div class="vline"></div>
@@ -421,19 +640,86 @@
     <div class="vnode"><b>LIVE WEBSITE</b><span>Dapat diakses publik.</span></div>
   </div>
   <h2>01 — Login Vercel</h2>
-  <p>Buka <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> → <b>Continue with GitHub</b> → authorize.</p>
-  <figure class="shot"><img src="assets/Tampilan%20web%20Vercel%20awal.png" alt="Vercel" loading="lazy"><figcaption>Gambar 14 — Halaman awal Vercel</figcaption></figure>
-  <figure class="shot"><img src="assets/tampilan%20login%20vercel%20click%20continue%20with%20github.png" alt="Login" loading="lazy"><figcaption>Gambar 15 — Continue with GitHub</figcaption></figure>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20login%20with%20github.png" alt="Dashboard" loading="lazy"><figcaption>Gambar 16 — Setelah login GitHub</figcaption></figure>
-  <h2>02 — Connect GitHub &amp; pilih repository</h2>
-  <p>Klik <b>Add New → Project</b> → pilih repo <code>portfolio-nama</code> → <b>Import</b>. Biarkan konfigurasi default.</p>
-  <figure class="shot"><img src="assets/tampilan%20kumpulan%20repo%20github%20di%20vercel%20setelah%20klik%20add%20new-project.jpeg" alt="Pilih repo" loading="lazy"><figcaption>Gambar 17 — Pilih repository</figcaption></figure>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20klik%20impor%20dan%20ingin%20deploy.jpeg" alt="Import" loading="lazy"><figcaption>Gambar 18 — Import project</figcaption></figure>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20deployment%20detail.jpeg" alt="Detail" loading="lazy"><figcaption>Gambar 19 — Detail deployment</figcaption></figure>
-  <h2>03 — Deploy &amp; open website</h2>
-  <p>Klik <b>Deploy</b> → tunggu selesai → copy URL publik.</p>
-  <div class="codeblock"><div class="cb-head"><span>URL</span><button data-copy="https://portfolio-nama-siswa.vercel.app">Copy</button></div><pre>https://portfolio-nama-siswa.vercel.app</pre></div>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20deploy%20berhasil.jpeg" alt="Berhasil" loading="lazy"><figcaption>Gambar 20 — Deploy berhasil</figcaption></figure>
+  <ol class="doc-ol">
+      <li>Buka <a href="https://vercel.com" target="_blank" rel="noopener">https://vercel.com</a> di browser.</li>
+      <li>Klik tombol <b>Sign Up</b> atau <b>Continue with GitHub</b>.</li>
+      <li>Klik <b>Continue with GitHub</b> (jika sudah ada akun, klik <b>Continue with GitHub</b> di halaman login).</li>
+      <li>Masukkan username &amp; password GitHub (jika diminta).</li>
+      <li>Halaman Authorization akan muncul — judulnya <b>Authorize Vercel</b>, tulisannya: Vercel meminta akses untuk repository.</li>
+      <li>Klik tombol besar <b>Authorize Vercel by Vercel</b>.</li>
+      <li>Halaman berikutnya: pilih <b>Only select repositories</b> → cari dan centang <code>portfolio-nama</code> → klik <b>Install</b>.</li>
+      <li>Tunggu redirect ke Vercel dashboard.</li>
+      <li>Dashboard Vercel tampil dengan daftar projects ✓</li>
+    </ol>
+    <div class="callout">💡 Jika muncul dialog <b>Select repositories</b> beberapa kali — itu normal, pilih <code>portfolio-nama</code> terus klik <b>Install</b>.</div>
+  <figure class="shot"><img src="assets/Tampilan%20web%20Vercel%20awal.png" alt="Vercel" loading="lazy"><figcaption>Gambar 14 — Halaman utama Vercel sebelum login</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20login%20vercel%20click%20continue%20with%20github.png" alt="Login" loading="lazy"><figcaption>Gambar 15 — Klik ‘Continue with GitHub’ untuk authorize</figcaption></figure>
+    <h2>02 — Connect GitHub &amp; pilih repository</h2>
+  <p>Setelah login berhasil, dashboard Vercel akan tampil seperti ini:</p>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20login%20with%20github.png" alt="Dashboard Vercel setelah login" loading="lazy"><figcaption>Gambar 16 — Dashboard Vercel setelah login berhasil</figcaption></figure>
+  <ol class="doc-ol">
+      <li>Di Vercel dashboard, klik tombol <b>Add New</b> → dropdown menu muncul → pilih <b>Project</b>.</li>
+      <li>Halaman Import Project muncul → cari repository <code>portfolio-nama</code> di daftar → klik repository tersebut.</li>
+      <li>Halaman Project Configuration tampil. Field yang akan terlihat:
+        <div class="codeblock"><div class="cb-head"><span>Project configuration</span></div><pre>Project Name: portfolio-nama   ← OK, biarkan default
+Framework: (Auto-detected)     ← OK, biarkan default
+Root Directory: ./              ← OK, biarkan default</pre></div>
+        <div class="callout">💡 Biarkan semua setting default, <b>JANGAN</b> diubah.</div>
+      </li>
+      <li>Scroll ke bawah, klik tombol besar <b>Deploy</b> (warnanya gray atau biru).</li>
+      <li>Tunggu proses deployment (2—3 menit):
+        <ul class="doc-ul">
+          <li>⏳ <b>Building...</b> (proses 1—2 menit) — building assets, compiling, dll</li>
+          <li>⏳ <b>Uploading...</b> (proses 30 detik) — upload ke server Vercel</li>
+          <li>⏳ <b>Finalizing...</b> (proses 10—20 detik) — finalisasi deployment</li>
+          <li>✅ <b>Done!</b> (sukses!) — muncul URL publik</li>
+        </ul>
+        Halaman yang terlihat:
+        <div class="codeblock"><div class="cb-head"><span>Deployment sukses</span></div><pre>🎉 Congratulations!
+
+Your project has been successfully deployed
+
+URL: [URL akan muncul di sini]</pre></div>
+      </li>
+      <li>Jika ada error (merah): scroll ke atas untuk baca error message → perbaiki error di GitHub → klik <b>Redeploy</b> untuk deploy ulang.</li>
+    </ol>
+  <figure class="shot"><img src="assets/tampilan%20kumpulan%20repo%20github%20di%20vercel%20setelah%20klik%20add%20new-project.jpeg" alt="Pilih repo" loading="lazy"><figcaption>Gambar 17 — Pilih repository ‘portfolio-nama’ untuk import</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20klik%20impor%20dan%20ingin%20deploy.jpeg" alt="Import" loading="lazy"><figcaption>Gambar 18 — Halaman konfigurasi sebelum deploy</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20deployment%20detail.jpeg" alt="Detail" loading="lazy"><figcaption>Gambar 19 — Progress deployment sedang berjalan</figcaption></figure>
+  <h2>03 — Live Website &amp; Next Steps</h2>
+  <p>Setelah Deploy Berhasil ✅:</p>
+  <ol class="doc-ol">
+    <li>URL akan terlihat seperti:
+      <div class="codeblock"><div class="cb-head"><span>URL</span><button data-copy="https://portfolio-nama-siswa.vercel.app">Copy</button></div><pre>https://portfolio-nama-siswa.vercel.app</pre></div>
+    </li>
+    <li>Klik link URL untuk buka website di browser.</li>
+    <li>Verifikasi Website Berfungsi:
+      <ul class="doc-ul">
+        <li>☑ Homepage muncul dengan benar</li>
+        <li>☑ Navigasi menu berfungsi (link tidak error)</li>
+        <li>☑ Responsive di mobile (buka DevTools F12)</li>
+        <li>☑ Gambar/foto profile tampil</li>
+        <li>☑ Tidak ada broken links atau 404</li>
+      </ul>
+    </li>
+    <li>Share Link Website:
+      <ul class="doc-ul">
+        <li>✓ Kirim ke guru/instruktur</li>
+        <li>✓ Bagikan ke teman</li>
+        <li>✓ Post di social media</li>
+        <li>✓ Simpan URL untuk referensi</li>
+      </ul>
+    </li>
+    <li>Update Otomatis:
+      <div class="callout">💡 Setiap kali ada perubahan di GitHub, jalankan:</div>
+      <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git add .">Copy</button></div><pre>$ git add .
+$ git commit -m 'Update portfolio'
+$ git push origin main</pre></div>
+      <p>Vercel akan otomatis detect dan deploy ulang (2—3 menit) ✓</p>
+    </li>
+  </ol>
+  <p>Jika ingin unpublish/delete project: → Vercel dashboard → Project → Settings → Delete project → konfirmasi penghapusan.</p>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20deploy%20berhasil.jpeg" alt="Berhasil" loading="lazy"><figcaption>Gambar 20 — Deployment berhasil, copy URL publik</figcaption></figure>
   <div class="deploy-ok"><p>✓ DEPLOYMENT SUCCESSFUL</p><span>Website kamu sudah online.</span></div>
 
   <h2>Project selesai</h2>
@@ -449,14 +735,17 @@
   <p>Nama folder <b>Nama_Kelas</b>, sertakan ketiganya di dalam folder.</p>
   <p><a class="btn" href="https://drive.google.com/drive/folders/1rJEwg2t68jakZ0xB9sxJ__4XW9S5XHI1?usp=drive_link" target="_blank" rel="noopener">📁 Buka Folder Pengumpulan</a></p>
 
-  <h2>Troubleshooting</h2>
-  <div class="duo">
-    <div class="mini"><b>9Router tidak dikenali</b><p>Pastikan Node.js sudah terinstall dan terminal sudah direstart.</p></div>
-    <div class="mini"><b>Provider tidak terhubung</b><p>Periksa API Key dan konfigurasi provider.</p></div>
-    <div class="mini"><b>Server masih Stopped</b><p>Pastikan server sudah dijalankan dan tidak ada error pada terminal.</p></div>
-    <div class="mini"><b>Antigravity tidak dapat response</b><p>Periksa endpoint, provider, model, API Key, dan status server.</p></div>
-  </div>
-  <div class="pager"><a class="btn outline" href="#github">← Sebelumnya</a><a class="btn" href="#pengenalan">Kembali ke awal ↑</a></div>
+  <h2>Troubleshooting Deployment</h2>
+  <p>Jika Deployment Gagal ❌ — cocokkan pesan error dengan daftar di bawah:</p>
+  <div class="mini"><b>Error 1: 'Failed to build'</b><p>Penyebab: Syntax error di HTML/CSS.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Buka error log di Vercel (scroll ke atas).</li><li>Cari baris yang error (misal 'unexpected token').</li><li>Fix di editor lokal.</li><li>Git commit &amp; push.</li><li>Vercel otomatis redeploy.</li></ol></div>
+  <div class="mini"><b>Error 2: '404 Not Found' atau Website blank</b><p>Penyebab: File index.html tidak di root folder.</p><p><b>Solusi:</b> cek struktur folder → <code>index.html</code> HARUS di root:</p><div class="codeblock"><div class="cb-head"><span>Struktur folder</span></div><pre>portfolio-nama/
+└—— index.html < HARUS DI SINI
+└—— style.css
+└—— assets/
+└—— ...</pre></div><ol class="doc-ol"><li>Jika index.html di subfolder, pindahkan ke root.</li><li>Git push.</li><li>Vercel redeploy.</li></ol></div>
+  <div class="mini"><b>Error 3: Image/CSS tidak muncul (200 OK tapi blank)</b><p>Penyebab: Path file salah di HTML.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Jangan pakai absolute path: ❌ <code>C:/Users/.../img.png</code></li><li>Gunakan relative path: ✓ <code>./assets/img.png</code></li><li>Fix di HTML.</li><li>Git push.</li><li>Vercel redeploy.</li></ol></div>
+  <div class="mini"><b>Error 4: 'Build takes too long' atau timeout</b><p>Penyebab: File terlalu besar atau process timeout.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Optimize image size (compress).</li><li>Hapus file yang tidak perlu.</li><li>Reduce CSS/JS size.</li><li>Git push ulang.</li></ol></div>
+  <div class="mini"><b>Error 5: Cannot authorize GitHub</b><p>Penyebab: Belum authorize akses.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Buka GitHub Settings → Apps &amp; integrations.</li><li>Cari 'Vercel'.</li><li>Klik untuk authorize.</li><li>Kembali ke Vercel, refresh page.</li><li>Coba import repository lagi.</li></ol></div>
   <footer class="foot"><p>Kelompok 8 · Alfian · Adrian · Fino · Irsyad · SMK Negeri 2 Surakarta · 2026</p></footer>
 </section>
 
