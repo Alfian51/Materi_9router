@@ -302,14 +302,24 @@
   </article>
 
   <article class="step" id="step3">
-    <p class="step-k">STEP 03</p><h2>Jalankan 9Router &amp; Buka Web UI</h2>
-    <h3>Tujuan</h3><p>Menjalankan server lokal 9Router dan membuka dashboard pengaturannya.</p><hr><h3>Langkah</h3>
-    <ol class="doc-ol"><li>Buka <b>CMD sebagai Administrator</b>: klik Start → ketik <code>CMD</code> → klik kanan <b>Command Prompt</b> → pilih <b>Run as administrator</b> → klik <b>Yes</b> jika muncul konfirmasi.</li><li>Ketik:</li></ol>
-    <div class="callout"><b>Kenapa harus Administrator?</b> 9Router menjalankan MITM server/proxy lokal — Windows membutuhkan izin administrator untuk itu. Tanpa Run as administrator, server bisa gagal start.</div>
+    <p class="step-k">STEP 03</p><h2>Jalankan 9Router</h2>
+    <h3>Tujuan</h3><p>Menjalankan 9Router agar dashboard dan service 9Router dapat digunakan.</p>
+    <div class="warning"><b>Penting:</b> CMD harus dibuka dengan <b>Run as administrator</b>. Kalau tidak, 9Router bisa gagal berjalan.</div>
+    <hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Buka <b>Start Menu</b> Windows.</li>
+      <li>Ketik <b>CMD</b> atau <b>Command Prompt</b> di kolom pencarian.</li>
+      <li>Klik kanan <b>Command Prompt</b> pada hasil pencarian.</li>
+      <li>Pilih <b>Run as administrator</b>.</li>
+      <li>Kalau muncul konfirmasi Windows, pilih <b>Yes</b>.</li>
+      <li>Di jendela CMD tersebut, ketik lalu tekan Enter:</li>
+    </ol>
     <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="9router">Copy</button></div><pre>9router</pre></div>
-    <ol class="doc-ol" start="3"><li>Akan muncul beberapa pilihan menu. Pilih <b>Web UI (Open in Browser)</b>.</li></ol>
-    <hr><h3>Hasil</h3><div class="success">✓ Browser terbuka otomatis ke dashboard 9Router di <code>http://localhost:20128</code>. Jika tidak terbuka otomatis, ketik alamat tersebut manual di browser.</div>
-    <div class="callout">💡 Setelah langkah ini, 9Router mulai menjalankan server lokal yang dapat menerima request sesuai konfigurasi.</div>
+    <ol class="doc-ol" start="7">
+      <li>Tunggu sampai 9Router berjalan.</li>
+      <li>Kalau muncul pilihan <b>Web UI (Open in Browser)</b>, pilih opsi tersebut untuk membuka dashboard.</li>
+    </ol>
+    <hr><h3>Hasil</h3><div class="success">✓ 9Router berhasil dijalankan dan dashboard bisa dibuka di browser (<code>http://localhost:20128</code>). Kalau browser tidak terbuka sendiri, ketik alamat itu manual di browser.</div>
     <figure class="shot"><img src="assets/Menu%20Pilihan%209router%20(Web%20UI).jpg" alt="Menu pilihan 9Router" loading="lazy"><figcaption>Gambar 04 — Pilih Web UI (Open in Browser)</figcaption></figure>
   </article>
 
@@ -423,71 +433,67 @@ oc/nemotron-3-ultra-free</pre></div>
   </article>
 
   <article class="step" id="step8">
-    <p class="step-k">STEP 08</p><h2>Setup Antigravity di CLI Tools</h2>
-    <h3>Tujuan</h3><p>Menghubungkan Antigravity ke 9Router dan mengaktifkan jalur request-nya.</p><hr><h3>Langkah</h3>
+    <p class="step-k">STEP 08</p><h2>Setup Antigravity melalui CLI Tools</h2>
+    <h3>Tujuan</h3><p>Menghubungkan Antigravity dengan 9Router melalui CLI Tools.</p>
+    <div class="warning"><b>Penting:</b> API Key yang dipakai adalah <b>API Key 9Router</b> yang sudah dibuat di STEP 07, bukan API Key OpenCode.</div>
+    <hr><h3>Langkah</h3>
     <ol class="doc-ol">
-      <li>Buka menu <b>CLI Tools</b> di dashboard 9Router.</li>
-      <li>Pilih <b>Antigravity</b> dari daftar tools.</li>
-      <li>Paste <b>API Key 9Router</b> dari Langkah 07 ke field yang tersedia.</li>
-      <li>Pilih model / configuration yang tersedia → klik <b>Select</b>.</li>
+      <li>Buka dashboard 9Router.</li>
+      <li>Masuk ke menu <b>CLI Tools</b>.</li>
+      <li>Pilih <b>Antigravity</b>.</li>
+      <li>Pada bagian <b>MITM Server</b>, cari kolom <b>API Key</b>.</li>
+      <li>Masukkan <b>API Key 9Router</b> yang sudah dibuat di STEP 07 ke kolom tersebut.</li>
       <li>Klik <b>Start Server</b>.</li>
-      <li>Pastikan status server berubah dari <b>Stopped</b> menjadi <b>Running</b>.</li>
+      <li>Tunggu sampai server berhasil berjalan (status berubah jadi <b>Running</b>).</li>
     </ol>
-    <hr><h3>Hasil</h3><div class="success">✓ Status MITM Server: <b>Running</b>. Artinya jalur antara Antigravity dan 9Router sudah aktif.</div>
-    <div class="callout">💡 MITM Server merupakan server perantara yang digunakan dalam konfigurasi 9Router untuk menangani request dari aplikasi yang terhubung. Jika masih Stopped, request tidak akan diproses.</div>
+    <hr><h3>Hasil</h3><div class="success">✓ MITM Server Antigravity berhasil dijalankan dan konfigurasi siap dilanjutkan.</div>
+    <div class="callout">💡 MITM Server adalah server perantara di 9Router yang meneruskan request dari Antigravity. Kalau statusnya masih <b>Stopped</b>, request tidak akan jalan.</div>
     <figure class="shot"><img src="assets/mitm%20proxy.jpeg" alt="MITM Proxy" loading="lazy"><figcaption>Gambar 10 — CLI Tools → Antigravity → Paste API Key 9Router</figcaption></figure>
     <figure class="shot"><img src="assets/mitm%20server.jpeg" alt="MITM Running" loading="lazy"><figcaption>Gambar 11 — Start Server → status Running</figcaption></figure>
   </article>
 
   <article class="step" id="step9">
-    <p class="step-k">STEP 09</p><h2>Pilih Combo di Antigravity</h2>
-    <h3>Tujuan</h3><p>Menentukan konfigurasi mana yang dipakai Antigravity saat mengirim request AI.</p><hr><h3>Langkah</h3>
+    <p class="step-k">STEP 09</p><h2>Pilih Model dan Combo</h2>
+    <h3>Tujuan</h3><p>Memilih model yang mau dipakai di Antigravity dan menghubungkannya dengan Combo yang sudah dibuat.</p>
+    <div class="warning"><b>Penting:</b> Pilih model <b>satu per satu</b>. Tidak ada tombol Select All di tampilan praktikum ini.</div>
+    <hr><h3>Langkah</h3>
     <ol class="doc-ol">
-      <li>Buka <b>Antigravity → Settings → Model Selection</b> (ikon ⚙️).</li>
-      <li>Pilih combo yang tadi dibuat, misalnya <code>OpenCode-AI</code>.</li>
-      <li>Klik <b>Save</b> / <b>Connect</b>.</li>
+      <li>Pada konfigurasi <b>Antigravity</b>, pilih satu model yang mau dipakai. Contohnya, pilih <b>Gemini 3.8</b>.</li>
+      <li>Klik <b>Select</b> di bagian kanan model tersebut.</li>
+      <li>Setelah itu, pilih <b>Combo</b> yang sudah dibuat di STEP 06. Contohnya:</li>
     </ol>
-    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>OpenCode-AI</b> terpilih di Antigravity. Combo ini yang menjadi jembatan antara Antigravity dengan provider yang sudah disiapkan di 9Router.</div>
+    <div class="codeblock"><div class="cb-head"><span>Contoh Combo</span><button data-copy="OpenCode-AI">Copy</button></div><pre>OpenCode-AI</pre></div>
+    <ol class="doc-ol" start="4">
+      <li>Setelah Combo dipilih, klik <b>Start DNS</b>.</li>
+    </ol>
+    <p>Kalau mau pakai model lain, ulangi cara yang sama <b>satu per satu</b> untuk model tersebut.</p>
+    <p>Contoh polanya:</p>
+    <div class="codeblock"><div class="cb-head"><span>Contoh pola</span></div><pre>Gemini 3.8 → Select → OpenCode-AI
+Model lain → Select → OpenCode-AI</pre></div>
+    <p>Kalau sudah begitu, model yang dipilih dan dikonfigurasi bisa dipakai di Antigravity.</p>
+    <hr><h3>Hasil</h3><div class="success">✓ Model yang dipilih sudah terhubung dengan Combo dan DNS berhasil dijalankan.</div>
   </article>
 
   <article class="step" id="step10">
-    <p class="step-k">STEP 10</p><h2>Testing Koneksi — Verify Setup Berhasil</h2>
-    <h3>Tujuan</h3><p>Memastikan setup benar-benar berhasil — bukan cuma Running di dashboard.</p>
-    <hr><h3>Pre-Test Checklist</h3>
-    <p>Sebelum kirim test prompt, pastikan ketiganya sudah beres:</p>
-    <ul class="doc-ul">
-      <li>☑ 9Router masih jalan di CMD? (server harus Running)</li>
-      <li>☑ Combo <code>OpenCode-AI</code> sudah dibuat? (di STEP 06)</li>
-      <li>☑ Combo sudah dipilih di Antigravity? (STEP 09)</li>
-    </ul>
-    <hr><h3>Test Prompt</h3>
-    <p>Gunakan prompt berikut untuk testing:</p>
-    <div class="codeblock"><div class="cb-head"><span>Test prompt</span><button data-copy="Buatkan navbar HTML responsif dengan HTML & CSS. Include: logo, menu links, hamburger menu untuk mobile.">Copy</button></div><pre>Buatkan navbar HTML responsif dengan HTML &amp; CSS.
-Include: logo, menu links, hamburger menu untuk mobile.</pre></div>
+    <p class="step-k">STEP 10</p><h2>Cek Usage</h2>
+    <h3>Tujuan</h3><p>Mengecek apakah aktivitas dari Antigravity sudah masuk ke 9Router.</p>
+    <hr><h3>Langkah</h3>
     <ol class="doc-ol">
-      <li>Buka project apa pun di Antigravity.</li>
-      <li>Kirim test prompt di atas.</li>
-      <li>Tunggu sampai AI memberikan respons.</li>
+      <li>Buka menu <b>Usage</b> di dashboard 9Router.</li>
+      <li>Lakukan pengujian dari Antigravity (kirim satu prompt sederhana, misalnya minta dibuatkan navbar).</li>
+      <li>Kembali ke menu <b>Usage</b> di dashboard 9Router.</li>
+      <li>Periksa apakah sudah muncul aktivitas atau request penggunaan.</li>
     </ol>
-    <hr><h3>Expected Result (Jika Berhasil) ✅</h3>
-    <div class="success">☑ AI response muncul di Antigravity<br>☑ Code yang diberikan adalah valid HTML/CSS<br>☑ Tidak ada error message<br>☑ Log di 9Router dashboard bertambah<br>☑ Status di Antigravity: "Connected"</div>
-    <h3>Cara Verify di 9Router</h3>
-    <ol class="doc-ol">
-      <li>Buka dashboard 9Router (<code>http://localhost:20128</code>).</li>
-      <li>Buka menu <b>Usage</b> atau <b>Log</b>.</li>
-      <li>Lihat request log bertambah.</li>
-      <li>Status: <b>Success</b> (hijau).</li>
-    </ol>
-    <hr><h3>Hasil</h3>
+    <hr><h3>Hasil</h3><div class="success">✓ Kalau aktivitas / request muncul di bagian <b>Usage</b>, berarti konfigurasi sudah bekerja dan penggunaan dari Antigravity sudah tercatat di 9Router.</div>
     <div class="deploy-ok"><p>✓ SETUP SELESAI</p><span>9Router Connected — OpenCode Connected — Antigravity Ready</span></div>
-    <p>Selamat! Setup selesai dan siap digunakan untuk praktik.</p>
-    <div class="warning"><b>Jika GAGAL ❌:</b> jangan panik — cocokkan pesan error yang muncul dengan <b>Troubleshooting</b> di bawah, ikuti solusinya langkah per langkah, lalu ulangi test prompt.</div>
+    <p>Selamat! Setup selesai dan siap dipakai untuk praktik.</p>
+    <div class="warning"><b>Kalau GAGAL ❌:</b> jangan panik — cocokkan pesan error yang muncul dengan <b>Troubleshooting</b> di bawah, lalu coba lagi.</div>
     <h3>Troubleshooting</h3>
-    <div class="mini"><b>Masalah 1: Response Timeout / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu sampai status server <b>Running</b>, lalu coba prompt lagi.</li></ol></div>
-    <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD baru → jalankan <code>9router</code>.</li><li>Setelah server aktif, coba lagi di Antigravity.</li></ol></div>
-    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum di-set.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa API Key yang di-paste (STEP 08).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba re-paste API Key.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
-    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Combo belum dipilih di Antigravity.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Buka Antigravity Settings (ikon ⚙️).</li><li>Cek Model Selection.</li><li>Pilih combo <code>OpenCode-AI</code>.</li><li>Klik Save/Connect.</li><li>Coba prompt lagi.</li></ol></div>
-    <div class="mini"><b>Masalah 5: Prompt berhasil tapi response lambat</b><p>→ Kemungkinan: Server sedang busy atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain di Combo (jika ada).</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 1: Tidak ada aktivitas di Usage / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu sampai status server <b>Running</b>, lalu coba prompt lagi dan cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD lagi dengan <b>Run as administrator</b> → jalankan <code>9router</code>.</li><li>Setelah server aktif, coba lagi di Antigravity lalu cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum diisi.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa <b>API Key 9Router</b> yang dimasukkan di STEP 08 (menu <b>CLI Tools → Antigravity → MITM Server → API Key</b>).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba masukkan ulang API Key 9Router.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
+    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 09.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 09.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>OpenCode-AI</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 09.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
     <p>Setup selesai — lanjut ke tugas berikutnya.</p>
   </article>
 
@@ -512,11 +518,11 @@ Include: logo, menu links, hamburger menu untuk mobile.</pre></div>
 <section class="chapter" id="praktik" data-name="Membuat Portfolio">
   <p class="eyebrow">07 / MEMBUAT PORTFOLIO</p>
   <h1>Bangun Website Portfolio</h1>
-  <p>Setup sudah beres dan combo <code>OpenCode-AI</code> sudah terpilih di Antigravity (STEP 09). Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
+  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>OpenCode-AI</code> di STEP 09. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
   <h2>Cara mengerjakan</h2>
   <ol class="doc-ol">
     <li>Buka folder project portfolio di Antigravity.</li>
-    <li>Pastikan combo <code>OpenCode-AI</code> masih aktif di Settings → Model Selection.</li>
+    <li>Pastikan model dan combo <code>OpenCode-AI</code> yang dipilih di STEP 09 masih aktif.</li>
     <li>Kerjakan per bagian (Identitas, Tentang Saya, Skills, Projects) dengan prompt yang spesifik — satu bagian per prompt agar hasilnya rapi.</li>
     <li>Cek hasilnya di browser setiap selesai satu bagian, lalu lanjutkan ke bagian berikutnya.</li>
   </ol>
