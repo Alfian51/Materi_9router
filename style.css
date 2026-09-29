@@ -164,7 +164,7 @@ pre{font-family:var(--mono)}
 .tut a.active{color:#04121c;background:var(--accent);font-weight:700}
 .tut a.done{color:var(--ok);border-color:rgba(52,211,153,.35);background:rgba(52,211,153,.07)}
 .step{padding:26px 0 8px;scroll-margin-top:140px}
-.step-k{font-size:12px;letter-spacing:2.6px;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+.step-k{font-size:17px;letter-spacing:2.6px;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
 .step h2{font-size:24px;font-weight:700;margin-bottom:14px}
 .step h3{font-size:15.5px;font-weight:700;margin:22px 0 8px;color:var(--dim);letter-spacing:.4px;text-transform:uppercase;font-size:13px}
 .step hr{border:none;border-top:1px solid var(--line);margin:22px 0}

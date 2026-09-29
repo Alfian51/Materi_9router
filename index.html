@@ -14,7 +14,7 @@
 
 <header class="topbar">
   <button class="icon-btn menu-toggle" id="menuToggle" aria-label="menu">☰</button>
-  <a class="tb-brand" href="#pengenalan"><span class="tb-mark">◈</span><span class="tb-name">AI CODING<small>TRAINING</small></span></a>
+  <a class="tb-brand" href="#pengenalan"><span class="tb-mark">◈</span><span class="tb-name">9Router<small>Enuma Technology</small></span></a>
   <div class="tb-search">
     <span class="tb-search-ico">⌕</span>
     <input id="searchInput" type="text" placeholder="Cari materi… (9Router, OpenCode, Combo…)" autocomplete="off">
@@ -118,16 +118,6 @@
   <h3>Routing</h3><p>Request dapat diteruskan berdasarkan konfigurasi yang dibuat.</p>
   <h3>Monitoring</h3><p>Aktivitas request dapat dilihat melalui log yang tersedia.</p>
   <h3>Fleksibilitas model</h3><p>Provider dan model dapat dikonfigurasi sesuai kebutuhan.</p>
-
-  <h2>Tanpa vs dengan 9Router</h2>
-  <div class="tablewrap"><table>
-    <tr><th>Kondisi</th><th>Tanpa 9Router</th><th>Dengan 9Router</th></tr>
-    <tr><td>Pengaturan provider</td><td>Dapat dilakukan secara terpisah</td><td>Dapat dikelola melalui satu gateway</td></tr>
-    <tr><td>Pilihan provider</td><td>Bergantung pada konfigurasi aplikasi</td><td>Dapat mengatur beberapa provider</td></tr>
-    <tr><td>Monitoring</td><td>Tidak selalu terpusat</td><td>Request dapat dilihat melalui log 9Router</td></tr>
-    <tr><td>Pengaturan model</td><td>Bergantung pada aplikasi / provider</td><td>Dapat dikonfigurasi melalui gateway</td></tr>
-    <tr><td>Provider bermasalah</td><td>Perlu mengganti konfigurasi secara manual</td><td>Dapat menyiapkan provider alternatif sesuai konfigurasi</td></tr>
-  </table></div>
 
   <h2>Fungsi 9Router</h2>
   <div class="duo">
@@ -538,87 +528,40 @@ Include: logo, menu links, hamburger menu untuk mobile.</pre></div>
   <p class="eyebrow">08 / GITHUB</p>
   <h1>Simpan Project</h1>
   <p>GitHub digunakan untuk menyimpan source code website agar aman dan bisa dihubungkan ke Vercel.</p>
-  <h2>01 — Buat repository</h2>
-  <p>Buka GitHub → <b>New repository</b> → nama misal <code>portfolio-nama</code> → <b>Create</b>.</p>
+  <h2>STEP 1 — Buat Repository</h2>
+  <p>Buka GitHub → <b>New repository</b> → nama misal <code>portfolio-nama</code> → <b>Create</b>. Jangan centang Add README — biarkan repository kosong.</p>
   <figure class="shot"><img src="assets/buat%20repo%20github.png" alt="Buat repo GitHub" loading="lazy"><figcaption>Gambar 13 — Buat repository baru di GitHub</figcaption></figure>
-  <h2>02 — Hubungkan Project Lokal ke GitHub</h2>
-  <p>Setelah website selesai dibuat, langkah berikutnya adalah mengupload project ke GitHub. Dengan Git, kita bisa menyimpan versi project secara online dan melakukan update ketika ada perubahan.</p>
-  <p>Buka CMD/Terminal di dalam folder project yang sudah dibuat.</p>
-  <div class="callout"><b>Catatan:</b> Pastikan terminal berada di folder project yang ingin di-upload, bukan di folder lain.</div>
-  <h3>Command 1️⃣ — Inisialisasi Repository</h3>
-  <p>Jalankan:</p>
+  <h2>Alur Git: 4 Command</h2>
+  <p>Buka CMD/Terminal di folder project, jalankan berurutan:</p>
+  <div class="hflow"><span>init</span><i>→</i><span>add</span><i>→</i><span>commit</span><i>→</i><span>push</span></div>
+  <h2>STEP 2 — git init</h2>
+  <p>Mengubah folder project menjadi Git repository:</p>
   <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git init">Copy</button></div><pre>$ git init</pre></div>
-  <p>Expected Output:</p>
-  <div class="codeblock"><div class="cb-head"><span>Expected output</span></div><pre>Initialized empty Git repository in C:/Users/.../portfolio-nama/.git/</pre></div>
-  <div class="success">✓ Artinya: Folder project sekarang sudah menjadi Git repository dan siap digunakan untuk menyimpan perubahan project.</div>
-  <h3>Command 2️⃣ — Gunakan Branch Main</h3>
-  <p>Jalankan:</p>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git branch -M main">Copy</button></div><pre>$ git branch -M main</pre></div>
-  <p>Expected Output:</p>
-  <p class="small">Tidak ada output. Ini normal.</p>
-  <div class="success">✓ Artinya: Branch utama project menggunakan nama main.</div>
-  <h3>Command 3️⃣ — Tambahkan Semua File</h3>
-  <p>Jalankan:</p>
+  <div class="success">✓ Folder siap menyimpan perubahan.</div>
+  <h2>STEP 3 — git add .</h2>
+  <p>Menyiapkan semua file untuk disimpan:</p>
   <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git add .">Copy</button></div><pre>$ git add .</pre></div>
-  <p>Expected Output:</p>
-  <p class="small">Biasanya tidak ada output. Ini normal.</p>
-  <div class="success">✓ Artinya: Semua file yang ada di dalam folder project ditambahkan ke staging dan siap disimpan dalam commit.</div>
-  <h3>Command 4️⃣ — Buat Commit</h3>
-  <p>Jalankan:</p>
+  <p class="small">Tidak ada output = normal.</p>
+  <div class="success">✓ Semua file masuk staging.</div>
+  <h2>STEP 4 — git commit</h2>
+  <p>Menyimpan perubahan dengan pesan:</p>
   <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy='git commit -m "Portfolio Website"'>Copy</button></div><pre>$ git commit -m "Portfolio Website"</pre></div>
-  <p>Expected Output:</p>
-  <div class="codeblock"><div class="cb-head"><span>Expected output</span></div><pre>[main (root-commit) a1b2c3d] Portfolio Website
- 5 files changed, 250 insertions(+)
- create mode 100644 index.html
- create mode 100644 style.css
- ...</pre></div>
-  <div class="success">✓ Artinya: File project sudah disimpan dalam sebuah commit.</div>
-  <p>Commit bisa dianggap sebagai titik penyimpanan perubahan pada project.</p>
-  <h3>Command 5️⃣ — Hubungkan Project ke GitHub</h3>
-  <p>Pastikan kamu sudah membuat repository kosong di GitHub pada langkah sebelumnya.</p>
-  <p>Kemudian jalankan:</p>
+  <div class="success">✓ Perubahan tersimpan dalam commit.</div>
+  <h2>STEP 5 — git push</h2>
+  <p>Sebelum push pertama, siapkan sekali saja (branch + hubungkan ke GitHub):</p>
+  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git branch -M main">Copy</button></div><pre>$ git branch -M main</pre></div>
   <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git remote add origin https://github.com/USERNAME/portfolio-nama.git">Copy</button></div><pre>$ git remote add origin https://github.com/USERNAME/portfolio-nama.git</pre></div>
-  <p>Ganti bagian:</p>
-  <ul class="doc-ul">
-    <li><code>USERNAME</code> → username GitHub kamu</li>
-    <li><code>portfolio-nama</code> → nama repository yang kamu buat di GitHub</li>
-  </ul>
-  <p>Contoh:</p>
-  <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git remote add origin https://github.com/alfianrizki/portfolio-nama.git">Copy</button></div><pre>$ git remote add origin https://github.com/alfianrizki/portfolio-nama.git</pre></div>
-  <p>Expected Output:</p>
-  <p class="small">Tidak ada output. Ini normal.</p>
-  <div class="success">✓ Artinya: Project lokal sekarang sudah terhubung dengan repository GitHub.</div>
-  <div class="callout"><b>Catatan:</b> Command <code>git remote add origin</code> hanya digunakan saat pertama kali menghubungkan project dengan repository tersebut.</div>
-  <h3>Command 6️⃣ — Push ke GitHub</h3>
-  <p>Sekarang kirim project ke GitHub:</p>
+  <div class="warning"><b>⚠️ Ganti:</b> <code>USERNAME</code> → username GitHub kamu — <code>portfolio-nama</code> → nama repository-mu. Contoh: <code>https://github.com/alfianrizki/portfolio-nama.git</code></div>
+  <p>Lalu kirim project:</p>
   <div class="codeblock"><div class="cb-head"><span>Terminal</span><button data-copy="git push -u origin main">Copy</button></div><pre>$ git push -u origin main</pre></div>
-  <p>Expected Output:</p>
-  <div class="codeblock"><div class="cb-head"><span>Expected output</span></div><pre>Enumerating objects: 12, done.
-Counting objects: 100% (12/12), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (9/9), done.
-Writing objects: 100% (12/12), 3.45 KiB | 1.15 MiB/s, done.
-Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-To https://github.com/USERNAME/portfolio-nama.git
- * [new branch]      main -> main
-Branch 'main' set up to track remote branch 'main' from 'origin'.</pre></div>
-  <div class="success">✓ Artinya: Project berhasil di-push ke GitHub.</div>
-  <p>Sekarang buka repository GitHub yang sudah dibuat dan pastikan file website seperti <code>index.html</code>, <code>style.css</code>, <code>app.js</code>, dan folder <code>assets</code> sudah muncul.</p>
+  <div class="success">✓ Project sudah ada di GitHub.</div>
   <div class="warning">⚠️ Jangan upload API Key ke GitHub. Pastikan tidak ada credential 9Router yang ikut ter-push.</div>
-  <h2>03 — Verifikasi Repository</h2>
-  <ol class="doc-ol">
-    <li>Buka browser → <code>https://github.com/USERNAME/portfolio-nama</code> (ganti USERNAME dengan username GitHub kamu).</li>
-    <li>Verifikasi:
-      <ul class="doc-ul">
-        <li>✓ File tampil lengkap (index.html, style.css, assets/, dll)</li>
-        <li>✓ Branch <b>main</b> aktif</li>
-        <li>✓ Commit message <code>"Portfolio Website"</code> terlihat</li>
-      </ul>
-    </li>
-  </ol>
-  <div class="success">✓ Jika semua checklist terpenuhi, lanjut ke <b>VERCEL DEPLOYMENT</b>.</div>
-</section>
+  <h2>Verifikasi</h2>
+  <ul class="doc-ul">
+    <li>✓ Buka <code>https://github.com/USERNAME/portfolio-nama</code> — file tampil lengkap, branch <b>main</b> aktif</li>
+  </ul>
+  <div class="success">✓ Jika checklist terpenuhi, lanjut ke <b>VERCEL DEPLOYMENT</b>.</div>
+  </section>
 
 <!-- 09 -->
 <section class="chapter" id="vercel" data-name="Vercel">

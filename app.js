@@ -34,7 +34,7 @@ function onScroll(){
   // Step nav active
   if(steps.length && stepNav){
     let curStep = steps[0].id;
-    const sc2 = window.scrollY + 180;
+    const sc2 = window.scrollY + 240;
     steps.forEach(s => { if(sc2 >= s.offsetTop) curStep = s.id; });
     const tutLinks = [...stepNav.querySelectorAll('a')];
     let curIdx = 0;
@@ -53,6 +53,12 @@ function onScroll(){
 }
 window.addEventListener('scroll', onScroll, {passive:true});
 onScroll();
+
+// Tut nav: set active instantly on click (scroll handler keeps it in sync)
+const tutNavLinks = [...document.querySelectorAll('#tutNav a')];
+tutNavLinks.forEach(a=>a.addEventListener('click', ()=>{
+  tutNavLinks.forEach(x=>x.classList.toggle('active', x===a));
+}));
 
 // Drawer
 function closeDrawer(){ sidebar.classList.remove('open'); scrim.classList.remove('on'); }
