@@ -7,19 +7,14 @@
 <meta name="description" content="Interactive AI Coding Training: konsep, instalasi, tugas portfolio, GitHub, dan deployment Vercel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="topbar">
   <button class="icon-btn menu-toggle" id="menuToggle" aria-label="menu">☰</button>
-  <a class="tb-brand" href="#pengenalan"><span class="tb-mark">◈</span><span class="tb-name">9Router<small>Enuma Technology</small></span></a>
-  <div class="tb-search">
-    <span class="tb-search-ico">⌕</span>
-    <input id="searchInput" type="text" placeholder="Cari materi… (9Router, OpenCode, Combo…)" autocomplete="off">
-    <div class="search-pop" id="searchPop"></div>
-  </div>
+  <a class="tb-brand" href="#pengenalan"><img class="tb-logo" src="assets/enumatech.png" alt="Logo Enuma"><span class="tb-name">9ROUTER<small>CV ENUMATECHNOLOGY</small></span></a>
   <div class="tb-right">
     <span class="tb-progress" id="tbProgress">1 dari 9 bagian</span>
     <div class="tb-bar"><span id="tbBar"></span></div>
@@ -28,7 +23,7 @@
 
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-  <p class="side-head">COURSE CONTENT</p>
+  <p class="side-head">SELECT MATERI</p>
   <nav class="side-nav" id="sideNav">
     <a href="#pengenalan" data-title="Pengenalan"><span class="num">01</span><span class="lbl">Pengenalan<i class="st"></i></span></a>
     <a href="#router" data-title="9Router"><span class="num">02</span><span class="lbl">9Router<i class="st"></i></span></a>
@@ -49,6 +44,8 @@
 
 <!-- 01 -->
 <section class="chapter" id="pengenalan" data-name="Pengenalan">
+<div class="pano" aria-hidden="true"><span class="pano-sun"></span><span class="pano-cloud c1"></span><span class="pano-cloud c2"></span><span class="pano-ground"></span><span class="pano-caption">AI CODING — 9ROUTER · OPENCODE · VERCEL</span></div>
+  <div class="hero-shapes"><i></i><i></i><i></i><i></i></div>
   <p class="eyebrow">01 / PENGENALAN</p>
   <h1>AI Coding Training</h1>
   <p class="doc-sub">Pemanfaatan 9Router dan OpenCode untuk AI Coding di Antigravity</p>
@@ -165,9 +162,7 @@
     <li>✓ Ready-to-use (sudah siap tanpa setup)</li>
   </ul>
   <h3>Flow dalam workflow</h3>
-  <div class="codeblock"><div class="cb-head"><span>Alur</span><button data-copy="Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity">Copy</button></div><pre>Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity
-                        ↑
-                    (Provider)</pre></div>
+  <div class="codeblock"><div class="cb-head"><span>Alur</span></div><pre>Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity</pre></div>
   <p>OpenCode Free berperan sebagai <b>provider</b> dalam alur tersebut.</p>
   <h2>Apa &amp; kenapa dipakai</h2>
   <h3>Layanannya</h3><p>OpenCode adalah layanan berbasis website yang diakses melalui browser. Daftar provider dan model yang didukung dapat dilihat dari dashboard layanan tersebut. Dalam praktikum ini, OpenCode digunakan sebagai <b>provider</b> yang dihubungkan ke 9Router.</p>
@@ -226,9 +221,10 @@
   <div class="duo">
     <div class="mini hl"><b>1️⃣ Provider</b><p><b>OpenCode Free</b><br>→ Layanan AI yang dipakai pada praktikum ini<br>→ Dipakai tanpa API key</p></div>
     <div class="mini hl"><b>2️⃣ Model</b><p>Model AI yang dipilih di dalam konfigurasi provider / combo<br>→ Contoh: <code>oc/muse-spark-1.3-contributor-free</code></p></div>
-    <div class="mini hl"><b>3️⃣ API Key 9Router</b><p>→ Dibuat di STEP 07 dari 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai untuk menghubungkan Antigravity dengan gateway 9Router<br>→ SIMPAN dengan aman<br>→ Jangan bagikan / upload ke GitHub</p></div>
+    <div class="mini hl"><b>3️⃣ API Key Gemini</b><p>→ Dibuat di STEP 06 dari Google AI Studio<br>→ Dipakai di menu <b>Providers → Google Gemini</b><br>→ SIMPAN dengan aman, jangan bagikan / upload ke GitHub</p></div>
+    <div class="mini hl"><b>4️⃣ API Key 9Router</b><p>→ Dibuat di STEP 08 dari 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai untuk menghubungkan Antigravity dengan gateway 9Router<br>→ SIMPAN dengan aman<br>→ Jangan bagikan / upload ke GitHub</p></div>
   </div>
-  <div class="callout">Provider <b>OpenCode Free</b> tidak membutuhkan API key. Satu-satunya API Key yang dibuat pada materi ini adalah <b>API Key 9Router</b>.</div>
+  <div class="callout">Provider <b>OpenCode Free</b> tidak membutuhkan API key. Dua API Key yang dibuat pada materi ini adalah <b>API Key Gemini</b> (STEP 06, dari Google AI Studio) dan <b>API Key 9Router</b> (STEP 08, dari dashboard 9Router).</div>
   <h3>Security tips</h3>
   <ul class="doc-ul">
     <li>✓ Simpan API Key 9Router di file terpisah</li>
@@ -263,10 +259,10 @@
 <section class="chapter" id="instalasi" data-name="Instalasi &amp; Setup">
   <p class="eyebrow">05 / INSTALASI &amp; SETUP</p>
   <h1>Menyiapkan 9Router</h1>
-  <p>Bagian paling detail. Ikuti <b>STEP 01–10</b> berurutan, jangan loncat. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
+  <p>Bagian paling detail. Ikuti <b>STEP 01–11</b> berurutan, jangan loncat. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
 
   <div class="tut" id="tutNav">
-    <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a>
+    <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a><a href="#step11">11</a>
   </div>
 
   <article class="step" id="step1">
@@ -367,17 +363,44 @@ oc/nemotron-3-ultra-free</pre></div>
   </article>
 
   <article class="step" id="step6">
-    <p class="step-k">STEP 06</p><h2>Buat Combo (Konfigurasi Provider + Multiple Models)</h2>
+    <p class="step-k">STEP 06</p><h2>Connect Gemini di 9Router</h2>
+    <h3>Tujuan</h3><p>Menghubungkan provider <b>Google Gemini</b> ke 9Router sehingga kita bisa memilih / menggunakan model Antigravity yang kita mau connect-kan dengan 9Router.</p>
+    <hr><h3>01 — Ambil API Key Gemini</h3>
+    <ol class="doc-ol">
+      <li>Buka: <a href="https://aistudio.google.com/welcome" target="_blank" rel="noopener">https://aistudio.google.com/welcome</a></li>
+      <li>Klik <b>"Get API Key"</b></li>
+      <li>Login Google jika diminta</li>
+      <li>Klik <b>"Create API Key"</b></li>
+      <li>Copy API Key — <b>Jangan tutup tab</b> sampai paste ke 9Router</li>
+    </ol>
+    <figure class="shot"><img src="assets/get%20api%20key.png" alt="Get API Key Gemini" loading="lazy"><figcaption>Gambar 07A — Klik Get API Key di Google AI Studio</figcaption></figure>
+    <figure class="shot"><img src="assets/create%20api%20key%20gemini.png" alt="Create API Key Gemini" loading="lazy"><figcaption>Gambar 07B — Create API Key Gemini</figcaption></figure>
+    <hr><h3>02 — Paste ke 9Router</h3>
+    <ol class="doc-ol">
+      <li>Buka 9Router dashboard: <a href="http://localhost:20128" target="_blank" rel="noopener">http://localhost:20128</a></li>
+      <li>Menu <b>"Providers"</b> → Cari <b>"Google Gemini"</b></li>
+      <li>Klik <b>"Connect"</b> / <b>"Add"</b></li>
+      <li>Dialog akan muncul:
+        <ul class="doc-ul">
+          <li>Field <b>"Name"</b>: biarkan default <b>"Gemini"</b></li>
+          <li>Field <b>"API Key"</b>: Paste API Key Gemini</li>
+          <li>Field lainnya: biarkan default</li>
+        </ul>
+      </li>
+      <li>Klik <b>"Save"</b></li>
+    </ol>
+    <div class="warning"><b>⚠️ PENTING:</b> Jangan sampai salah paste — pastikan yang dimasukkan adalah <b>API Key Gemini</b> dari Google AI Studio, bukan API Key 9Router. Simpan API Key Gemini dengan aman, jangan bagikan atau upload ke GitHub.</div>
+    <figure class="shot"><img src="assets/add%20api%20key%20di%209router.png" alt="Add API Key Gemini di 9Router" loading="lazy"><figcaption>Gambar 07C — Providers → Google Gemini → Connect/Add di 9Router</figcaption></figure>
+    <figure class="shot"><img src="assets/paste%20api%20key%20dan%20kasi%20nama.png" alt="Paste API Key Gemini" loading="lazy"><figcaption>Gambar 07D — Dialog: Name "Gemini" + Paste API Key → Save</figcaption></figure>
+    <hr><h3>Hasil</h3><div class="success">✓ Provider <b>Google Gemini</b> berhasil terhubung di 9Router — API Key sudah tersimpan dan provider siap dipakai.</div>
+    <h3>Next Step</h3><p>Gemini berhasil dihubungkan! Lanjut ke <b><a href="#step7">STEP 07: Buat Combo (Konfigurasi Provider + Multiple Models)</a></b>.</p>
+  </article>
+
+  <article class="step" id="step7">
+    <p class="step-k">STEP 07</p><h2>Buat Combo (Konfigurasi Provider + Multiple Models)</h2>
     <h3>Tujuan</h3><p>Menggabungkan provider <b>OpenCode</b> dengan <b>MULTIPLE MODELS</b> dalam satu konfigurasi yang dapat digunakan di Antigravity.</p>
     <hr><h3>Kenapa Harus Buat Combo?</h3>
     <p>Saat menggunakan hanya 1 model, jika model tersebut mencapai rate limit, request akan ditolak dan pekerjaan terhenti. Dengan combo yang berisi multiple models, jika 1 model limit, sistem secara otomatis akan switch ke model lain. Pekerjaan tetap berjalan tanpa perlu menunggu.</p>
-    <hr><h3>Manfaat Combo dengan Multiple Models</h3>
-    <div class="duo">
-      <div class="mini"><b>1️⃣ Redundancy (Backup System)</b><p>Jika 1 model limit, otomatis switch ke model lain. Request tidak pernah ditolak. Pekerjaan tidak terganggu.</p></div>
-      <div class="mini"><b>2️⃣ Flexibility (Fleksibilitas)</b><p>Mudah ganti/tambah/kurangi model dari dashboard. Tidak perlu restart Antigravity. Konfigurasi bisa diubah kapan saja.</p></div>
-      <div class="mini"><b>3️⃣ Load Balancing (Distribusi Beban)</b><p>Request terdistribusi ke beberapa model (Round Robin). Tidak ada 1 model yang overload. Response lebih konsisten dan cepat.</p></div>
-      <div class="mini"><b>4️⃣ Strategy Options (Berbagai Pilihan Routing)</b><p>Round Robin: rotate ke model berbeda setiap request. Fallback: try model utama, jika gagal coba backup. Pilih sesuai kebutuhan.</p></div>
-    </div>
     <hr><h3>Langkah-Langkah</h3>
     <h3>Langkah 1: Masuk ke Menu Combo &amp; Vision Adapter</h3>
     <ol class="doc-ol">
@@ -387,7 +410,7 @@ oc/nemotron-3-ultra-free</pre></div>
     </ol>
     <h3>Langkah 2: Isi Form</h3>
     <ul class="doc-ul">
-      <li><b>Combo Name:</b> <code>OpenCode-AI</code></li>
+      <li><b>Combo Name:</b> <code>9Router</code></li>
       <li><b>Select Provider:</b> <code>OpenCode</code></li>
       <li><b>Models:</b> centang MINIMAL 3 MODEL:
         <ul class="doc-ul">
@@ -402,7 +425,7 @@ oc/nemotron-3-ultra-free</pre></div>
     <h3>Langkah 3: Klik Create</h3>
     <p>Setelah semua field terisi, klik tombol <b>Create</b>.</p>
     <h3>Langkah 4: Verifikasi</h3>
-    <div class="success">✓ Combo <b>OpenCode-AI</b> muncul di daftar<br>✓ 3 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
+    <div class="success">✓ Combo <b>9Router</b> muncul di daftar<br>✓ 3 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
     <hr><h3>Mengapa Minimal 3 Model?</h3>
     <div class="tablewrap"><table>
       <tr><th>Jumlah</th><th>Risk</th><th>Kejelasan</th></tr>
@@ -410,15 +433,14 @@ oc/nemotron-3-ultra-free</pre></div>
       <tr><td>2 model</td><td>MEDIUM</td><td>Ada backup, tapi kalau keduanya limit buntu</td></tr>
       <tr><td>3+ model</td><td>RENDAH</td><td>Selalu ada model yang bisa dipakai ✓</td></tr>
     </table></div>
-    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>OpenCode-AI</b> berhasil dibuat<br>✓ Models: <code>oc/muse-spark-1.3-contributor-free</code> + <code>oc/mimo-v2.5-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
-    <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Multiple Models → <code>OpenCode-AI</code></figcaption></figure>
-    <h3>Next Step</h3><p>Combo berhasil dibuat! Lanjut ke <b><a href="#step7">STEP 07: Buat API Key 9Router</a></b>.</p>
+    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>9Router</b> berhasil dibuat<br>✓ Models: <code>oc/muse-spark-1.3-contributor-free</code> + <code>oc/mimo-v2.5-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
+    <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Multiple Models → <code>9Router</code></figcaption></figure>
+    <h3>Next Step</h3><p>Combo berhasil dibuat! Lanjut ke <b><a href="#step8">STEP 08: Buat API Key 9Router</a></b>.</p>
   </article>
 
-  <article class="step" id="step7">
-    <p class="step-k">STEP 07</p><h2>Buat API Key 9Router untuk Antigravity</h2>
+  <article class="step" id="step8">
+    <p class="step-k">STEP 08</p><h2>Buat API Key 9Router untuk Antigravity</h2>
     <h3>Tujuan</h3><p>Setelah provider <b>OpenCode Free</b> berhasil terhubung, buat <b>API Key 9Router</b> melalui menu <b>Endpoint &amp; Key</b>. API Key ini dibuat dari 9Router dan digunakan untuk menghubungkan Antigravity dengan gateway 9Router.</p>
-    <div class="warning"><b>⚠️ INGAT: INI API KEY 9ROUTER</b><br><br>API Key yang dibuat pada langkah ini:<br><br><b>API Key 9Router</b><br>→ Untuk menghubungkan Antigravity dengan gateway 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai di STEP 08<br>→ HARUS DISIMPAN dengan aman<br><br>Provider <b>OpenCode Free</b> tidak membutuhkan API key, jadi tidak ada lagi yang perlu dibuat dari sisi provider.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Masuk ke menu <b>Endpoint &amp; Key</b> di dashboard 9Router.</li>
@@ -432,17 +454,17 @@ oc/nemotron-3-ultra-free</pre></div>
     <figure class="shot"><img src="assets/API%20config.jpeg" alt="Endpoint &amp; Key" loading="lazy"><figcaption>Gambar 09 — Endpoint &amp; Key → Create API Key 9Router</figcaption></figure>
   </article>
 
-  <article class="step" id="step8">
-    <p class="step-k">STEP 08</p><h2>Setup Antigravity melalui CLI Tools</h2>
+  <article class="step" id="step9">
+    <p class="step-k">STEP 09</p><h2>Setup Antigravity melalui CLI Tools</h2>
     <h3>Tujuan</h3><p>Menghubungkan Antigravity dengan 9Router melalui CLI Tools.</p>
-    <div class="warning"><b>Penting:</b> API Key yang dipakai adalah <b>API Key 9Router</b> yang sudah dibuat di STEP 07, bukan API Key OpenCode.</div>
+    <div class="warning"><b>Penting:</b> API Key yang dipakai adalah <b>API Key 9Router</b> yang sudah dibuat di STEP 08, bukan API Key OpenCode.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Buka dashboard 9Router.</li>
       <li>Masuk ke menu <b>CLI Tools</b>.</li>
       <li>Pilih <b>Antigravity</b>.</li>
       <li>Pada bagian <b>MITM Server</b>, cari kolom <b>API Key</b>.</li>
-      <li>Masukkan <b>API Key 9Router</b> yang sudah dibuat di STEP 07 ke kolom tersebut.</li>
+      <li>Masukkan <b>API Key 9Router</b> yang sudah dibuat di STEP 08 ke kolom tersebut.</li>
       <li>Klik <b>Start Server</b>.</li>
       <li>Tunggu sampai server berhasil berjalan (status berubah jadi <b>Running</b>).</li>
     </ol>
@@ -450,17 +472,20 @@ oc/nemotron-3-ultra-free</pre></div>
     <div class="callout">💡 MITM Server adalah server perantara di 9Router yang meneruskan request dari Antigravity. Kalau statusnya masih <b>Stopped</b>, request tidak akan jalan.</div>
     <figure class="shot"><img src="assets/mitm%20proxy.jpeg" alt="MITM Proxy" loading="lazy"><figcaption>Gambar 10 — CLI Tools → Antigravity → Paste API Key 9Router</figcaption></figure>
     <figure class="shot"><img src="assets/mitm%20server.jpeg" alt="MITM Running" loading="lazy"><figcaption>Gambar 11 — Start Server → status Running</figcaption></figure>
+    <hr><h3>03 — Troubleshooting (Jika Error MITM Muncul)</h3><p>Saat setup 9Router, mungkin akan muncul error MITM. Berikut solusinya:</p>
+    <div class="mini"><b>CARA 1: Hapus mitm.lock (Paling Efektif)</b><ol class="doc-ol"><li>Close 9Router (tutup CMD/Terminal)</li><li>Buka File Explorer</li><li>Navigate ke: <code>C:\Users\[Nama Username]\AppData\Roaming\9router</code></li><li>Buka folder "mitm"</li><li>Hapus file "mitm.lock" (jika ada)</li><li>Tutup File Explorer</li><li>Buka CMD lagi (Run as Administrator)</li><li>Jalankan: <code>9router</code></li><li>Ulangi jalankan server MITM</li></ol></div>
+    <div class="mini"><b>CARA 2: Create Folder mitm (Jika mitm.lock Tidak Ada)</b><ol class="doc-ol"><li>Close 9Router (tutup CMD/Terminal)</li><li>Buka File Explorer</li><li>Navigate ke: <code>C:\Users\[Nama Username]\AppData\Roaming\9router</code></li><li>Check apakah folder "mitm" ada:<ul class="doc-ul"><li>Jika <b>ADA</b> → hapus semua file <code>.lock</code> di dalamnya</li><li>Jika <b>TIDAK ADA</b> → buat folder baru bernama "mitm"</li></ul></li><li>Buka CMD lagi (Run as Administrator)</li><li>Jalankan: <code>9router</code></li><li>Ulangi jalankan server MITM</li></ol></div>
   </article>
 
-  <article class="step" id="step9">
-    <p class="step-k">STEP 09</p><h2>Pilih Model dan Combo</h2>
+  <article class="step" id="step10">
+    <p class="step-k">STEP 10</p><h2>Pilih Model dan Combo</h2>
     <h3>Tujuan</h3><p>Memilih model yang mau dipakai di Antigravity dan menghubungkannya dengan Combo yang sudah dibuat.</p>
     <div class="warning"><b>Penting:</b> Pilih model <b>satu per satu</b>. Tidak ada tombol Select All di tampilan praktikum ini.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Pada konfigurasi <b>Antigravity</b>, pilih satu model yang mau dipakai. Contohnya, pilih <b>Gemini 3.8</b>.</li>
       <li>Klik <b>Select</b> di bagian kanan model tersebut.</li>
-      <li>Setelah itu, pilih <b>Combo</b> yang sudah dibuat di STEP 06. Contohnya:</li>
+      <li>Setelah itu, pilih <b>Combo</b> yang sudah dibuat di STEP 07. Contohnya:</li>
     </ol>
     <div class="codeblock"><div class="cb-head"><span>Contoh Combo</span><button data-copy="OpenCode-AI">Copy</button></div><pre>OpenCode-AI</pre></div>
     <ol class="doc-ol" start="4">
@@ -474,8 +499,8 @@ Model lain → Select → OpenCode-AI</pre></div>
     <hr><h3>Hasil</h3><div class="success">✓ Model yang dipilih sudah terhubung dengan Combo dan DNS berhasil dijalankan.</div>
   </article>
 
-  <article class="step" id="step10">
-    <p class="step-k">STEP 10</p><h2>Cek Usage</h2>
+  <article class="step" id="step11">
+    <p class="step-k">STEP 11</p><h2>Cek Usage</h2>
     <h3>Tujuan</h3><p>Mengecek apakah aktivitas dari Antigravity sudah masuk ke 9Router.</p>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
@@ -491,9 +516,9 @@ Model lain → Select → OpenCode-AI</pre></div>
     <h3>Troubleshooting</h3>
     <div class="mini"><b>Masalah 1: Tidak ada aktivitas di Usage / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu sampai status server <b>Running</b>, lalu coba prompt lagi dan cek <b>Usage</b>.</li></ol></div>
     <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD lagi dengan <b>Run as administrator</b> → jalankan <code>9router</code>.</li><li>Setelah server aktif, coba lagi di Antigravity lalu cek <b>Usage</b>.</li></ol></div>
-    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum diisi.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa <b>API Key 9Router</b> yang dimasukkan di STEP 08 (menu <b>CLI Tools → Antigravity → MITM Server → API Key</b>).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba masukkan ulang API Key 9Router.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
-    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 09.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 09.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>OpenCode-AI</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
-    <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 09.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum diisi.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa <b>API Key 9Router</b> yang dimasukkan di STEP 09 (menu <b>CLI Tools → Antigravity → MITM Server → API Key</b>).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba masukkan ulang API Key 9Router.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
+    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 10.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 09.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>OpenCode-AI</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 10.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
     <p>Setup selesai — lanjut ke tugas berikutnya.</p>
   </article>
 
@@ -518,11 +543,11 @@ Model lain → Select → OpenCode-AI</pre></div>
 <section class="chapter" id="praktik" data-name="Membuat Portfolio">
   <p class="eyebrow">07 / MEMBUAT PORTFOLIO</p>
   <h1>Bangun Website Portfolio</h1>
-  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>OpenCode-AI</code> di STEP 09. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
+  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>OpenCode-AI</code> di STEP 10. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
   <h2>Cara mengerjakan</h2>
   <ol class="doc-ol">
     <li>Buka folder project portfolio di Antigravity.</li>
-    <li>Pastikan model dan combo <code>OpenCode-AI</code> yang dipilih di STEP 09 masih aktif.</li>
+    <li>Pastikan model dan combo <code>OpenCode-AI</code> yang dipilih di STEP 10 masih aktif.</li>
     <li>Kerjakan per bagian (Identitas, Tentang Saya, Skills, Projects) dengan prompt yang spesifik — satu bagian per prompt agar hasilnya rapi.</li>
     <li>Cek hasilnya di browser setiap selesai satu bagian, lalu lanjutkan ke bagian berikutnya.</li>
   </ol>
@@ -685,7 +710,7 @@ $ git push origin main</pre></div>
   <p>Yang dikumpulkan:</p>
   <ol class="doc-ol"><li>Link repository GitHub.</li><li>Link website Vercel.</li><li>Screenshot website.</li></ol>
   <p>Nama folder <b>Kelas_Absen_Nama</b>, sertakan ketiganya di dalam folder.</p>
-  <p><a class="btn" href="https://drive.google.com/drive/folders/1rJEwg2t68jakZ0xB9sxJ__4XW9S5XHI1?usp=drive_link" target="_blank" rel="noopener">📁 Buka Folder Pengumpulan</a></p>
+  <p><a class="btn" href="https://drive.google.com/drive/folders/1ybuhHkboUx1piP2P87UdIhdO1KnISQ7J?usp=sharing" target="_blank" rel="noopener">📁 Buka Folder Pengumpulan</a></p>
 
   <h2>Troubleshooting Deployment</h2>
   <p>Jika Deployment Gagal ❌ — cocokkan pesan error dengan daftar di bawah:</p>
@@ -704,6 +729,8 @@ $ git push origin main</pre></div>
 </div>
 </main>
 </div>
+
+<div class="adv-toast" id="advToast" role="status" aria-live="polite"><span class="adv-ico"></span><span class="adv-txt"><b id="advTitle">MATERI DIPERBARUI</b><i id="advSub">Modul training siap dimulai</i></span></div>
 
 <div class="lightbox" id="lightbox"><img id="lbimg" alt="preview"></div>
 <script src="app.js"></script>
