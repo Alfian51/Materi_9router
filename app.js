@@ -1,4 +1,4 @@
-// Topbar progress + sidebar active + drawer + search + lightbox + copy + checklist
+// Topbar progress + sidebar active + drawer + lightbox + copy
 const chapters = [...document.querySelectorAll('.chapter')];
 const sideLinks = [...document.querySelectorAll('.side-nav a')];
 const sidebar = document.getElementById('sidebar');
@@ -11,37 +11,6 @@ const steps = [...document.querySelectorAll('.step')];
 let tutLockUntil = 0;
 
 function idOf(href){ return href ? href.slice(1) : ''; }
-
-// Slide PPT controls
-const prevBtn = document.getElementById('prevSlide');
-const nextBtn = document.getElementById('nextSlide');
-const ctrlDots = document.getElementById('ctrlDots');
-const ctrlCount = document.getElementById('ctrlCount');
-let curSlide = 0;
-
-if (ctrlDots) {
-  ctrlDots.innerHTML = chapters.map((c, i) => '<button aria-label="Ke slide ' + (i+1) + '" data-i="' + i + '"></button>').join('');
-}
-const dotBtns = ctrlDots ? [...ctrlDots.querySelectorAll('button')] : [];
-function goSlide(i){
-  curSlide = Math.max(0, Math.min(chapters.length - 1, i));
-  const el = chapters[curSlide];
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  syncCtrl();
-}
-function syncCtrl(){
-  if (ctrlCount) ctrlCount.textContent = 'MATERI ' + (curSlide + 1) + '/' + chapters.length;
-  dotBtns.forEach((d, i) => d.classList.toggle('on', i === curSlide));
-  if (prevBtn) prevBtn.disabled = curSlide === 0;
-  if (nextBtn) nextBtn.disabled = curSlide === chapters.length - 1;
-}
-if (prevBtn) prevBtn.addEventListener('click', () => goSlide(curSlide - 1));
-if (nextBtn) nextBtn.addEventListener('click', () => goSlide(curSlide + 1));
-dotBtns.forEach(d => d.addEventListener('click', () => goSlide(parseInt(d.dataset.i, 10))));
-document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowRight' || e.key === 'PageDown') goSlide(curSlide + 1);
-  if (e.key === 'ArrowLeft' || e.key === 'PageUp') goSlide(curSlide - 1);
-});
 
 // Advancement toast — quest log popup ala Minecraft
 const advToast = document.getElementById('advToast');
@@ -133,8 +102,6 @@ function onScroll(){
   tbBar.style.width = pct + '%';
   const curNum = Math.max(1, order.indexOf(current)+1);
   tbProgress.textContent = 'LVL ' + curNum + ' · XP ' + pct + '%';
-  curSlide = Math.max(0, order.indexOf(current));
-  syncCtrl();
   const qi = order.indexOf(current);
   if(!toastArmed){ lastQuest = qi; toastArmed = true; }
   else if(qi !== lastQuest){
@@ -178,30 +145,6 @@ menuToggle.addEventListener('click', ()=>{ sidebar.classList.toggle('open'); scr
 scrim.addEventListener('click', closeDrawer);
 sideLinks.forEach(a=>a.addEventListener('click', closeDrawer));
 
-// Search (opsional — dilewati kalau elemen search bar dihapus)
-const searchInput = document.getElementById('searchInput');
-const searchPop = document.getElementById('searchPop');
-if (searchInput && searchPop) {
-const index = Array.from(document.querySelectorAll('.chapter')).map(c=>({
-  id:c.id, name:(c.dataset.name||c.querySelector('h1')?.textContent||c.id).trim()
-}));
-searchInput.addEventListener('input', ()=>{
-  const q = searchInput.value.trim().toLowerCase();
-  if(!q){ searchPop.classList.remove('on'); searchPop.innerHTML=''; return; }
-  const hits = index.filter(x=> x.name.toLowerCase().includes(q) || x.id.toLowerCase().includes(q)).slice(0,7);
-  if(!hits.length){ searchPop.innerHTML='<a>— tidak ada hasil</a>'; searchPop.classList.add('on'); return; }
-  searchPop.innerHTML = hits.map(h=>'<a href="#'+h.id+'">'+h.name+'</a>').join('');
-  searchPop.classList.add('on');
-  searchPop.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
-    searchPop.classList.remove('on'); searchInput.value=''; closeDrawer();
-  }));
-});
-searchInput.addEventListener('keydown', e=>{ if(e.key==='Escape'){ searchPop.classList.remove('on'); searchInput.blur(); }});
-document.addEventListener('click', e=>{
-  if(e.target!==searchInput && !searchPop.contains(e.target)) searchPop.classList.remove('on');
-});
-} // end if search
-
 // Lightbox (tahan kalau elemen tidak ada)
 const lb = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbimg');
@@ -228,18 +171,3 @@ document.querySelectorAll('[data-copy]').forEach(btn=>{
     });
   });
 });
-
-// Checklist
-const checklist = document.getElementById('checklist');
-const ckCount = document.getElementById('ckCount');
-if(checklist && ckCount){
-  function updateCount(){
-    const boxes=[...checklist.querySelectorAll('input')];
-    const done=boxes.filter(b=>b.checked).length;
-    ckCount.textContent=done+'/'+boxes.length;
-    ckCount.classList.toggle('complete', done===boxes.length);
-    checklist.querySelectorAll('label').forEach(l=> l.classList.toggle('done', l.querySelector('input').checked));
-  }
-  checklist.querySelectorAll('input').forEach(b=> b.addEventListener('change', updateCount));
-  updateCount();
-}
