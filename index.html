@@ -184,10 +184,10 @@
 <section class="chapter" id="instalasi" data-name="Instalasi &amp; Setup">
   <p class="eyebrow">05 / INSTALASI &amp; SETUP</p>
   <h1>Menyiapkan 9Router</h1>
-  <p>Bagian paling detail. Ikuti <b>STEP 01–12</b> berurutan, jangan loncat. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
+  <p>Bagian paling detail. Ikuti <b>STEP 01–11</b> berurutan, jangan loncat. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
 
   <div class="tut" id="tutNav">
-    <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a><a href="#step11">11</a><a href="#step12">12</a>
+    <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a><a href="#step11">11</a>
   </div>
 
   <article class="step" id="step1">
@@ -315,7 +315,6 @@ oc/nemotron-3-ultra-free</pre></div>
       </li>
       <li>Klik <b>"Save"</b></li>
     </ol>
-    <div class="warning"><b>⚠️ PENTING:</b> Jangan sampai salah paste — pastikan yang dimasukkan adalah <b>API Key Gemini</b> dari Google AI Studio, bukan API Key 9Router. Simpan API Key Gemini dengan aman, jangan bagikan atau upload ke GitHub.</div>
     <figure class="shot"><img src="assets/add%20api%20key%20di%209router.png" alt="Add API Key Gemini di 9Router" loading="lazy"><figcaption>Gambar 07C — Providers → Google Gemini → Connect/Add di 9Router</figcaption></figure>
     <figure class="shot"><img src="assets/paste%20api%20key%20dan%20kasi%20nama.png" alt="Paste API Key Gemini" loading="lazy"><figcaption>Gambar 07D — Dialog: Name "Gemini" + Paste API Key → Save</figcaption></figure>
     <hr><h3>Hasil</h3><div class="success">✓ Provider <b>Google Gemini</b> berhasil terhubung di 9Router — API Key sudah tersimpan dan provider siap dipakai.</div>
@@ -375,64 +374,39 @@ oc/nemotron-3-ultra-free</pre></div>
   </article>
 
   <article class="step" id="step9">
-    <p class="step-k">STEP 09</p><h2>Buat API Key 9Router untuk Antigravity</h2>
-    <h3>Tujuan</h3><p>Setelah provider <b>OpenCode Free</b> berhasil terhubung, buat <b>API Key 9Router</b> melalui menu <b>Endpoint &amp; Key</b>. API Key ini dibuat dari 9Router dan digunakan untuk menghubungkan Antigravity dengan gateway 9Router.</p>
-    <hr><h3>Langkah</h3>
-    <ol class="doc-ol">
-      <li>Masuk ke menu <b>Endpoint &amp; Key</b> di dashboard 9Router.</li>
-      <li>Klik <b>Create API Key</b> / <b>+ New</b>.</li>
-      <li>Berikan nama, misalnya <code>Antigravity-Key</code>.</li>
-      <li>Klik <b>Generate / Create</b> → copy API key yang dihasilkan.</li>
-    </ol>
-    <div class="codeblock"><div class="cb-head"><span>Contoh format — jangan pakai key asli</span><button data-copy="sk-xxxxxxxxxxxxxxxx">Copy</button></div><pre>sk-xxxxxxxxxxxxxxxx</pre></div>
-    <div class="warning">Jangan pernah:<br>❌ Bagikan API Key kepada orang lain<br>❌ Upload ke GitHub<br>❌ Masukkan API Key asli ke screenshot atau repository GitHub<br><br><b>SECURE STORAGE:</b><br>✓ Simpan di Notepad terpisah<br>✓ Atau file .env lokal (jangan di-commit)<br>✓ Jika bocor, segera regenerate di dashboard</div>
-    <hr><h3>Hasil</h3><div class="success">✓ API Key 9Router berhasil dibuat dan tersalin. Simpan sementara — akan dipakai di langkah berikutnya.</div>
-    <figure class="shot"><img src="assets/API%20config.jpeg" alt="Endpoint &amp; Key" loading="lazy"><figcaption>Gambar 09 — Endpoint &amp; Key → Create API Key 9Router</figcaption></figure>
-  </article>
-
-  <article class="step" id="step10">
-    <p class="step-k">STEP 10</p><h2>Setup Antigravity melalui CLI Tools</h2>
-    <h3>Tujuan</h3><p>Menghubungkan Antigravity dengan 9Router melalui CLI Tools.</p>
+    <p class="step-k">STEP 09</p><h2>Hubungkan Antigravity via CLI Tools</h2>
+    <h3>Tujuan</h3><p>Menghubungkan Antigravity ke 9Router dan menyalakan <b>MITM Server</b> agar request bisa jalan.</p>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Buka dashboard 9Router.</li>
       <li>Masuk ke menu <b>CLI Tools</b>.</li>
       <li>Pilih <b>Antigravity</b>.</li>
-      <li>Pada bagian <b>MITM Server</b>, cari kolom <b>API Key</b>.</li>
-      <li>Masukkan <b>API Key 9Router</b> yang sudah dibuat di STEP 09 ke kolom tersebut.</li>
-      <li>Klik <b>Start Server</b>.</li>
-      <li>Tunggu sampai server berhasil berjalan (status berubah jadi <b>Running</b>).</li>
+      <li>Di bagian <b>MITM Server</b>, klik <b>Start Server</b>.</li>
+      <li>Tunggu sampai status berubah jadi <b>Running</b>.</li>
     </ol>
-    <hr><h3>Hasil</h3><div class="success">✓ MITM Server Antigravity berhasil dijalankan dan konfigurasi siap dilanjutkan.</div>
-    <div class="callout">💡 MITM Server adalah server perantara di 9Router yang meneruskan request dari Antigravity. Kalau statusnya masih <b>Stopped</b>, request tidak akan jalan.</div>
-    <figure class="shot"><img src="assets/mitm%20proxy.jpeg" alt="MITM Proxy" loading="lazy"><figcaption>Gambar 10 — CLI Tools → Antigravity → Paste API Key 9Router</figcaption></figure>
+    <hr><h3>Hasil</h3><div class="success">✓ MITM Server sudah <b>Running</b> — Antigravity sudah terhubung ke 9Router.</div>
     <figure class="shot"><img src="assets/mitm%20server.jpeg" alt="MITM Running" loading="lazy"><figcaption>Gambar 11 — Start Server → status Running</figcaption></figure>
   </article>
 
-  <article class="step" id="step11">
-    <p class="step-k">STEP 11</p><h2>Pilih Model dan Combo</h2>
-    <h3>Tujuan</h3><p>Memilih model yang mau dipakai di Antigravity dan menghubungkannya dengan Combo yang sudah dibuat.</p>
-    <div class="warning"><b>Penting:</b> Pilih model <b>satu per satu</b>. Tidak ada tombol Select All di tampilan praktikum ini.</div>
+  <article class="step" id="step10">
+    <p class="step-k">STEP 10</p><h2>Pilih Model dan Jalankan DNS</h2>
+    <h3>Tujuan</h3><p>Memilih model di Antigravity, menghubungkannya ke Combo, lalu menyalakan DNS agar bisa dipakai coding.</p>
+    <div class="warning"><b>Penting:</b> Pilih model <b>satu per satu</b>. Pastikan MITM Server di STEP 09 sudah <b>Running</b>.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
-      <li>Pada konfigurasi <b>Antigravity</b>, pilih satu model yang mau dipakai. Contohnya, pilih <b>Gemini 3.8</b>.</li>
-      <li>Klik <b>Select</b> di bagian kanan model tersebut.</li>
-      <li>Setelah itu, pilih <b>Combo</b> yang sudah dibuat di STEP 07. Contohnya:</li>
+      <li>Masih di halaman <b>CLI Tools → Antigravity</b>, cari daftar model.</li>
+      <li>Pilih satu model, contoh <b>Gemini 3.8</b> → klik <b>Select</b>.</li>
+      <li>Pada kolom <b>Combo</b>, pilih <code>9router</code> yang dibuat di STEP 07.</li>
+      <li>Klik <b>Start DNS</b> dan tunggu sampai jalan.</li>
+      <li>Untuk model lain, ulangi cara yang sama <b>satu per satu</b>.</li>
     </ol>
-    <div class="codeblock"><div class="cb-head"><span>Contoh Combo</span><button data-copy="9router">Copy</button></div><pre>9router</pre></div>
-    <ol class="doc-ol" start="4">
-      <li>Setelah Combo dipilih, klik <b>Start DNS</b>.</li>
-    </ol>
-    <p>Kalau mau pakai model lain, ulangi cara yang sama <b>satu per satu</b> untuk model tersebut.</p>
-    <p>Contoh polanya:</p>
-    <div class="codeblock"><div class="cb-head"><span>Contoh pola</span></div><pre>Gemini 3.8 → Select → 9router
-Model lain → Select → 9router</pre></div>
-    <p>Kalau sudah begitu, model yang dipilih dan dikonfigurasi bisa dipakai di Antigravity.</p>
-    <hr><h3>Hasil</h3><div class="success">✓ Model yang dipilih sudah terhubung dengan Combo dan DNS berhasil dijalankan.</div>
+    <div class="codeblock"><div class="cb-head"><span>Contoh pola</span></div><pre>Gemini 3.8 → Select → 9router → Start DNS</pre></div>
+    <hr><h3>Hasil</h3><div class="success">✓ Model sudah terhubung ke Combo dan DNS jalan — Antigravity siap dipakai.</div>
+    <figure class="shot"><img src="assets/mitm%20proxy.jpeg" alt="MITM Proxy" loading="lazy"><figcaption>Gambar 10 — CLI Tools → Antigravity → Pilih model + Start DNS</figcaption></figure>
   </article>
 
-  <article class="step" id="step12">
-    <p class="step-k">STEP 12</p><h2>Cek Usage</h2>
+  <article class="step" id="step11">
+    <p class="step-k">STEP 11</p><h2>Cek Usage</h2>
     <h3>Tujuan</h3><p>Mengecek apakah aktivitas dari Antigravity sudah masuk ke 9Router.</p>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
@@ -448,9 +422,9 @@ Model lain → Select → 9router</pre></div>
     <h3>Troubleshooting</h3>
     <div class="mini"><b>Masalah 1: Tidak ada aktivitas di Usage / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu sampai status server <b>Running</b>, lalu coba prompt lagi dan cek <b>Usage</b>.</li></ol></div>
     <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD lagi dengan <b>Run as administrator</b> → jalankan <code>9router</code>.</li><li>Setelah server aktif, coba lagi di Antigravity lalu cek <b>Usage</b>.</li></ol></div>
-    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum diisi.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa <b>API Key 9Router</b> yang dimasukkan di STEP 10 (menu <b>CLI Tools → Antigravity → MITM Server → API Key</b>).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba masukkan ulang API Key 9Router.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
-    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 11.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 10.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>9router</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
-    <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 11.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: MITM Server belum jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek <b>CLI Tools → Antigravity → MITM Server</b> di STEP 09.</li><li>Pastikan status <b>Running</b>, bukan Stopped.</li><li>Klik <b>Start Server</b> ulang jika perlu.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 10.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 09.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>9router</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 10.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
     <p>Setup selesai — lanjut ke tugas berikutnya.</p>
   </article>
 
@@ -475,11 +449,11 @@ Model lain → Select → 9router</pre></div>
 <section class="chapter" id="praktik" data-name="Membuat Portfolio">
   <p class="eyebrow">07 / MEMBUAT PORTFOLIO</p>
   <h1>Bangun Website Portfolio</h1>
-  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>9router</code> di STEP 11. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
+  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>9router</code> di STEP 10. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
   <h2>Cara mengerjakan</h2>
   <ol class="doc-ol">
     <li>Buka folder project portfolio di Antigravity.</li>
-    <li>Pastikan model dan combo <code>9router</code> yang dipilih di STEP 11 masih aktif.</li>
+    <li>Pastikan model dan combo <code>9router</code> yang dipilih di STEP 10 masih aktif.</li>
     <li>Kerjakan per bagian (Identitas, Tentang Saya, Skills, Projects) dengan prompt yang spesifik — satu bagian per prompt agar hasilnya rapi.</li>
     <li>Cek hasilnya di browser setiap selesai satu bagian, lalu lanjutkan ke bagian berikutnya.</li>
   </ol>
