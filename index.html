@@ -214,7 +214,7 @@
 
   <h2>Contoh Combo: OpenCode + Claude Sonnet</h2>
   <p><b>Provider:</b> OpenCode · <b>Model:</b> Claude Sonnet</p>
-  <p>Combo merupakan konfigurasi yang menggabungkan provider dan model agar dapat digunakan sebagai satu pilihan dalam workflow. Jadi nanti di 9Router kita akan membuat satu combo bernama misal <code>OpenCode-AI</code> yang isinya OpenCode + model pilihan — lalu combo itulah yang dipilih di Antigravity.</p>
+  <p>Combo merupakan konfigurasi yang menggabungkan provider dan model agar dapat digunakan sebagai satu pilihan dalam workflow. Jadi nanti di 9Router kita akan membuat satu combo bernama <code>9router</code> yang isinya OpenCode + model pilihan — lalu combo itulah yang dipilih di Antigravity.</p>
 
   <h2>🔐 API Key 9Router — penting dicatat</h2>
   <p>Yang dibuat pada materi ini adalah <b>API Key 9Router</b>. Jangan tertukar dengan tiga hal berikut:</p>
@@ -411,7 +411,7 @@ oc/nemotron-3-ultra-free</pre></div>
     </ol>
     <h3>Langkah 2: Isi Form</h3>
     <ul class="doc-ul">
-      <li><b>Combo Name:</b> <code>9Router</code></li>
+      <li><b>Combo Name:</b> <code>9router</code></li>
       <li><b>Select Provider:</b> <code>OpenCode</code></li>
       <li><b>Models:</b> centang 3 model berikut sebagai contoh pada praktik ini:
         <ul class="doc-ul">
@@ -422,15 +422,14 @@ oc/nemotron-3-ultra-free</pre></div>
       </li>
       <li><b>Strategy:</b> <code>Round Robin</code> (untuk praktik — membagi request secara bergiliran, tergantung konfigurasi)</li>
     </ul>
-    <div class="warning"><b>⚠️ PENTING:</b> Pada praktik ini, pilih 3 model di atas sesuai contoh agar sama dengan langkah selanjutnya.</div>
     <h3>Langkah 3: Klik Create</h3>
     <p>Setelah semua field terisi, klik tombol <b>Create</b>.</p>
     <h3>Langkah 4: Verifikasi</h3>
-    <div class="success">✓ Combo <b>9Router</b> muncul di daftar<br>✓ 3 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
+    <div class="success">✓ Combo <b>9router</b> muncul di daftar<br>✓ 3 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
     <hr><h3>Catatan tentang pilihan model</h3>
     <p>Daftar model di atas adalah contoh yang dipakai pada praktik ini. Jika daftar model yang tersedia di 9Router berbeda, ikuti instruksi guru dan gunakan model yang tersedia saat praktik. Perilaku request bergantung pada konfigurasi dan dapat berbeda tergantung versi dan konfigurasi 9Router.</p>
-    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>9Router</b> berhasil dibuat<br>✓ Models: <code>oc/muse-spark-1.3-contributor-free</code> + <code>oc/mimo-v2.5-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
-    <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Multiple Models → <code>9Router</code></figcaption></figure>
+    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>9router</b> berhasil dibuat<br>✓ Models: <code>oc/muse-spark-1.3-contributor-free</code> + <code>oc/mimo-v2.5-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
+    <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Multiple Models → <code>9router</code></figcaption></figure>
     <h3>Next Step</h3><p>Combo berhasil dibuat! Lanjut ke <b><a href="#step8">STEP 08: Buat API Key 9Router</a></b>.</p>
   </article>
 
@@ -483,14 +482,14 @@ oc/nemotron-3-ultra-free</pre></div>
       <li>Klik <b>Select</b> di bagian kanan model tersebut.</li>
       <li>Setelah itu, pilih <b>Combo</b> yang sudah dibuat di STEP 07. Contohnya:</li>
     </ol>
-    <div class="codeblock"><div class="cb-head"><span>Contoh Combo</span><button data-copy="OpenCode-AI">Copy</button></div><pre>OpenCode-AI</pre></div>
+    <div class="codeblock"><div class="cb-head"><span>Contoh Combo</span><button data-copy="9router">Copy</button></div><pre>9router</pre></div>
     <ol class="doc-ol" start="4">
       <li>Setelah Combo dipilih, klik <b>Start DNS</b>.</li>
     </ol>
     <p>Kalau mau pakai model lain, ulangi cara yang sama <b>satu per satu</b> untuk model tersebut.</p>
     <p>Contoh polanya:</p>
-    <div class="codeblock"><div class="cb-head"><span>Contoh pola</span></div><pre>Gemini 3.8 → Select → OpenCode-AI
-Model lain → Select → OpenCode-AI</pre></div>
+    <div class="codeblock"><div class="cb-head"><span>Contoh pola</span></div><pre>Gemini 3.8 → Select → 9router
+Model lain → Select → 9router</pre></div>
     <p>Kalau sudah begitu, model yang dipilih dan dikonfigurasi bisa dipakai di Antigravity.</p>
     <hr><h3>Hasil</h3><div class="success">✓ Model yang dipilih sudah terhubung dengan Combo dan DNS berhasil dijalankan.</div>
   </article>
@@ -513,7 +512,7 @@ Model lain → Select → OpenCode-AI</pre></div>
     <div class="mini"><b>Masalah 1: Tidak ada aktivitas di Usage / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu sampai status server <b>Running</b>, lalu coba prompt lagi dan cek <b>Usage</b>.</li></ol></div>
     <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD lagi dengan <b>Run as administrator</b> → jalankan <code>9router</code>.</li><li>Setelah server aktif, coba lagi di Antigravity lalu cek <b>Usage</b>.</li></ol></div>
     <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum diisi.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa <b>API Key 9Router</b> yang dimasukkan di STEP 09 (menu <b>CLI Tools → Antigravity → MITM Server → API Key</b>).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba masukkan ulang API Key 9Router.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
-    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 10.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 09.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>OpenCode-AI</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 10.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 09.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>9router</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
     <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 10.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
     <p>Setup selesai — lanjut ke tugas berikutnya.</p>
   </article>
@@ -539,11 +538,11 @@ Model lain → Select → OpenCode-AI</pre></div>
 <section class="chapter" id="praktik" data-name="Membuat Portfolio">
   <p class="eyebrow">07 / MEMBUAT PORTFOLIO</p>
   <h1>Bangun Website Portfolio</h1>
-  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>OpenCode-AI</code> di STEP 10. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
+  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>9router</code> di STEP 10. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
   <h2>Cara mengerjakan</h2>
   <ol class="doc-ol">
     <li>Buka folder project portfolio di Antigravity.</li>
-    <li>Pastikan model dan combo <code>OpenCode-AI</code> yang dipilih di STEP 10 masih aktif.</li>
+    <li>Pastikan model dan combo <code>9router</code> yang dipilih di STEP 10 masih aktif.</li>
     <li>Kerjakan per bagian (Identitas, Tentang Saya, Skills, Projects) dengan prompt yang spesifik — satu bagian per prompt agar hasilnya rapi.</li>
     <li>Cek hasilnya di browser setiap selesai satu bagian, lalu lanjutkan ke bagian berikutnya.</li>
   </ol>
