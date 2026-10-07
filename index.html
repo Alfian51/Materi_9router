@@ -144,98 +144,23 @@
 <section class="chapter" id="opencode" data-name="OpenCode">
   <p class="eyebrow">03 / OPENCODE</p>
   <h1>Apa itu OpenCode?</h1>
-  <p><b>OpenCode adalah salah satu provider AI yang dapat digunakan melalui 9Router. Pada praktikum ini kita menggunakan OpenCode Free sebagai provider tanpa API key.</b></p>
-  <p>OpenCode adalah layanan berbasis website dan berbeda dengan 9Router. Kalau 9Router dijalankan lokal lewat CMD, OpenCode cukup diakses lewat browser — tidak perlu di-install.</p>
-  <div class="callout"><b>OpenCode Free merupakan provider yang dapat digunakan tanpa autentikasi tambahan melalui 9Router.</b> Ketersediaan model dan status gratis dapat berubah mengikuti pembaruan layanan. Pada praktikum ini tidak ada API key yang perlu dicari dari sisi OpenCode — cukup lihat daftar model yang tersedia di 9Router saat praktik.</div>
-  <h3>Definisi</h3>
+  <p><b>OpenCode adalah salah satu provider AI yang dapat digunakan melalui 9Router untuk mengakses model AI dalam proses coding.</b> OpenCode menyediakan akses ke berbagai model AI yang dapat digunakan untuk membantu membuat, menjelaskan, memperbaiki, dan mengembangkan kode program.</p>
+  <p>Dalam penggunaan melalui 9Router, OpenCode berperan sebagai <b>penyedia model AI</b>, sedangkan 9Router berfungsi sebagai <b>gateway atau perantara</b> yang mengatur koneksi antara aplikasi AI coding dengan provider tersebut.</p>
+  <h2>Peran OpenCode dalam 9Router</h2>
+  <p>Secara sederhana, alurnya adalah:</p>
+  <div class="codeblock"><div class="cb-head"><span>Alur</span></div><pre>Antigravity → 9Router → OpenCode → Model AI → Respons</pre></div>
+  <p>Artinya, ketika pengguna memberikan perintah melalui Antigravity, permintaan tersebut diteruskan ke 9Router. Selanjutnya, 9Router meneruskannya ke provider OpenCode dan model AI yang dipilih. Hasil dari model kemudian dikembalikan melalui 9Router ke Antigravity.</p>
+  <h2>OpenCode Free</h2>
+  <div class="callout"><b>OpenCode Free merupakan provider yang dapat digunakan tanpa autentikasi tambahan melalui 9Router.</b> Ketersediaan model dan status akses dapat berubah mengikuti kebijakan dan pembaruan layanan. Oleh karena itu, model yang tersedia atau dapat digunakan pada suatu waktu tidak selalu sama — cek daftar yang tersedia di 9Router saat praktik.</div>
+  <h2>Kenapa OpenCode digunakan dengan 9Router?</h2>
+  <p>Penggunaan OpenCode melalui 9Router membuat pengguna dapat mengatur provider dan model AI dari satu tempat. Hal ini juga memungkinkan pengguna membuat <b>Combo</b>, yaitu konfigurasi yang berisi beberapa provider atau model untuk digunakan dalam satu pengaturan.</p>
+  <p>Dengan memahami peran OpenCode, pengguna dapat membedakan fungsi setiap bagian:</p>
   <div class="duo">
-    <div class="mini hl"><b>Provider</b><p>Layanan AI yang dipakai pada konfigurasi 9Router. Pada praktikum ini: <b>OpenCode Free</b>.</p></div>
-    <div class="mini hl"><b>Model</b><p>Model AI yang dipilih di dalam konfigurasi provider / combo.</p></div>
+    <div class="mini"><b>Antigravity</b><p>Tempat pengguna bekerja dan memberikan perintah kepada AI.</p></div>
+    <div class="mini"><b>9Router</b><p>Gateway yang mengatur dan meneruskan request.</p></div>
+    <div class="mini"><b>OpenCode</b><p>Provider yang menyediakan akses ke model AI.</p></div>
+    <div class="mini"><b>Model AI</b><p>Bagian yang memproses perintah dan menghasilkan respons.</p></div>
   </div>
-  <h3>Kenapa dipakai dalam materi ini</h3>
-  <ul class="doc-ul">
-    <li>✓ Dapat dipakai tanpa autentikasi tambahan melalui 9Router (OpenCode Free)</li>
-    <li>✓ Multiple models (banyak pilihan AI yang berbeda — cek daftar yang tersedia saat praktik)</li>
-    <li>✓ Dapat dihubungkan melalui menu Providers di 9Router</li>
-    <li>✓ Dipakai tanpa API key</li>
-    <li>✓ Tidak perlu mencari atau membuat API key tambahan</li>
-    <li>✓ Dapat dipakai tanpa autentikasi tambahan melalui 9Router</li>
-  </ul>
-  <h3>Flow dalam workflow</h3>
-  <div class="codeblock"><div class="cb-head"><span>Alur</span></div><pre>Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity</pre></div>
-  <p>OpenCode Free berperan sebagai <b>provider</b> dalam alur tersebut.</p>
-  <h2>Apa &amp; kenapa dipakai</h2>
-  <h3>Layanannya</h3><p>OpenCode adalah layanan berbasis website yang diakses melalui browser. Daftar provider dan model yang didukung dapat dilihat dari dashboard layanan tersebut. Dalam praktikum ini, OpenCode digunakan sebagai <b>provider</b> yang dihubungkan ke 9Router.</p>
-  <h3>Alasan dipakai</h3><p>OpenCode digunakan sebagai salah satu provider yang dapat dihubungkan ke 9Router, sehingga request dari workflow AI Coding dapat diarahkan ke layanan tersebut sesuai konfigurasi. Ketersediaan model mengikuti layanan dan konfigurasi yang digunakan — tidak semua model selalu ada.</p>
-  <h3>Provider, Model, API Key — bedanya apa?</h3><p><b>Provider</b> adalah layanan AI-nya, pada praktikum ini <b>OpenCode Free</b>. <b>Model</b> adalah model AI yang dipilih di dalam konfigurasi provider / combo. <b>API Key 9Router</b> adalah kunci akses yang dibuat dari 9Router untuk menghubungkan konfigurasi ke Antigravity. Provider OpenCode Free sendiri tidak membutuhkan API key.</p>
-
-  <h2>Provider vs Model</h2>
-  <p>Bagian ini wajib dipahami agar tidak ketukar. Banyak yang mengira OpenCode = Claude Sonnet — padahal keduanya punya peran berbeda.</p>
-  <div class="duo">
-    <div class="mini hl"><b>Provider</b><p>Layanan yang menyediakan akses ke model AI.</p><code>Contoh: OpenCode</code></div>
-    <div class="mini hl"><b>Model</b><p>Model AI yang memproses request.</p><code>Contoh: Claude Sonnet</code></div>
-  </div>
-  <div class="success">✅ Benar: <b>Provider → OpenCode</b> · <b>Model → Claude Sonnet</b> &nbsp;|&nbsp; ❌ Salah: OpenCode = Claude Sonnet</div>
-  <p>Katakanlah OpenCode itu seperti penyedia listrik, dan Claude Sonnet itu seperti lampu yang kita colok. Listriknya dari OpenCode, yang menyala adalah modelnya.</p>
-
-  <h2>"No Authentication Required" — apa artinya?</h2>
-  <p>Saat connect OpenCode Free di 9Router, akan terlihat tulisan status <b>"No authentication required"</b> (warna hijau).</p>
-  <p>Artinya:</p>
-  <ul class="doc-ul">
-    <li>✅ Pada praktik ini, OpenCode Free dapat dipakai tanpa setup tambahan dari sisi OpenCode</li>
-    <li>✅ Tidak perlu mencari kunci akses dari sisi OpenCode</li>
-    <li>✅ Tidak perlu membuat API key tambahan</li>
-    <li>✅ Tidak perlu authorization/approve apapun</li>
-    <li>✅ Bisa langsung pilih dari model yang tersedia saat itu dan digunakan</li>
-  </ul>
-  <p>Dibandingkan provider lain yang biasanya butuh:</p>
-  <ul class="doc-ul">
-    <li>❌ Login ke layanan terpisah</li>
-    <li>❌ API key dari provider tersebut</li>
-    <li>❌ Authorization tambahan</li>
-  </ul>
-  <div class="callout">OpenCode Free lebih sederhana karena dapat digunakan tanpa autentikasi tambahan melalui 9Router. Ketersediaan model dan status layanan dapat berubah — cek daftar yang tersedia saat praktik.</div>
-
-  <h2>Model-model available di OpenCode Free</h2>
-  <p>Contoh daftar model yang tampil pada saat materi ini dibuat:</p>
-  <h3>⭐ Recommended untuk praktik</h3>
-  <ul class="doc-ul">
-    <li><code>oc/muse-spark-1.3-contributor-free</code><br>→ Fast &amp; good quality<br>→ Cocok untuk AI coding<br>→ <b>Recommended</b></li>
-    <li><code>oc/mimo-v2.5-free</code><br>→ Good balance speed/quality<br>→ Alternative pilihan</li>
-  </ul>
-  <h3>Alternatif lain (contoh saat materi dibuat)</h3>
-  <ul class="doc-ul">
-    <li><code>oc/muse-spark-1.2-contributor-free</code></li>
-    <li><code>oc/big-pickle</code></li>
-    <li><code>oc/nemotron-3-ultra-free</code></li>
-    <li>(daftar model dapat berubah mengikuti pembaruan layanan — cek daftar yang tersedia di 9Router saat praktik)</li>
-  </ul>
-  <div class="callout">💡 <b>Tips:</b> Jika tidak tahu pilih mana, gunakan yang direkomendasikan. <b>OpenCode Free tidak berarti seluruh model akan selalu tersedia atau gratis selamanya.</b> Daftar model dan status layanan dapat berubah — saat praktik, lihat daftar model yang tersedia di 9Router.</div>
-
-  <h2>Contoh Combo: OpenCode + Claude Sonnet</h2>
-  <p><b>Provider:</b> OpenCode · <b>Model:</b> Claude Sonnet</p>
-  <p>Combo merupakan konfigurasi yang menggabungkan provider dan model agar dapat digunakan sebagai satu pilihan dalam workflow. Jadi nanti di 9Router kita akan membuat satu combo bernama <code>9router</code> yang isinya OpenCode + model pilihan — lalu combo itulah yang dipilih di Antigravity.</p>
-
-  <h2>🔐 API Key 9Router — penting dicatat</h2>
-  <p>Yang dibuat pada materi ini adalah <b>API Key 9Router</b>. Jangan tertukar dengan tiga hal berikut:</p>
-  <div class="duo">
-    <div class="mini hl"><b>1️⃣ Provider</b><p><b>OpenCode Free</b><br>→ Layanan AI yang dipakai pada praktikum ini<br>→ Dipakai tanpa API key</p></div>
-    <div class="mini hl"><b>2️⃣ Model</b><p>Model AI yang dipilih di dalam konfigurasi provider / combo<br>→ Contoh: <code>oc/muse-spark-1.3-contributor-free</code></p></div>
-    <div class="mini hl"><b>3️⃣ API Key Gemini</b><p>→ Dibuat di STEP 06 dari Google AI Studio<br>→ Dipakai di menu <b>Providers → Google Gemini</b><br>→ SIMPAN dengan aman, jangan bagikan / upload ke GitHub</p></div>
-    <div class="mini hl"><b>4️⃣ API Key 9Router</b><p>→ Dibuat di STEP 08 dari 9Router<br>→ Format: <code>sk-xxxxxxxxxxxxxxxx</code><br>→ Dipakai untuk menghubungkan Antigravity dengan gateway 9Router<br>→ SIMPAN dengan aman<br>→ Jangan bagikan / upload ke GitHub</p></div>
-  </div>
-  <div class="callout">Provider <b>OpenCode Free</b> tidak membutuhkan API key. Dua API Key yang dibuat pada materi ini adalah <b>API Key Gemini</b> (STEP 06, dari Google AI Studio) dan <b>API Key 9Router</b> (STEP 08, dari dashboard 9Router).</div>
-  <h3>Security tips</h3>
-  <ul class="doc-ul">
-    <li>✓ Simpan API Key 9Router di file terpisah</li>
-    <li>✓ Jangan upload ke GitHub</li>
-    <li>✓ Jangan tampilkan di screenshot (gunakan placeholder)</li>
-    <li>✓ Jangan bagikan ke orang lain</li>
-    <li>✓ Jika bocor, regenerate di dashboard 9Router</li>
-  </ul>
-  <div class="warning"><b>Jangan sampai:</b><br>❌ Paste API Key di source code<br>❌ Commit API Key ke GitHub<br>❌ Share screenshot dengan API Key terlihat<br>❌ Hardcode API Key di file yang di-push</div>
-  <figure class="shot"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="Dashboard OpenCode" loading="lazy"><figcaption>Gambar 01 — Dashboard OpenCode</figcaption></figure>
-  <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Gambar 02 — Connect OpenCode di menu Providers 9Router</figcaption></figure>
 </section>
 
 <!-- 04 -->
