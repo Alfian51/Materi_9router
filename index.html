@@ -184,10 +184,10 @@
 <section class="chapter" id="instalasi" data-name="Instalasi &amp; Setup">
   <p class="eyebrow">05 / INSTALASI &amp; SETUP</p>
   <h1>Menyiapkan 9Router</h1>
-  <p>Bagian paling detail. Ikuti <b>STEP 01–11</b> berurutan, jangan loncat. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
+  <p>Bagian paling detail. Ikuti <b>STEP 01–12</b> berurutan, jangan loncat. Setiap langkah mengikuti pola: <b>Tujuan → Langkah → Cek / Hasil → Screenshot</b>. Buka CMD / Terminal baru setelah tiap instalasi agar PATH terbaca.</p>
 
   <div class="tut" id="tutNav">
-    <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a><a href="#step11">11</a>
+    <a href="#step1" class="active">01</a><a href="#step2">02</a><a href="#step3">03</a><a href="#step4">04</a><a href="#step5">05</a><a href="#step6">06</a><a href="#step7">07</a><a href="#step8">08</a><a href="#step9">09</a><a href="#step10">10</a><a href="#step11">11</a><a href="#step12">12</a>
   </div>
 
   <article class="step" id="step1">
@@ -258,33 +258,34 @@
   </article>
 
   <article class="step" id="step5">
-    <p class="step-k">STEP 05</p><h2>Connect OpenCode Free ke 9Router</h2>
-    <h3>Tujuan</h3><p>Menghubungkan provider <b>OpenCode Free</b> ke 9Router sehingga request AI bisa diteruskan ke sana.</p>
-    <div class="callout"><b>OpenCode Free merupakan provider yang dapat digunakan tanpa autentikasi tambahan melalui 9Router.</b> Ketersediaan model dan status gratis dapat berubah mengikuti pembaruan layanan. Tidak perlu daftar akun baru atau memasukkan API key apa pun — cukup klik <b>Connect</b>, lalu cek daftar model yang tersedia saat praktik.</div>
+    <p class="step-k">STEP 05</p><h2>Pilih Model OpenCode</h2>
+    <h3>Tujuan</h3><p>Setelah <b>OpenCode Free</b> berhasil terhubung, kita bisa memilih model AI yang akan digunakan.</p>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
-      <li>Buka dashboard 9Router.</li>
-      <li>Masuk ke menu <b>Providers</b>.</li>
-      <li>Cari <b>OpenCode Free</b> pada daftar provider.</li>
-      <li>Klik <b>Connect</b>.</li>
-      <li>Perhatikan tampilan setelah klik <b>Connect</b>: panel detail provider akan terbuka dan menampilkan daftar <b>Available Models</b> secara otomatis — cek daftar yang tampil saat itu, karena daftar model dapat berbeda tergantung versi dan konfigurasi 9Router.</li>
-      <li>Tunggu sampai status provider siap digunakan. Status yang diharapkan: <b>"No authentication required"</b> dengan indikator <b>hijau</b> — artinya provider aktif dan tidak membutuhkan autentikasi tambahan.</li>
+      <li>Buka <b>OpenCode Free</b>.</li>
+      <li>Masuk ke: <b>Providers → OpenCode Free</b>.</li>
+      <li>Pastikan muncul tulisan: <b>"No authentication required"</b> dengan indikator <b>hijau</b> — artinya provider aktif dan tidak membutuhkan autentikasi tambahan.</li>
+      <li>Setelah masuk ke OpenCode Free, scroll ke bagian <b>Available Models</b>.</li>
+      <li>Aktifkan 5 model berikut:</li>
     </ol>
-    <h3>Contoh model yang tampil</h3>
-    <p>Contoh daftar model yang tampil pada saat materi ini dibuat. Daftar sebenarnya dapat berbeda tergantung versi dan konfigurasi 9Router — cek daftar <b>Available Models</b> di dashboard saat praktik:</p>
-    <div class="codeblock"><div class="cb-head"><span>Available Models — OpenCode Free</span><button data-copy="oc/muse-spark-1.3-contributor-free">Copy</button></div><pre>oc/muse-spark-1.3-contributor-free
-oc/muse-spark-1.2-contributor-free
-oc/big-pickle
-oc/mimo-v2.5-free
+    <div class="codeblock"><div class="cb-head"><span>Available Models — OpenCode Free</span><button data-copy="oc/big-pickle
+oc/mimo-v2.6-flash-free
+oc/space-bunny-free
+oc/longcat-2.5-preview-free
+oc/nemotron-3-ultra-free">Copy</button></div><pre>oc/big-pickle
+oc/mimo-v2.6-flash-free
+oc/space-bunny-free
+oc/longcat-2.5-preview-free
 oc/nemotron-3-ultra-free</pre></div>
     <ul class="doc-ul">
-      <li><code>oc/muse-spark-1.3-contributor-free</code> — <b>RECOMMENDED untuk praktik ini</b>, contoh model yang dipakai saat materi dibuat.</li>
-      <li><code>oc/muse-spark-1.2-contributor-free</code> — contoh model lain yang tampil saat materi dibuat.</li>
-      <li><code>oc/big-pickle</code>, <code>oc/mimo-v2.5-free</code>, <code>oc/nemotron-3-ultra-free</code> — contoh model lain. Jangan menganggap model tertentu pasti gratis selamanya — ketersediaan dan status gratis dapat berubah mengikuti pembaruan layanan.</li>
+      <li><code>oc/big-pickle</code></li>
+      <li><code>oc/mimo-v2.6-flash-free</code></li>
+      <li><code>oc/space-bunny-free</code></li>
+      <li><code>oc/longcat-2.5-preview-free</code></li>
+      <li><code>oc/nemotron-3-ultra-free</code></li>
     </ul>
-    <hr><h3>Hasil</h3><div class="success">✓ Provider <b>OpenCode Free</b> berstatus siap digunakan — indikator hijau <b>"No authentication required"</b>. Jika gagal, cek koneksi internet dan coba klik Connect lagi.</div>
-    <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Gambar 06 — Connect OpenCode Free di menu Providers</figcaption></figure>
-    <figure class="shot"><img src="assets/OpenCode%20Free%20Ready%20to%20Use.png" alt="Available Models OpenCode Free" loading="lazy"><figcaption>Gambar 06B — Available Models yang tampil setelah Connect (No authentication required)</figcaption></figure>
+    <hr><h3>Hasil</h3><div class="success">✓ 5 model OpenCode Free berhasil diaktifkan dan siap digunakan di langkah berikutnya. Jika daftar model berbeda, cek <b>Available Models</b> yang tampil saat praktik.</div>
+    <figure class="shot"><img src="assets/select%20model%20opencode%20free.png" alt="Select Model OpenCode Free" loading="lazy"><figcaption>Gambar 06 — Select Model OpenCode Free — aktifkan 5 model di atas</figcaption></figure>
   </article>
 
   <article class="step" id="step6">
@@ -338,10 +339,12 @@ oc/nemotron-3-ultra-free</pre></div>
     <ul class="doc-ul">
       <li><b>Combo Name:</b> <code>9router</code></li>
       <li><b>Select Provider:</b> <code>OpenCode</code></li>
-      <li><b>Models:</b> centang 3 model berikut sebagai contoh pada praktik ini:
+      <li><b>Models:</b> centang 5 model berikut yang sudah diaktifkan di STEP 05:
         <ul class="doc-ul">
-          <li>✓ <code>oc/muse-spark-1.3-contributor-free</code></li>
-          <li>✓ <code>oc/mimo-v2.5-free</code></li>
+          <li>✓ <code>oc/big-pickle</code></li>
+          <li>✓ <code>oc/mimo-v2.6-flash-free</code></li>
+          <li>✓ <code>oc/space-bunny-free</code></li>
+          <li>✓ <code>oc/longcat-2.5-preview-free</code></li>
           <li>✓ <code>oc/nemotron-3-ultra-free</code></li>
         </ul>
       </li>
@@ -350,16 +353,29 @@ oc/nemotron-3-ultra-free</pre></div>
     <h3>Langkah 3: Klik Create</h3>
     <p>Setelah semua field terisi, klik tombol <b>Create</b>.</p>
     <h3>Langkah 4: Verifikasi</h3>
-    <div class="success">✓ Combo <b>9router</b> muncul di daftar<br>✓ 3 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
+    <div class="success">✓ Combo <b>9router</b> muncul di daftar<br>✓ 5 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
     <hr><h3>Catatan tentang pilihan model</h3>
     <p>Daftar model di atas adalah contoh yang dipakai pada praktik ini. Jika daftar model yang tersedia di 9Router berbeda, ikuti instruksi guru dan gunakan model yang tersedia saat praktik. Perilaku request bergantung pada konfigurasi dan dapat berbeda tergantung versi dan konfigurasi 9Router.</p>
-    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>9router</b> berhasil dibuat<br>✓ Models: <code>oc/muse-spark-1.3-contributor-free</code> + <code>oc/mimo-v2.5-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
+    <hr><h3>Hasil</h3><div class="success">✓ Combo <b>9router</b> berhasil dibuat<br>✓ Models: <code>oc/big-pickle</code> + <code>oc/mimo-v2.6-flash-free</code> + <code>oc/space-bunny-free</code> + <code>oc/longcat-2.5-preview-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
     <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Multiple Models → <code>9router</code></figcaption></figure>
-    <h3>Next Step</h3><p>Combo berhasil dibuat! Lanjut ke <b><a href="#step8">STEP 08: Buat API Key 9Router</a></b>.</p>
+    <h3>Next Step</h3><p>Combo berhasil dibuat! Lanjut ke <b><a href="#step8">STEP 08: Buat Folder mitm</a></b>.</p>
   </article>
 
   <article class="step" id="step8">
-    <p class="step-k">STEP 08</p><h2>Buat API Key 9Router untuk Antigravity</h2>
+    <p class="step-k">STEP 08</p><h2>Buat Folder mitm</h2>
+    <h3>Tujuan</h3><p>Menyiapkan folder <b>mitm</b> agar <b>MITM Server</b> 9Router bisa berjalan tanpa error.</p>
+    <hr><h3>Langkah</h3>
+    <ol class="doc-ol">
+      <li>Tekan <b>Windows + R</b> di keyboard.</li>
+      <li>Ketik <code>%appdata%</code> lalu tekan <b>Enter</b>.</li>
+      <li>Cari dan buka folder <b>9router</b>.</li>
+      <li>Di dalam folder <b>9router</b>, buat folder baru bernama <b>mitm</b> (klik kanan → <b>New → Folder</b> → ketik <code>mitm</code>).</li>
+      <li>Pastikan folder <b>mitm</b> sudah ada. Kalau sudah ada, tidak perlu buat lagi — lanjut saja.</li>
+    </ol>
+  </article>
+
+  <article class="step" id="step9">
+    <p class="step-k">STEP 09</p><h2>Buat API Key 9Router untuk Antigravity</h2>
     <h3>Tujuan</h3><p>Setelah provider <b>OpenCode Free</b> berhasil terhubung, buat <b>API Key 9Router</b> melalui menu <b>Endpoint &amp; Key</b>. API Key ini dibuat dari 9Router dan digunakan untuk menghubungkan Antigravity dengan gateway 9Router.</p>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
@@ -374,17 +390,16 @@ oc/nemotron-3-ultra-free</pre></div>
     <figure class="shot"><img src="assets/API%20config.jpeg" alt="Endpoint &amp; Key" loading="lazy"><figcaption>Gambar 09 — Endpoint &amp; Key → Create API Key 9Router</figcaption></figure>
   </article>
 
-  <article class="step" id="step9">
-    <p class="step-k">STEP 09</p><h2>Setup Antigravity melalui CLI Tools</h2>
+  <article class="step" id="step10">
+    <p class="step-k">STEP 10</p><h2>Setup Antigravity melalui CLI Tools</h2>
     <h3>Tujuan</h3><p>Menghubungkan Antigravity dengan 9Router melalui CLI Tools.</p>
-    <div class="warning"><b>Penting:</b> API Key yang dipakai adalah <b>API Key 9Router</b> yang sudah dibuat di STEP 08, bukan API Key OpenCode.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Buka dashboard 9Router.</li>
       <li>Masuk ke menu <b>CLI Tools</b>.</li>
       <li>Pilih <b>Antigravity</b>.</li>
       <li>Pada bagian <b>MITM Server</b>, cari kolom <b>API Key</b>.</li>
-      <li>Masukkan <b>API Key 9Router</b> yang sudah dibuat di STEP 08 ke kolom tersebut.</li>
+      <li>Masukkan <b>API Key 9Router</b> yang sudah dibuat di STEP 09 ke kolom tersebut.</li>
       <li>Klik <b>Start Server</b>.</li>
       <li>Tunggu sampai server berhasil berjalan (status berubah jadi <b>Running</b>).</li>
     </ol>
@@ -392,13 +407,10 @@ oc/nemotron-3-ultra-free</pre></div>
     <div class="callout">💡 MITM Server adalah server perantara di 9Router yang meneruskan request dari Antigravity. Kalau statusnya masih <b>Stopped</b>, request tidak akan jalan.</div>
     <figure class="shot"><img src="assets/mitm%20proxy.jpeg" alt="MITM Proxy" loading="lazy"><figcaption>Gambar 10 — CLI Tools → Antigravity → Paste API Key 9Router</figcaption></figure>
     <figure class="shot"><img src="assets/mitm%20server.jpeg" alt="MITM Running" loading="lazy"><figcaption>Gambar 11 — Start Server → status Running</figcaption></figure>
-    <hr><h3>03 — Troubleshooting (Jika Error MITM Muncul)</h3><p>Saat setup 9Router, mungkin akan muncul error MITM. Berikut solusinya:</p>
-    <div class="mini"><b>CARA 1: Hapus mitm.lock</b><ol class="doc-ol"><li>Close 9Router (tutup CMD/Terminal)</li><li>Buka File Explorer</li><li>Navigate ke: <code>C:\Users\[Nama Username]\AppData\Roaming\9router</code></li><li>Buka folder "mitm"</li><li>Hapus file "mitm.lock" (jika ada)</li><li>Tutup File Explorer</li><li>Buka CMD lagi (Run as Administrator)</li><li>Jalankan: <code>9router</code></li><li>Ulangi jalankan server MITM</li></ol></div>
-    <div class="mini"><b>CARA 2: Create Folder mitm (Jika mitm.lock Tidak Ada)</b><ol class="doc-ol"><li>Close 9Router (tutup CMD/Terminal)</li><li>Buka File Explorer</li><li>Navigate ke: <code>C:\Users\[Nama Username]\AppData\Roaming\9router</code></li><li>Check apakah folder "mitm" ada:<ul class="doc-ul"><li>Jika <b>ADA</b> → hapus semua file <code>.lock</code> di dalamnya</li><li>Jika <b>TIDAK ADA</b> → buat folder baru bernama "mitm"</li></ul></li><li>Buka CMD lagi (Run as Administrator)</li><li>Jalankan: <code>9router</code></li><li>Ulangi jalankan server MITM</li></ol></div>
   </article>
 
-  <article class="step" id="step10">
-    <p class="step-k">STEP 10</p><h2>Pilih Model dan Combo</h2>
+  <article class="step" id="step11">
+    <p class="step-k">STEP 11</p><h2>Pilih Model dan Combo</h2>
     <h3>Tujuan</h3><p>Memilih model yang mau dipakai di Antigravity dan menghubungkannya dengan Combo yang sudah dibuat.</p>
     <div class="warning"><b>Penting:</b> Pilih model <b>satu per satu</b>. Tidak ada tombol Select All di tampilan praktikum ini.</div>
     <hr><h3>Langkah</h3>
@@ -419,8 +431,8 @@ Model lain → Select → 9router</pre></div>
     <hr><h3>Hasil</h3><div class="success">✓ Model yang dipilih sudah terhubung dengan Combo dan DNS berhasil dijalankan.</div>
   </article>
 
-  <article class="step" id="step11">
-    <p class="step-k">STEP 11</p><h2>Cek Usage</h2>
+  <article class="step" id="step12">
+    <p class="step-k">STEP 12</p><h2>Cek Usage</h2>
     <h3>Tujuan</h3><p>Mengecek apakah aktivitas dari Antigravity sudah masuk ke 9Router.</p>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
@@ -436,9 +448,9 @@ Model lain → Select → 9router</pre></div>
     <h3>Troubleshooting</h3>
     <div class="mini"><b>Masalah 1: Tidak ada aktivitas di Usage / AI tidak merespons</b><p>→ Kemungkinan: Server 9Router Stopped.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek status di dashboard 9Router.</li><li>Lihat status MITM Server.</li><li>Jika Stopped, klik <b>Start Server</b>.</li><li>Tunggu sampai status server <b>Running</b>, lalu coba prompt lagi dan cek <b>Usage</b>.</li></ol></div>
     <div class="mini"><b>Masalah 2: "Connection Refused" Error</b><p>→ Kemungkinan: 9Router tidak jalan.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa jendela CMD tempat menjalankan <code>9router</code>.</li><li>Pastikan masih running (tidak error).</li><li>Jika tertutup, buka CMD lagi dengan <b>Run as administrator</b> → jalankan <code>9router</code>.</li><li>Setelah server aktif, coba lagi di Antigravity lalu cek <b>Usage</b>.</li></ol></div>
-    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum diisi.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa <b>API Key 9Router</b> yang dimasukkan di STEP 09 (menu <b>CLI Tools → Antigravity → MITM Server → API Key</b>).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba masukkan ulang API Key 9Router.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
-    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 10.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 09.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>9router</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
-    <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 10.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 3: "401 Unauthorized"</b><p>→ Kemungkinan: API Key salah atau belum diisi.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Periksa <b>API Key 9Router</b> yang dimasukkan di STEP 10 (menu <b>CLI Tools → Antigravity → MITM Server → API Key</b>).</li><li>Pastikan tidak ada typo atau spasi.</li><li>Coba masukkan ulang API Key 9Router.</li><li>Klik <b>Start Server</b> ulang.</li></ol></div>
+    <div class="mini"><b>Masalah 4: "Model not found"</b><p>→ Kemungkinan: Model / Combo belum dipilih di STEP 11.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Cek konfigurasi <b>Antigravity</b> di STEP 10.</li><li>Pastikan sudah pilih <b>satu model</b> → klik <b>Select</b> → pilih Combo <code>9router</code> → klik <b>Start DNS</b>.</li><li>Coba prompt lagi lalu cek <b>Usage</b>.</li></ol></div>
+    <div class="mini"><b>Masalah 5: Prompt berhasil tapi respons lambat</b><p>→ Kemungkinan: Server sedang sibuk atau jaringan sedang lambat.</p><p><b>Solusi:</b></p><ol class="doc-ol"><li>Coba prompt yang lebih sederhana.</li><li>Cek koneksi internet.</li><li>Coba model lain satu per satu seperti di STEP 11.</li><li>Pastikan status MITM Server masih <b>Running</b>.</li></ol></div>
     <p>Setup selesai — lanjut ke tugas berikutnya.</p>
   </article>
 
@@ -463,11 +475,11 @@ Model lain → Select → 9router</pre></div>
 <section class="chapter" id="praktik" data-name="Membuat Portfolio">
   <p class="eyebrow">07 / MEMBUAT PORTFOLIO</p>
   <h1>Bangun Website Portfolio</h1>
-  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>9router</code> di STEP 10. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
+  <p>Setup sudah beres dan model pilihan sudah terhubung dengan combo <code>9router</code> di STEP 11. Sekarang gunakan workflow tersebut untuk mengerjakan tugas: membangun website portfolio sesuai requirements di bagian 06.</p>
   <h2>Cara mengerjakan</h2>
   <ol class="doc-ol">
     <li>Buka folder project portfolio di Antigravity.</li>
-    <li>Pastikan model dan combo <code>9router</code> yang dipilih di STEP 10 masih aktif.</li>
+    <li>Pastikan model dan combo <code>9router</code> yang dipilih di STEP 11 masih aktif.</li>
     <li>Kerjakan per bagian (Identitas, Tentang Saya, Skills, Projects) dengan prompt yang spesifik — satu bagian per prompt agar hasilnya rapi.</li>
     <li>Cek hasilnya di browser setiap selesai satu bagian, lalu lanjutkan ke bagian berikutnya.</li>
   </ol>
@@ -483,7 +495,7 @@ Model lain → Select → 9router</pre></div>
   <p>GitHub digunakan untuk menyimpan source code website agar aman dan bisa dihubungkan ke Vercel.</p>
   <h2>STEP 1 — Buat Repository</h2>
   <p>Buka GitHub → <b>New repository</b> → nama misal <code>portfolio-nama</code> → <b>Create</b>. Jangan centang Add README — biarkan repository kosong.</p>
-  <figure class="shot"><img src="assets/buat%20repo%20github.png" alt="Buat repo GitHub" loading="lazy"><figcaption>Gambar 13 — Buat repository baru di GitHub</figcaption></figure>
+  <figure class="shot"><img src="assets/buat%20repo%20github.png" alt="Buat repo GitHub" loading="lazy"><figcaption>Gambar 12 — Buat repository baru di GitHub</figcaption></figure>
   <h2>Alur Git: 4 Command</h2>
   <p>Buka CMD/Terminal di folder project, jalankan berurutan:</p>
   <div class="hflow"><span>init</span><i>→</i><span>add</span><i>→</i><span>commit</span><i>→</i><span>push</span></div>
@@ -549,11 +561,11 @@ Model lain → Select → 9router</pre></div>
       <li>Dashboard Vercel tampil dengan daftar projects ✓</li>
     </ol>
     <div class="callout">💡 Jika muncul dialog <b>Select repositories</b> beberapa kali — itu normal, pilih <code>portfolio-nama</code> terus klik <b>Install</b>.</div>
-  <figure class="shot"><img src="assets/Tampilan%20web%20Vercel%20awal.png" alt="Vercel" loading="lazy"><figcaption>Gambar 14 — Halaman utama Vercel sebelum login</figcaption></figure>
-  <figure class="shot"><img src="assets/tampilan%20login%20vercel%20click%20continue%20with%20github.png" alt="Login" loading="lazy"><figcaption>Gambar 15 — Klik ‘Continue with GitHub’ untuk authorize</figcaption></figure>
+  <figure class="shot"><img src="assets/Tampilan%20web%20Vercel%20awal.png" alt="Vercel" loading="lazy"><figcaption>Gambar 13 — Halaman utama Vercel sebelum login</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20login%20vercel%20click%20continue%20with%20github.png" alt="Login" loading="lazy"><figcaption>Gambar 14 — Klik ‘Continue with GitHub’ untuk authorize</figcaption></figure>
     <h2>02 — Connect GitHub &amp; pilih repository</h2>
   <p>Setelah login berhasil, dashboard Vercel akan tampil seperti ini:</p>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20login%20with%20github.png" alt="Dashboard Vercel setelah login" loading="lazy"><figcaption>Gambar 16 — Dashboard Vercel setelah login berhasil</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20login%20with%20github.png" alt="Dashboard Vercel setelah login" loading="lazy"><figcaption>Gambar 15 — Dashboard Vercel setelah login berhasil</figcaption></figure>
   <ol class="doc-ol">
       <li>Di Vercel dashboard, klik tombol <b>Add New</b> → dropdown menu muncul → pilih <b>Project</b>.</li>
       <li>Halaman Import Project muncul → cari repository <code>portfolio-nama</code> di daftar → klik repository tersebut.</li>
@@ -580,9 +592,9 @@ URL: [URL akan muncul di sini]</pre></div>
       </li>
       <li>Jika ada error (merah): scroll ke atas untuk baca error message → perbaiki error di GitHub → klik <b>Redeploy</b> untuk deploy ulang.</li>
     </ol>
-  <figure class="shot"><img src="assets/tampilan%20kumpulan%20repo%20github%20di%20vercel%20setelah%20klik%20add%20new-project.jpeg" alt="Pilih repo" loading="lazy"><figcaption>Gambar 17 — Pilih repository ‘portfolio-nama’ untuk import</figcaption></figure>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20klik%20impor%20dan%20ingin%20deploy.jpeg" alt="Import" loading="lazy"><figcaption>Gambar 18 — Halaman konfigurasi sebelum deploy</figcaption></figure>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20deployment%20detail.jpeg" alt="Detail" loading="lazy"><figcaption>Gambar 19 — Progress deployment sedang berjalan</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20kumpulan%20repo%20github%20di%20vercel%20setelah%20klik%20add%20new-project.jpeg" alt="Pilih repo" loading="lazy"><figcaption>Gambar 16 — Pilih repository ‘portfolio-nama’ untuk import</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20setelah%20klik%20impor%20dan%20ingin%20deploy.jpeg" alt="Import" loading="lazy"><figcaption>Gambar 17 — Halaman konfigurasi sebelum deploy</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20deployment%20detail.jpeg" alt="Detail" loading="lazy"><figcaption>Gambar 18 — Progress deployment sedang berjalan</figcaption></figure>
   <h2>03 — Live Website &amp; Next Steps</h2>
   <p>Setelah Deploy Berhasil ✅:</p>
   <ol class="doc-ol">
@@ -616,7 +628,7 @@ $ git push origin main</pre></div>
     </li>
   </ol>
   <p>Jika ingin unpublish/delete project: → Vercel dashboard → Project → Settings → Delete project → konfirmasi penghapusan.</p>
-  <figure class="shot"><img src="assets/tampilan%20vercel%20deploy%20berhasil.jpeg" alt="Berhasil" loading="lazy"><figcaption>Gambar 20 — Deployment berhasil, copy URL publik</figcaption></figure>
+  <figure class="shot"><img src="assets/tampilan%20vercel%20deploy%20berhasil.jpeg" alt="Berhasil" loading="lazy"><figcaption>Gambar 19 — Deployment berhasil, copy URL publik</figcaption></figure>
   <div class="deploy-ok"><p>✓ DEPLOYMENT SUCCESSFUL</p><span>Website kamu sudah online.</span></div>
 
   <h2>Project selesai</h2>
