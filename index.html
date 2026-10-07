@@ -146,7 +146,7 @@
   <h1>Apa itu OpenCode?</h1>
   <p><b>OpenCode adalah salah satu provider AI yang dapat digunakan melalui 9Router. Pada praktikum ini kita menggunakan OpenCode Free sebagai provider tanpa API key.</b></p>
   <p>OpenCode adalah layanan berbasis website dan berbeda dengan 9Router. Kalau 9Router dijalankan lokal lewat CMD, OpenCode cukup diakses lewat browser — tidak perlu di-install.</p>
-  <div class="callout"><b>OpenCode Free adalah provider AI yang sudah tersedia di dalam 9Router.</b> Tidak perlu download, install, atau setup tambahan. Dalam praktikum ini tidak ada API key yang perlu dicari dari sisi OpenCode.</div>
+  <div class="callout"><b>OpenCode Free merupakan provider yang dapat digunakan tanpa autentikasi tambahan melalui 9Router.</b> Ketersediaan model dan status gratis dapat berubah mengikuti pembaruan layanan. Pada praktikum ini tidak ada API key yang perlu dicari dari sisi OpenCode — cukup lihat daftar model yang tersedia di 9Router saat praktik.</div>
   <h3>Definisi</h3>
   <div class="duo">
     <div class="mini hl"><b>Provider</b><p>Layanan AI yang dipakai pada konfigurasi 9Router. Pada praktikum ini: <b>OpenCode Free</b>.</p></div>
@@ -154,12 +154,12 @@
   </div>
   <h3>Kenapa dipakai dalam materi ini</h3>
   <ul class="doc-ul">
-    <li>✓ Gratis (OpenCode Free dengan model-model gratis)</li>
-    <li>✓ Multiple models (banyak pilihan AI yang berbeda)</li>
-    <li>✓ Sudah tersedia di 9Router (tinggal connect di menu Providers)</li>
+    <li>✓ Dapat dipakai tanpa autentikasi tambahan melalui 9Router (OpenCode Free)</li>
+    <li>✓ Multiple models (banyak pilihan AI yang berbeda — cek daftar yang tersedia saat praktik)</li>
+    <li>✓ Dapat dihubungkan melalui menu Providers di 9Router</li>
     <li>✓ Dipakai tanpa API key</li>
     <li>✓ Tidak perlu mencari atau membuat API key tambahan</li>
-    <li>✓ Ready-to-use (sudah siap tanpa setup)</li>
+    <li>✓ Dapat dipakai tanpa autentikasi tambahan melalui 9Router</li>
   </ul>
   <h3>Flow dalam workflow</h3>
   <div class="codeblock"><div class="cb-head"><span>Alur</span></div><pre>Antigravity → 9Router → OpenCode Free → Model AI → 9Router → Antigravity</pre></div>
@@ -182,11 +182,11 @@
   <p>Saat connect OpenCode Free di 9Router, akan terlihat tulisan status <b>"No authentication required"</b> (warna hijau).</p>
   <p>Artinya:</p>
   <ul class="doc-ul">
-    <li>✅ OpenCode Free sudah siap pakai tanpa setup tambahan</li>
+    <li>✅ Pada praktik ini, OpenCode Free dapat dipakai tanpa setup tambahan dari sisi OpenCode</li>
     <li>✅ Tidak perlu mencari kunci akses dari sisi OpenCode</li>
     <li>✅ Tidak perlu membuat API key tambahan</li>
     <li>✅ Tidak perlu authorization/approve apapun</li>
-    <li>✅ Langsung bisa pilih model dan digunakan</li>
+    <li>✅ Bisa langsung pilih dari model yang tersedia saat itu dan digunakan</li>
   </ul>
   <p>Dibandingkan provider lain yang biasanya butuh:</p>
   <ul class="doc-ul">
@@ -194,23 +194,23 @@
     <li>❌ API key dari provider tersebut</li>
     <li>❌ Authorization tambahan</li>
   </ul>
-  <div class="callout">OpenCode Free lebih sederhana karena sudah tersedia di dalam 9Router.</div>
+  <div class="callout">OpenCode Free lebih sederhana karena dapat digunakan tanpa autentikasi tambahan melalui 9Router. Ketersediaan model dan status layanan dapat berubah — cek daftar yang tersedia saat praktik.</div>
 
   <h2>Model-model available di OpenCode Free</h2>
-  <p>Daftar model gratis yang bisa dipilih:</p>
+  <p>Contoh daftar model yang tampil pada saat materi ini dibuat:</p>
   <h3>⭐ Recommended untuk praktik</h3>
   <ul class="doc-ul">
     <li><code>oc/muse-spark-1.3-contributor-free</code><br>→ Fast &amp; good quality<br>→ Cocok untuk AI coding<br>→ <b>Recommended</b></li>
     <li><code>oc/mimo-v2.5-free</code><br>→ Good balance speed/quality<br>→ Alternative pilihan</li>
   </ul>
-  <h3>Alternatif lain</h3>
+  <h3>Alternatif lain (contoh saat materi dibuat)</h3>
   <ul class="doc-ul">
     <li><code>oc/muse-spark-1.2-contributor-free</code></li>
     <li><code>oc/big-pickle</code></li>
     <li><code>oc/nemotron-3-ultra-free</code></li>
-    <li>(list bisa berkembang sesuai update OpenCode)</li>
+    <li>(daftar model dapat berubah mengikuti pembaruan layanan — cek daftar yang tersedia di 9Router saat praktik)</li>
   </ul>
-  <div class="callout">💡 <b>Tips:</b> Jika tidak tahu pilih mana, gunakan yang direkomendasikan. Semua model di atas gratis dan berfungsi dengan baik.</div>
+  <div class="callout">💡 <b>Tips:</b> Jika tidak tahu pilih mana, gunakan yang direkomendasikan. <b>OpenCode Free tidak berarti seluruh model akan selalu tersedia atau gratis selamanya.</b> Daftar model dan status layanan dapat berubah — saat praktik, lihat daftar model yang tersedia di 9Router.</div>
 
   <h2>Contoh Combo: OpenCode + Claude Sonnet</h2>
   <p><b>Provider:</b> OpenCode · <b>Model:</b> Claude Sonnet</p>
@@ -335,27 +335,27 @@
   <article class="step" id="step5">
     <p class="step-k">STEP 05</p><h2>Connect OpenCode Free ke 9Router</h2>
     <h3>Tujuan</h3><p>Menghubungkan provider <b>OpenCode Free</b> ke 9Router sehingga request AI bisa diteruskan ke sana.</p>
-    <div class="callout"><b>OpenCode Free sudah tersedia di dalam 9Router, tidak perlu setup lagi.</b> Tidak perlu daftar akun baru, tidak perlu login ke layanan OpenCode, dan tidak perlu memasukkan API key apa pun — cukup klik <b>Connect</b>.</div>
+    <div class="callout"><b>OpenCode Free merupakan provider yang dapat digunakan tanpa autentikasi tambahan melalui 9Router.</b> Ketersediaan model dan status gratis dapat berubah mengikuti pembaruan layanan. Tidak perlu daftar akun baru atau memasukkan API key apa pun — cukup klik <b>Connect</b>, lalu cek daftar model yang tersedia saat praktik.</div>
     <hr><h3>Langkah</h3>
     <ol class="doc-ol">
       <li>Buka dashboard 9Router.</li>
       <li>Masuk ke menu <b>Providers</b>.</li>
       <li>Cari <b>OpenCode Free</b> pada daftar provider.</li>
       <li>Klik <b>Connect</b>.</li>
-      <li>Perhatikan tampilan setelah klik <b>Connect</b>: panel detail provider akan terbuka dan menampilkan daftar <b>Available Models</b> secara otomatis — inilah model-model gratis yang langsung bisa dipakai tanpa konfigurasi tambahan.</li>
+      <li>Perhatikan tampilan setelah klik <b>Connect</b>: panel detail provider akan terbuka dan menampilkan daftar <b>Available Models</b> secara otomatis — cek daftar yang tampil saat itu, karena daftar model dapat berbeda tergantung versi dan konfigurasi 9Router.</li>
       <li>Tunggu sampai status provider siap digunakan. Status yang diharapkan: <b>"No authentication required"</b> dengan indikator <b>hijau</b> — artinya provider aktif dan tidak membutuhkan autentikasi tambahan.</li>
     </ol>
-    <h3>Model yang akan tampil</h3>
-    <p>Setelah Connect berhasil, minimal 5 model berikut akan muncul di daftar Available Models:</p>
+    <h3>Contoh model yang tampil</h3>
+    <p>Contoh daftar model yang tampil pada saat materi ini dibuat. Daftar sebenarnya dapat berbeda tergantung versi dan konfigurasi 9Router — cek daftar <b>Available Models</b> di dashboard saat praktik:</p>
     <div class="codeblock"><div class="cb-head"><span>Available Models — OpenCode Free</span><button data-copy="oc/muse-spark-1.3-contributor-free">Copy</button></div><pre>oc/muse-spark-1.3-contributor-free
 oc/muse-spark-1.2-contributor-free
 oc/big-pickle
 oc/mimo-v2.5-free
 oc/nemotron-3-ultra-free</pre></div>
     <ul class="doc-ul">
-      <li><code>oc/muse-spark-1.3-contributor-free</code> — <b>RECOMMENDED</b>, versi terbaru dan paling stabil.</li>
-      <li><code>oc/muse-spark-1.2-contributor-free</code> — versi sebelumnya, cadangan jika 1.3 bermasalah.</li>
-      <li><code>oc/big-pickle</code>, <code>oc/mimo-v2.5-free</code>, <code>oc/nemotron-3-ultra-free</code> — alternatif gratis untuk variasi / fallback.</li>
+      <li><code>oc/muse-spark-1.3-contributor-free</code> — <b>RECOMMENDED untuk praktik ini</b>, contoh model yang dipakai saat materi dibuat.</li>
+      <li><code>oc/muse-spark-1.2-contributor-free</code> — contoh model lain yang tampil saat materi dibuat.</li>
+      <li><code>oc/big-pickle</code>, <code>oc/mimo-v2.5-free</code>, <code>oc/nemotron-3-ultra-free</code> — contoh model lain. Jangan menganggap model tertentu pasti gratis selamanya — ketersediaan dan status gratis dapat berubah mengikuti pembaruan layanan.</li>
     </ul>
     <hr><h3>Hasil</h3><div class="success">✓ Provider <b>OpenCode Free</b> berstatus siap digunakan — indikator hijau <b>"No authentication required"</b>. Jika gagal, cek koneksi internet dan coba klik Connect lagi.</div>
     <figure class="shot"><img src="assets/sambung%20opencode.png" alt="Connect OpenCode" loading="lazy"><figcaption>Gambar 06 — Connect OpenCode Free di menu Providers</figcaption></figure>
@@ -398,9 +398,10 @@ oc/nemotron-3-ultra-free</pre></div>
 
   <article class="step" id="step7">
     <p class="step-k">STEP 07</p><h2>Buat Combo (Konfigurasi Provider + Multiple Models)</h2>
-    <h3>Tujuan</h3><p>Menggabungkan provider <b>OpenCode</b> dengan <b>MULTIPLE MODELS</b> dalam satu konfigurasi yang dapat digunakan di Antigravity.</p>
-    <hr><h3>Kenapa Harus Buat Combo?</h3>
-    <p>Saat menggunakan hanya 1 model, jika model tersebut mencapai rate limit, request akan ditolak dan pekerjaan terhenti. Dengan combo yang berisi multiple models, jika 1 model limit, sistem secara otomatis akan switch ke model lain. Pekerjaan tetap berjalan tanpa perlu menunggu.</p>
+    <h3>Tujuan</h3><p>Membuat satu konfigurasi combo yang mengelompokkan provider <b>OpenCode</b> dan beberapa model pilihan agar dapat digunakan di Antigravity.</p>
+    <hr><h3>Apa itu Combo dan Strategy?</h3>
+    <p><b>Combo digunakan untuk mengelompokkan beberapa provider atau model dalam satu konfigurasi. Strategy menentukan bagaimana request dipilih atau didistribusikan di antara konfigurasi tersebut. Perilaku fallback bergantung pada strategy, konfigurasi, dan kondisi provider yang digunakan.</b></p>
+    <p><b>Round Robin</b> pada praktik ini berarti request dibagi secara bergiliran di antara pilihan yang tersedia. Round Robin bukan mekanisme otomatis untuk menangani rate limit — perilaku pastinya dapat berbeda tergantung versi dan konfigurasi 9Router.</p>
     <hr><h3>Langkah-Langkah</h3>
     <h3>Langkah 1: Masuk ke Menu Combo &amp; Vision Adapter</h3>
     <ol class="doc-ol">
@@ -412,27 +413,22 @@ oc/nemotron-3-ultra-free</pre></div>
     <ul class="doc-ul">
       <li><b>Combo Name:</b> <code>9Router</code></li>
       <li><b>Select Provider:</b> <code>OpenCode</code></li>
-      <li><b>Models:</b> centang MINIMAL 3 MODEL:
+      <li><b>Models:</b> centang 3 model berikut sebagai contoh pada praktik ini:
         <ul class="doc-ul">
-          <li>✓ <code>oc/muse-spark-1.3-contributor-free</code> <b>(PRIMARY)</b></li>
-          <li>✓ <code>oc/mimo-v2.5-free</code> <b>(BACKUP 1)</b></li>
-          <li>✓ <code>oc/nemotron-3-ultra-free</code> <b>(BACKUP 2)</b></li>
+          <li>✓ <code>oc/muse-spark-1.3-contributor-free</code></li>
+          <li>✓ <code>oc/mimo-v2.5-free</code></li>
+          <li>✓ <code>oc/nemotron-3-ultra-free</code></li>
         </ul>
       </li>
-      <li><b>Strategy:</b> <code>Round Robin</code> (untuk praktik)</li>
+      <li><b>Strategy:</b> <code>Round Robin</code> (untuk praktik — membagi request secara bergiliran, tergantung konfigurasi)</li>
     </ul>
-    <div class="warning"><b>⚠️ PENTING:</b> Jangan hanya pilih 1 model! Minimal 3 untuk redundancy yang baik.</div>
+    <div class="warning"><b>⚠️ PENTING:</b> Pada praktik ini, pilih 3 model di atas sesuai contoh agar sama dengan langkah selanjutnya.</div>
     <h3>Langkah 3: Klik Create</h3>
     <p>Setelah semua field terisi, klik tombol <b>Create</b>.</p>
     <h3>Langkah 4: Verifikasi</h3>
     <div class="success">✓ Combo <b>9Router</b> muncul di daftar<br>✓ 3 models yang dipilih<br>✓ Strategy: <code>Round Robin</code><br>✓ Status: Ready</div>
-    <hr><h3>Mengapa Minimal 3 Model?</h3>
-    <div class="tablewrap"><table>
-      <tr><th>Jumlah</th><th>Risk</th><th>Kejelasan</th></tr>
-      <tr><td>1 model</td><td>TINGGI</td><td>Jika limit, tidak ada backup — harus tunggu</td></tr>
-      <tr><td>2 model</td><td>MEDIUM</td><td>Ada backup, tapi kalau keduanya limit buntu</td></tr>
-      <tr><td>3+ model</td><td>RENDAH</td><td>Selalu ada model yang bisa dipakai ✓</td></tr>
-    </table></div>
+    <hr><h3>Catatan tentang pilihan model</h3>
+    <p>Daftar model di atas adalah contoh yang dipakai pada praktik ini. Jika daftar model yang tersedia di 9Router berbeda, ikuti instruksi guru dan gunakan model yang tersedia saat praktik. Perilaku request bergantung pada konfigurasi dan dapat berbeda tergantung versi dan konfigurasi 9Router.</p>
     <hr><h3>Hasil</h3><div class="success">✓ Combo <b>9Router</b> berhasil dibuat<br>✓ Models: <code>oc/muse-spark-1.3-contributor-free</code> + <code>oc/mimo-v2.5-free</code> + <code>oc/nemotron-3-ultra-free</code><br>✓ Strategy: <code>Round Robin</code> — ready untuk Antigravity</div>
     <figure class="shot"><img src="assets/combo%209router.png" alt="Combo 9Router" loading="lazy"><figcaption>Gambar 08 — Combo: Provider + Multiple Models → <code>9Router</code></figcaption></figure>
     <h3>Next Step</h3><p>Combo berhasil dibuat! Lanjut ke <b><a href="#step8">STEP 08: Buat API Key 9Router</a></b>.</p>
